@@ -65,7 +65,16 @@ export async function POST(request: NextRequest) {
       );
     }
     console.error('[chat] classifier failed:', error);
-    return NextResponse.json({ error: 'classifier_unavailable' }, { status: 503 });
+    // The upstream status alone, never the message — enough to tell a bad key
+    // (401) from a rate limit (429) or an outage (5xx) without leaking detail.
+    const upstream =
+      typeof error === 'object' && error !== null && 'status' in error
+        ? (error as { status?: number }).status
+        : undefined;
+    return NextResponse.json(
+      { error: 'classifier_unavailable', upstream },
+      { status: 503 }
+    );
   }
 
   // The sensitive route never reaches a model. The copy is written and
