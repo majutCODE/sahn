@@ -171,6 +171,90 @@ export const TOPICS: readonly Topic[] = [
         }
       }
     ]
+  },
+  {
+    slug: 'gulf-banking',
+    region: 'gulf',
+    title: {
+      en: 'Islamic banking in the Gulf',
+      ar: 'المصرفية الإسلامية في الخليج'
+    },
+    summary: {
+      en: 'Who certifies a product as compliant, why the answer differs by country, and what an "Islamic window" is.',
+      ar: 'من يصدّق على توافق المنتج، ولماذا يختلف الجواب من بلد إلى آخر، وما المقصود بالنافذة الإسلامية.'
+    },
+    sections: [
+      {
+        heading: { en: 'Who certifies what', ar: 'من يصدّق' },
+        body: {
+          en: 'Every Islamic bank has its own sharia supervisory board, which approves a product before launch and audits it afterwards. Above the bank, some jurisdictions add a central authority whose rulings bind everyone: the UAE has the Higher Shari\'ah Authority at the central bank, Bahrain requires AAOIFI\'s standards of its Islamic licensees, and Oman regulates the sector through a published framework rather than leaving it to each bank. Saudi Arabia has historically left certification to the boards at the banks themselves.\n\nThe consequence is worth stating plainly: "sharia-compliant" is not one standard across the region. A structure approved in one country can be refused in another, and two products sharing a name can rest on different contracts. Where it matters, the document to read is the bank\'s own fatwa and contract, not the brochure.',
+          ar: 'لكل مصرف إسلامي هيئة رقابة شرعية تجيز المنتج قبل طرحه وتدقّقه بعد ذلك. وفوق المصرف تضيف بعض الدول جهة مركزية تُلزم رأيها الجميع: ففي الإمارات الهيئة العليا الشرعية في المصرف المركزي، والبحرين تُلزم مرخَّصيها الإسلاميين بمعايير أيوفي، وعُمان تنظّم القطاع بإطار منشور لا بترك الأمر لكل مصرف. أما السعودية فقد جرى العمل فيها على أن تتولى التصديق هيئاتُ المصارف نفسها.\n\nويحسن التصريح بالنتيجة: «التوافق مع الشريعة» ليس معيارًا واحدًا في المنطقة. فقد تُجاز البنية في بلد وتُردّ في آخر، وقد يشترك منتجان في الاسم ويختلفان في العقد. وعند الحاجة فالذي يُقرأ هو فتوى المصرف وعقده، لا النشرة الدعائية.'
+        }
+      },
+      {
+        heading: { en: 'Full banks and windows', ar: 'المصارف الكاملة والنوافذ' },
+        body: {
+          en: 'A fully Islamic bank runs its whole balance sheet on these contracts. An "Islamic window" is a separate operation inside a conventional bank, required to keep segregated funds and its own accounts. Windows are permitted in the UAE, Bahrain and Oman; Qatar ordered conventional banks to close theirs in 2011, on the reasoning that separation inside one institution is difficult to guarantee.\n\nThe standing criticism of windows is exactly that: the funds are declared separate, but the capital, the treasury and the risk appetite belong to a conventional parent. Those who accept them argue that segregation is auditable and that windows widened access considerably. Both positions are held by serious people.',
+          ar: 'المصرف الإسلامي الكامل يقوم مركزه المالي كله على هذه العقود. أما «النافذة الإسلامية» فعملٌ منفصل داخل مصرف تقليدي، يلزمه فصل الأموال وإفراد الحسابات. والنوافذ مأذون بها في الإمارات والبحرين وعُمان، وأمرت قطر مصارفها التقليدية بإغلاقها سنة ٢٠١١، لأن ضمان الفصل داخل المؤسسة الواحدة عسير.\n\nوهذا عين ما يُنتقد به النوافذ: الأموال مفصولة بالإعلان، ورأس المال والخزينة وسياسة المخاطر لأمٍّ تقليدية. ومن قَبِلها احتجّ بأن الفصل قابل للتدقيق وأن النوافذ وسّعت الوصول توسعةً معتبرة. والقولان يقول بهما أهل نظر.'
+        }
+      }
+    ]
+  },
+  {
+    slug: 'sukuk',
+    region: 'gulf',
+    title: { en: 'Sukuk', ar: 'الصكوك' },
+    summary: {
+      en: 'What a certificate actually entitles you to, the asset-backed and asset-based split, and the critique of the latter.',
+      ar: 'ما الذي يملكه حامل الصك حقيقةً، والفرق بين المستند إلى الأصل والمرتبط به، ونقد الثاني.'
+    },
+    sections: [
+      {
+        heading: { en: 'What a sukuk is', ar: 'ما الصك' },
+        body: {
+          en: 'A sukuk is not a bond, though it is usually priced against one. In principle the holder owns an undivided share in an asset or a venture and receives what that asset produces — rent under an Ijara structure, a profit share under Musharaka. A special purpose vehicle holds the asset, issues the certificates and passes the income through.\n\nThe Gulf is, with Malaysia, the centre of global issuance: sovereigns, banks and infrastructure projects all fund this way, and the instrument is now a routine part of GCC public finance rather than a niche.',
+          ar: 'الصك ليس سندًا وإن كان يُسعَّر عادةً بالقياس إليه. والأصل أن حامله يملك حصة شائعة في أصل أو مشروع فيأخذ ما يغلّه ذلك الأصل — أجرةً في الإجارة، وحصةً من الربح في المشاركة. وتتولى شركةُ غرضٍ خاص حيازةَ الأصل وإصدارَ الصكوك وتمرير الدخل.\n\nوالخليج مع ماليزيا مركز الإصدار في العالم: تموّل به الحكومات والمصارف ومشروعات البنية التحتية، وقد صار جزءًا معتادًا من المالية العامة في دول المجلس لا بابًا ضيقًا.'
+        }
+      },
+      {
+        heading: {
+          en: 'Asset-backed and asset-based',
+          ar: 'المستند إلى الأصل والمرتبط به'
+        },
+        body: {
+          en: 'The distinction decides what you own. In an asset-backed sukuk the holders have real recourse to the asset: if the issuer fails, the asset is theirs to claim. In an asset-based sukuk the transfer is a legal form, and the holders\' recourse is to the originator\'s undertaking to buy the asset back at face value — which makes the return and the risk those of a bond.\n\nThis is not a fringe objection. In 2007 Shaykh Muhammad Taqi Usmani, then chairing AAOIFI\'s sharia board, stated publicly that the great majority of sukuk in issue did not meet the requirements, principally because of those purchase undertakings at par; AAOIFI restricted them the following year. Most issuance since has nonetheless remained asset-based. That the question is live rather than theoretical was shown in 2017, when a UAE issuer argued in court that its own sukuk were not compliant and therefore unenforceable.',
+          ar: 'هذا الفرق هو الذي يحدّد ما تملكه. ففي الصك المستند إلى الأصل رجوعٌ حقيقي للحملة على الأصل: إن أخفق المصدر كان الأصل لهم. وفي الصك المرتبط بالأصل يكون النقل صورةً قانونية، ورجوع الحملة إنما هو على تعهّد المُنشئ بإعادة شراء الأصل بقيمته الاسمية — فيصير العائد والمخاطرة عائدَ سند ومخاطرته.\n\nوليس هذا اعتراض أطراف. ففي سنة ٢٠٠٧ صرّح الشيخ محمد تقي العثماني، وكان يرأس المجلس الشرعي لأيوفي، بأن جمهور الصكوك المُصدَرة حينئذ لا يستوفي الشروط، وأعظم ذلك تعهّدات الشراء بالقيمة الاسمية، فقيّدتها أيوفي في العام التالي. ومع ذلك بقي أكثر الإصدار بعدها مرتبطًا بالأصل. وأن المسألة عملية لا نظرية ظهر سنة ٢٠١٧ حين احتجّ مُصدِر إماراتي أمام القضاء بأن صكوكه هو غير متوافقة فلا تلزمه.'
+        }
+      }
+    ]
+  },
+  {
+    slug: 'tawarruq',
+    region: 'gulf',
+    title: {
+      en: 'Commodity murabaha and tawarruq',
+      ar: 'المرابحة السلعية والتورق'
+    },
+    summary: {
+      en: 'The structure behind most Gulf personal finance and deposit products — and the most contested contract in common use.',
+      ar: 'البنية التي يقوم عليها أكثر التمويل الشخصي والودائع في الخليج، وهي أكثر العقود المستعملة خلافًا.'
+    },
+    sections: [
+      {
+        heading: { en: 'How it works', ar: 'كيف تعمل' },
+        body: {
+          en: 'The customer needs cash. The bank buys a commodity — typically metal traded on an international exchange — and sells it to the customer at a deferred mark-up. The customer immediately sells it back into the market, usually through the bank acting as agent, and receives spot cash. The customer ends the morning with money now and a larger fixed debt later.\n\nOnce you recognise the shape you see it everywhere in the region: personal finance, credit cards, interbank liquidity, and the profit paid on a deposit account.',
+          ar: 'يحتاج العميل نقدًا. فيشتري المصرف سلعة — معدنًا يُتداول في بورصة عالمية غالبًا — ثم يبيعها للعميل بثمن مؤجل فيه ربح. ويبيعها العميل من فوره في السوق، بوكالة المصرف عادةً، فيقبض نقدًا حاضرًا. فينتهي الأمر إلى مالٍ الآن ودينٍ أكبر ثابت لاحقًا.\n\nومن عرف هذه الصورة رآها في كل مكان في المنطقة: التمويل الشخصي، وبطاقات الائتمان، والسيولة بين المصارف، والربح الموزّع على حساب الوديعة.'
+        }
+      },
+      {
+        heading: { en: 'The disagreement', ar: 'الخلاف' },
+        body: {
+          en: 'Classical tawarruq — buying on credit and selling to an unrelated third party — is permitted by most of the schools. What is disputed is organised tawarruq, where the bank arranges both legs, appoints itself agent for the resale, and the commodity never meaningfully moves. The International Islamic Fiqh Academy resolved in 2009 that organised tawarruq is impermissible, on the reasoning that the two sales are agreed in advance and the commodity is a device. AAOIFI permits tawarruq only within conditions that a good deal of retail practice does not satisfy.\n\nIt remains in wide use because nothing else substitutes as readily for a cash loan. Sahn does not resolve this, and no one should present it as settled: it is the clearest case in ordinary Gulf banking where common market practice and the strongest scholarly bodies disagree, and anyone signing one of these contracts is entitled to know that beforehand.',
+          ar: 'التورق الفقهي — الشراء بثمن مؤجل ثم البيع لطرف ثالث لا صلة له بالبائع — يجيزه جمهور المذاهب. وإنما الخلاف في التورق المنظم، حيث يرتّب المصرف الطرفين ويوكَّل في إعادة البيع ولا تنتقل السلعة انتقالًا معتبرًا. وقد قرّر مجمع الفقه الإسلامي الدولي سنة ٢٠٠٩ أن التورق المنظم غير جائز، لأن البيعتين متواطأ عليهما ولأن السلعة حيلة. وأيوفي لا تجيز التورق إلا بشروط لا يستوفيها كثير من التطبيق في التجزئة.\n\nوبقي مع ذلك واسع الاستعمال لأنه لا بديل عنه في تيسير القرض النقدي. وسَحْن لا يحسم هذا، ولا ينبغي لأحد أن يعرضه محسومًا: فهو أوضح موضع في المصرفية الخليجية المعتادة يفترق فيه العملُ الجاري عن أقوى الجهات العلمية، ومن يوقّع مثل هذا العقد له أن يعلم ذلك قبل توقيعه.'
+        }
+      }
+    ]
   }
 ];
 

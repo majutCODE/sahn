@@ -281,7 +281,9 @@
     "submit": "Email me a link",
     "sending": "Sending…",
     "sent": "Link sent to {email}. Open it on this device.",
-    "error": "We could not accept that address. Check it and try again."
+    "error": "We could not accept that address. Check it and try again.",
+    "linkExpired": "That link has expired. Links are good for one hour and one use — request a new one below.",
+    "linkFailed": "We could not complete that sign-in. Request a new link below."
   },
   "notFound": {
     "title": "This door is not here.",

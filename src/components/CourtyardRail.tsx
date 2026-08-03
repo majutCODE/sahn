@@ -5,6 +5,7 @@ import { Link, usePathname } from '@/i18n/navigation';
 import { MODULE_GROUPS, modulesInGroup } from '@/lib/modules';
 import GirihDoorway from './GirihDoorway';
 import AccountMenu from './AccountMenu';
+import NewChatButton from './NewChatButton';
 import LocaleSwitcher from './LocaleSwitcher';
 import ThreadList from './ThreadList';
 
@@ -34,17 +35,13 @@ export default function CourtyardRail() {
       </div>
 
       <div className="px-3">
-        <Link
-          href="/"
-          className={`flex items-center gap-2.5 rounded-sm border px-3 py-2.5 text-sm transition-colors ${
+        <NewChatButton
+          className={`flex w-full items-center gap-2.5 rounded-sm border px-3 py-2.5 text-sm transition-colors ${
             pathname === '/'
               ? 'border-glaze bg-glaze text-on-glaze'
               : 'border-line text-ink hover:bg-sunk'
           }`}
-        >
-          <PlusIcon />
-          <span className="text-start">{t('nav.newChat')}</span>
-        </Link>
+        />
       </div>
 
       <div className="mt-6 flex-1 overflow-y-auto px-2 pb-4">
@@ -103,18 +100,5 @@ export default function CourtyardRail() {
         </div>
       </div>
     </nav>
-  );
-}
-
-function PlusIcon() {
-  return (
-    <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
-      <path
-        d="M8 3v10M3 8h10"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-      />
-    </svg>
   );
 }

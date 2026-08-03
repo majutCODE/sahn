@@ -13,11 +13,17 @@ export async function generateMetadata({
 }
 
 export default async function SignInPage({
-  params
+  params,
+  searchParams
 }: {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{ error?: string }>;
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return <SignInForm />;
+  // The callback bounces failures back here with a reason. Without surfacing
+  // it, a dead link returned a pristine sign-in form and looked like the click
+  // simply did nothing.
+  const { error } = await searchParams;
+  return <SignInForm problem={error} />;
 }

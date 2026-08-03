@@ -29,10 +29,11 @@ const rows = duas.map((d) => ({
   source_ref: d.source_ref,
   quran_ref: d.quran_ref ?? null,
   tags: d.tags ?? [],
-  // Qur'anic du'as are translated live through the Quran.com licence, so they
-  // are not waiting on anything. Prophetic du'as are.
-  translation_pending: !d.quran_ref,
-  translations: {}
+  // Qur'anic du'as are translated live through the Quran.com licence; the
+  // prophetic ones carry our own English rendering in the content file. A
+  // du'a is only "pending" if neither route can produce a translation.
+  translation_pending: !d.quran_ref && !d.translations?.en,
+  translations: d.translations ?? {}
 }));
 
 const response = await fetch(`${url}/rest/v1/dua_entries?on_conflict=slug`, {
@@ -57,7 +58,10 @@ const quranic = saved.filter((r) => r.quran_ref).length;
 
 console.log(`Seeded ${saved.length} du'as.`);
 console.log(`  ${quranic} Qur'anic — translated live via the Quran.com licence`);
-console.log(`  ${saved.length - quranic} prophetic — Arabic and transliteration only`);
+const own = saved.filter((r) => r.translations?.en).length;
+console.log(`  ${saved.length - quranic} prophetic — ${own} with our own translation`);
+const pending = saved.filter((r) => r.translation_pending).length;
+if (pending) console.log(`  ${pending} still untranslated`);
 console.log(
   `  ${new Set(saved.flatMap((r) => r.tags)).size} distinct situation tags`
 );

@@ -6,6 +6,7 @@ import type { Locale } from '@/i18n/routing';
 import AnswerBody from './AnswerBody';
 import Composer, { DRAFT_KEY } from './Composer';
 import GirihDoorway from './GirihDoorway';
+import { NEW_CHAT_EVENT } from './NewChatButton';
 import SourcePanel, { type Citation } from './SourcePanel';
 
 type Helpline = { name: string; contact: string; note?: Record<string, string> };
@@ -189,6 +190,19 @@ export default function ChatRoom({ threadId: initialThread }: { threadId?: strin
       })
       .catch(() => undefined);
   }, [initialThread]);
+
+  // "New chat" while already on the home screen cannot rely on navigation —
+  // the route is unchanged, so nothing remounts. The rail says so explicitly.
+  useEffect(() => {
+    function reset() {
+      setTurns([]);
+      setOpen(null);
+      threadRef.current = undefined;
+      sessionStorage.removeItem(DRAFT_KEY);
+    }
+    window.addEventListener(NEW_CHAT_EVENT, reset);
+    return () => window.removeEventListener(NEW_CHAT_EVENT, reset);
+  }, []);
 
   useEffect(() => {
     endRef.current?.scrollIntoView({ block: 'end' });

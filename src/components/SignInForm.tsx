@@ -13,7 +13,7 @@ type State = 'idle' | 'sending' | 'sent' | 'error';
  * Email link sign-in. No passwords anywhere in Sahn — one less thing to leak,
  * and worship data is the most private data the product holds.
  */
-export default function SignInForm() {
+export default function SignInForm({ problem }: { problem?: string } = {}) {
   const t = useTranslations('auth');
   const locale = useLocale();
   const [email, setEmail] = useState('');
@@ -48,6 +48,15 @@ export default function SignInForm() {
     <section className="mx-auto max-w-md px-5 py-12 sm:px-8 sm:py-16">
       <h1 className="font-display text-3xl text-ink">{t('title')}</h1>
       <p className="mt-3 text-sm text-muted">{t('body')}</p>
+
+      {problem && state === 'idle' && (
+        <p
+          role="alert"
+          className="mt-6 border-s-2 border-clay ps-4 text-sm text-clay"
+        >
+          {t(problem === 'expired' ? 'linkExpired' : 'linkFailed')}
+        </p>
+      )}
 
       {state === 'sent' ? (
         <p

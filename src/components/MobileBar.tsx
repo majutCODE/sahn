@@ -6,6 +6,7 @@ import { Link, usePathname } from '@/i18n/navigation';
 import { MODULE_GROUPS, modulesInGroup } from '@/lib/modules';
 import GirihDoorway from './GirihDoorway';
 import AccountMenu from './AccountMenu';
+import NewChatButton from './NewChatButton';
 import LocaleSwitcher from './LocaleSwitcher';
 
 /**
@@ -86,12 +87,10 @@ export default function MobileBar() {
             </div>
 
             <div className="px-3 pt-3">
-              <Link
-                href="/"
-                className="flex items-center gap-2.5 rounded-sm border border-line px-3 py-2.5 text-sm text-ink hover:bg-sunk"
-              >
-                {t('nav.newChat')}
-              </Link>
+              <NewChatButton
+                onNavigate={() => setOpen(false)}
+                className="flex w-full items-center gap-2.5 rounded-sm border border-line px-3 py-2.5 text-sm text-ink hover:bg-sunk"
+              />
             </div>
 
             <div className="border-b border-line px-4 py-3">

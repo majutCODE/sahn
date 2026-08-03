@@ -3,174 +3,339 @@
   "duas": [
     {
       "slug": "good-in-both-worlds",
-      "title": { "en": "For good in this world and the next", "ar": "لحسنة الدنيا والآخرة" },
+      "title": {
+        "en": "For good in this world and the next",
+        "ar": "لحسنة الدنيا والآخرة"
+      },
       "arabic": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
       "transliteration": "Rabbanā ātinā fid-dunyā ḥasanatan wa fil-ākhirati ḥasanatan wa qinā ʿadhāban-nār",
       "source_ref": "Qur'an 2:201",
       "quran_ref": "2:201",
-      "tags": ["general", "hajj", "everyday"]
+      "tags": [
+        "general",
+        "hajj",
+        "everyday"
+      ]
     },
     {
       "slug": "expand-my-breast",
-      "title": { "en": "Before speaking or a hard task", "ar": "قبل الكلام أو أمر شاق" },
+      "title": {
+        "en": "Before speaking or a hard task",
+        "ar": "قبل الكلام أو أمر شاق"
+      },
       "arabic": "رَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي وَاحْلُلْ عُقْدَةً مِنْ لِسَانِي يَفْقَهُوا قَوْلِي",
       "transliteration": "Rabbish-raḥ lī ṣadrī wa yassir lī amrī waḥlul ʿuqdatan min lisānī yafqahū qawlī",
       "source_ref": "Qur'an 20:25-28",
       "quran_ref": "20:25",
-      "tags": ["anxiety", "exams", "work", "speaking"]
+      "tags": [
+        "anxiety",
+        "exams",
+        "work",
+        "speaking"
+      ]
     },
     {
       "slug": "forgetfulness-and-error",
-      "title": { "en": "For forgetfulness and mistakes", "ar": "عند النسيان والخطأ" },
+      "title": {
+        "en": "For forgetfulness and mistakes",
+        "ar": "عند النسيان والخطأ"
+      },
       "arabic": "رَبَّنَا لَا تُؤَاخِذْنَا إِنْ نَسِينَا أَوْ أَخْطَأْنَا",
       "transliteration": "Rabbanā lā tu'ākhidhnā in nasīnā aw akhṭa'nā",
       "source_ref": "Qur'an 2:286",
       "quran_ref": "2:286",
-      "tags": ["forgiveness", "guilt", "everyday"]
+      "tags": [
+        "forgiveness",
+        "guilt",
+        "everyday"
+      ]
     },
     {
       "slug": "increase-me-in-knowledge",
-      "title": { "en": "For knowledge and study", "ar": "لطلب العلم" },
+      "title": {
+        "en": "For knowledge and study",
+        "ar": "لطلب العلم"
+      },
       "arabic": "رَبِّ زِدْنِي عِلْمًا",
       "transliteration": "Rabbi zidnī ʿilmā",
       "source_ref": "Qur'an 20:114",
       "quran_ref": "20:114",
-      "tags": ["exams", "study", "knowledge"]
+      "tags": [
+        "exams",
+        "study",
+        "knowledge"
+      ]
     },
     {
       "slug": "sufficient-is-allah",
-      "title": { "en": "When facing fear or opposition", "ar": "عند الخوف" },
+      "title": {
+        "en": "When facing fear or opposition",
+        "ar": "عند الخوف"
+      },
       "arabic": "حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ",
       "transliteration": "Ḥasbunallāhu wa niʿmal-wakīl",
       "source_ref": "Qur'an 3:173",
       "quran_ref": "3:173",
-      "tags": ["anxiety", "fear", "trust"]
+      "tags": [
+        "anxiety",
+        "fear",
+        "trust"
+      ]
     },
     {
       "slug": "coolness-of-eyes",
-      "title": { "en": "For family and children", "ar": "للأهل والذرية" },
+      "title": {
+        "en": "For family and children",
+        "ar": "للأهل والذرية"
+      },
       "arabic": "رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا",
       "transliteration": "Rabbanā hab lanā min azwājinā wa dhurriyyātinā qurrata aʿyunin wajʿalnā lil-muttaqīna imāmā",
       "source_ref": "Qur'an 25:74",
       "quran_ref": "25:74",
-      "tags": ["family", "marriage", "children"]
+      "tags": [
+        "family",
+        "marriage",
+        "children"
+      ]
     },
     {
       "slug": "dua-of-yunus",
-      "title": { "en": "In distress — the du'a of Yunus", "ar": "دعاء ذي النون" },
+      "title": {
+        "en": "In distress — the du'a of Yunus",
+        "ar": "دعاء ذي النون"
+      },
       "arabic": "لَا إِلَٰهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ",
       "transliteration": "Lā ilāha illā anta subḥānaka innī kuntu minaẓ-ẓālimīn",
       "source_ref": "Qur'an 21:87",
       "quran_ref": "21:87",
-      "tags": ["distress", "grief", "anxiety", "forgiveness"]
+      "tags": [
+        "distress",
+        "grief",
+        "anxiety",
+        "forgiveness"
+      ]
     },
     {
       "slug": "in-need-of-good",
-      "title": { "en": "In hardship and need", "ar": "عند الفقر والحاجة" },
+      "title": {
+        "en": "In hardship and need",
+        "ar": "عند الفقر والحاجة"
+      },
       "arabic": "رَبِّ إِنِّي لِمَا أَنْزَلْتَ إِلَيَّ مِنْ خَيْرٍ فَقِيرٌ",
       "transliteration": "Rabbi innī limā anzalta ilayya min khayrin faqīr",
       "source_ref": "Qur'an 28:24",
       "quran_ref": "28:24",
-      "tags": ["hardship", "provision", "work"]
+      "tags": [
+        "hardship",
+        "provision",
+        "work"
+      ]
     },
     {
       "slug": "pour-upon-us-patience",
-      "title": { "en": "For patience and steadiness", "ar": "للصبر والثبات" },
+      "title": {
+        "en": "For patience and steadiness",
+        "ar": "للصبر والثبات"
+      },
       "arabic": "رَبَّنَا أَفْرِغْ عَلَيْنَا صَبْرًا وَثَبِّتْ أَقْدَامَنَا",
       "transliteration": "Rabbanā afrigh ʿalaynā ṣabran wa thabbit aqdāmanā",
       "source_ref": "Qur'an 2:250",
       "quran_ref": "2:250",
-      "tags": ["patience", "hardship", "anxiety"]
+      "tags": [
+        "patience",
+        "hardship",
+        "anxiety"
+      ]
     },
     {
       "slug": "righteous-offspring",
-      "title": { "en": "For righteous children", "ar": "للذرية الصالحة" },
+      "title": {
+        "en": "For righteous children",
+        "ar": "للذرية الصالحة"
+      },
       "arabic": "رَبِّ هَبْ لِي مِنْ لَدُنْكَ ذُرِّيَّةً طَيِّبَةً إِنَّكَ سَمِيعُ الدُّعَاءِ",
       "transliteration": "Rabbi hab lī min ladunka dhurriyyatan ṭayyibatan innaka samīʿud-duʿā'",
       "source_ref": "Qur'an 3:38",
       "quran_ref": "3:38",
-      "tags": ["family", "children"]
+      "tags": [
+        "family",
+        "children"
+      ]
     },
     {
       "slug": "travel",
-      "title": { "en": "On setting out to travel", "ar": "دعاء السفر" },
+      "title": {
+        "en": "On setting out to travel",
+        "ar": "دعاء السفر"
+      },
       "arabic": "سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَٰذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ وَإِنَّا إِلَىٰ رَبِّنَا لَمُنْقَلِبُونَ",
       "transliteration": "Subḥānalladhī sakhkhara lanā hādhā wa mā kunnā lahu muqrinīn, wa innā ilā rabbinā lamunqalibūn",
       "source_ref": "Qur'an 43:13-14",
       "quran_ref": "43:13",
-      "tags": ["travel"]
+      "tags": [
+        "travel"
+      ]
     },
     {
       "slug": "entering-the-mosque",
-      "title": { "en": "On entering the mosque", "ar": "عند دخول المسجد" },
+      "title": {
+        "en": "On entering the mosque",
+        "ar": "عند دخول المسجد"
+      },
       "arabic": "اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ",
       "transliteration": "Allāhumma-ftaḥ lī abwāba raḥmatik",
       "source_ref": "Sahih Muslim 713",
-      "tags": ["mosque", "everyday"]
+      "tags": [
+        "mosque",
+        "everyday"
+      ],
+      "translations": {
+        "en": "O Allah, open for me the gates of Your mercy."
+      }
     },
     {
       "slug": "leaving-the-mosque",
-      "title": { "en": "On leaving the mosque", "ar": "عند الخروج من المسجد" },
+      "title": {
+        "en": "On leaving the mosque",
+        "ar": "عند الخروج من المسجد"
+      },
       "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ",
       "transliteration": "Allāhumma innī as'aluka min faḍlik",
       "source_ref": "Sahih Muslim 713",
-      "tags": ["mosque", "everyday"]
+      "tags": [
+        "mosque",
+        "everyday"
+      ],
+      "translations": {
+        "en": "O Allah, I ask You of Your bounty."
+      }
     },
     {
       "slug": "before-sleep",
-      "title": { "en": "Before sleeping", "ar": "قبل النوم" },
+      "title": {
+        "en": "Before sleeping",
+        "ar": "قبل النوم"
+      },
       "arabic": "بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا",
       "transliteration": "Bismika-llāhumma amūtu wa aḥyā",
       "source_ref": "Sahih al-Bukhari 6314",
-      "tags": ["sleep", "evening", "everyday"]
+      "tags": [
+        "sleep",
+        "evening",
+        "everyday"
+      ],
+      "translations": {
+        "en": "In Your name, O Allah, I die and I live."
+      }
     },
     {
       "slug": "on-waking",
-      "title": { "en": "On waking", "ar": "عند الاستيقاظ" },
+      "title": {
+        "en": "On waking",
+        "ar": "عند الاستيقاظ"
+      },
       "arabic": "الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ",
       "transliteration": "Al-ḥamdu lillāhilladhī aḥyānā baʿda mā amātanā wa ilayhin-nushūr",
       "source_ref": "Sahih al-Bukhari 6312",
-      "tags": ["morning", "everyday"]
+      "tags": [
+        "morning",
+        "everyday"
+      ],
+      "translations": {
+        "en": "Praise belongs to Allah, who gave us life after having taken it from us, and to Him is the resurrection."
+      }
     },
     {
       "slug": "anxiety-and-sorrow",
-      "title": { "en": "For anxiety and sorrow", "ar": "عند الهم والحزن" },
+      "title": {
+        "en": "For anxiety and sorrow",
+        "ar": "عند الهم والحزن"
+      },
       "arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ، وَالْعَجْزِ وَالْكَسَلِ، وَالْبُخْلِ وَالْجُبْنِ، وَضَلَعِ الدَّيْنِ وَغَلَبَةِ الرِّجَالِ",
       "transliteration": "Allāhumma innī aʿūdhu bika minal-hammi wal-ḥazan, wal-ʿajzi wal-kasal, wal-bukhli wal-jubn, wa ḍalaʿid-dayni wa ghalabatir-rijāl",
       "source_ref": "Sahih al-Bukhari 6369",
-      "tags": ["anxiety", "grief", "debt", "distress"]
+      "tags": [
+        "anxiety",
+        "grief",
+        "debt",
+        "distress"
+      ],
+      "translations": {
+        "en": "O Allah, I take refuge in You from worry and from grief, from incapacity and from idleness, from miserliness and from cowardice, from the weight of debt and from being overpowered by others."
+      }
     },
     {
       "slug": "visiting-the-sick",
-      "title": { "en": "For someone who is ill", "ar": "لعيادة المريض" },
+      "title": {
+        "en": "For someone who is ill",
+        "ar": "لعيادة المريض"
+      },
       "arabic": "أَسْأَلُ اللَّهَ الْعَظِيمَ رَبَّ الْعَرْشِ الْعَظِيمِ أَنْ يَشْفِيَكَ",
       "transliteration": "As'alullāhal-ʿaẓīma rabbal-ʿarshil-ʿaẓīmi an yashfiyak",
       "source_ref": "Sunan Abi Dawud 3106, Jami' at-Tirmidhi 2083",
-      "tags": ["illness", "healing"]
+      "tags": [
+        "illness",
+        "healing"
+      ],
+      "translations": {
+        "en": "I ask Allah the Immense, Lord of the Immense Throne, to heal you."
+      }
     },
     {
       "slug": "on-affliction",
-      "title": { "en": "On hearing of a death or loss", "ar": "عند المصيبة" },
+      "title": {
+        "en": "On hearing of a death or loss",
+        "ar": "عند المصيبة"
+      },
       "arabic": "إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ، اللَّهُمَّ أْجُرْنِي فِي مُصِيبَتِي وَأَخْلِفْ لِي خَيْرًا مِنْهَا",
       "transliteration": "Innā lillāhi wa innā ilayhi rājiʿūn, Allāhumma'jurnī fī muṣībatī wa akhlif lī khayran minhā",
       "source_ref": "Sahih Muslim 918",
-      "tags": ["grief", "death", "loss"]
+      "tags": [
+        "grief",
+        "death",
+        "loss"
+      ],
+      "translations": {
+        "en": "Indeed we belong to Allah, and indeed to Him we return. O Allah, reward me in this affliction of mine, and give me in its place something better than it."
+      }
     },
     {
       "slug": "sayyid-al-istighfar",
-      "title": { "en": "The master supplication for forgiveness", "ar": "سيد الاستغفار" },
+      "title": {
+        "en": "The master supplication for forgiveness",
+        "ar": "سيد الاستغفار"
+      },
       "arabic": "اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَٰهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَىٰ عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ",
       "transliteration": "Allāhumma anta rabbī lā ilāha illā ant, khalaqtanī wa anā ʿabduk, wa anā ʿalā ʿahdika wa waʿdika mas-taṭaʿt, aʿūdhu bika min sharri mā ṣanaʿt, abū'u laka biniʿmatika ʿalayya, wa abū'u bidhanbī faghfir lī fa innahu lā yaghfirudh-dhunūba illā ant",
       "source_ref": "Sahih al-Bukhari 6306",
-      "tags": ["forgiveness", "guilt", "morning", "evening"]
+      "tags": [
+        "forgiveness",
+        "guilt",
+        "morning",
+        "evening"
+      ],
+      "translations": {
+        "en": "O Allah, You are my Lord. There is no god but You. You created me and I am Your servant, and I hold to Your covenant and Your promise as far as I am able. I take refuge in You from the evil of what I have done. I acknowledge before You Your favour upon me, and I acknowledge my sin — so forgive me, for none forgives sins but You."
+      }
     },
     {
       "slug": "nothing-is-easy",
-      "title": { "en": "When something feels impossible", "ar": "عند الصعوبة" },
+      "title": {
+        "en": "When something feels impossible",
+        "ar": "عند الصعوبة"
+      },
       "arabic": "اللَّهُمَّ لَا سَهْلَ إِلَّا مَا جَعَلْتَهُ سَهْلًا، وَأَنْتَ تَجْعَلُ الْحَزْنَ إِذَا شِئْتَ سَهْلًا",
       "transliteration": "Allāhumma lā sahla illā mā jaʿaltahu sahlā, wa anta tajʿalul-ḥazna idhā shi'ta sahlā",
       "source_ref": "Sahih Ibn Hibban 974",
-      "tags": ["exams", "anxiety", "hardship", "work"]
+      "tags": [
+        "exams",
+        "anxiety",
+        "hardship",
+        "work"
+      ],
+      "translations": {
+        "en": "O Allah, nothing is easy except what You make easy, and when You will, You make hardship itself easy."
+      }
     }
   ]
 }
