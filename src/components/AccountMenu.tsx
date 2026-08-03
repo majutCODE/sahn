@@ -65,9 +65,13 @@ export default function AccountMenu() {
       >
         {email[0]?.toUpperCase()}
       </span>
-      <span className="min-w-0 flex-1 truncate text-xs text-muted" title={email}>
+      <Link
+        href="/account"
+        title={email}
+        className="min-w-0 flex-1 truncate text-xs text-muted hover:text-ink"
+      >
         {email}
-      </span>
+      </Link>
       <button
         type="button"
         onClick={signOut}

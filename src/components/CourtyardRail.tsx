@@ -98,6 +98,15 @@ export default function CourtyardRail() {
         <div className="mt-2">
           <LocaleSwitcher />
         </div>
+        <nav className="mt-3 flex gap-3 text-[11px] text-muted">
+          <Link href="/privacy" className="hover:text-ink">
+            {t('legal.privacy')}
+          </Link>
+          <Link href="/terms" className="hover:text-ink">
+            {t('legal.terms')}
+          </Link>
+        </nav>
+
       </div>
     </nav>
   );

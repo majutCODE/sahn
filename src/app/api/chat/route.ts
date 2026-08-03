@@ -13,6 +13,7 @@ import {
   type Citation
 } from '@/lib/search/retrieve';
 import { MADHHABS, type Madhhab } from '@/lib/madhhab';
+import { checkRateLimit, rateLimitHeaders } from '@/lib/rate-limit';
 
 export const runtime = 'nodejs';
 
@@ -48,6 +49,22 @@ export async function POST(request: NextRequest) {
   const madhhab: Madhhab = body.data.madhhab ?? 'all';
   const incognito = body.data.incognito === true;
   const threadId = incognito ? undefined : body.data.threadId;
+
+  // Before any paid call. Every message here is a classifier call, an
+  // embedding and a Sonnet completion, and the endpoint is open to anyone who
+  // finds the domain.
+  const supabase = await createClient();
+  const {
+    data: { user }
+  } = await supabase.auth.getUser();
+
+  const verdict = await checkRateLimit('chat', request, user?.id);
+  if (!verdict.allowed) {
+    return NextResponse.json(
+      { error: 'rate_limited', retryAfter: verdict.retryAfter, signedIn: Boolean(user) },
+      { status: 429, headers: rateLimitHeaders(verdict) }
+    );
+  }
 
   let route;
   try {

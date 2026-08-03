@@ -99,7 +99,13 @@ export default function ChatRoom({ threadId: initialThread }: { threadId?: strin
       if (contentType.includes('application/json')) {
         const data = await response.json();
         if (!response.ok) {
-          patch(id, { streaming: false, error: data.error ?? 'failed' });
+          // A signed-out visitor who hits the limit has a fix available to
+          // them — signing in raises it — so they get told that instead.
+          const reason =
+            data.error === 'rate_limited' && !data.signedIn
+              ? 'rate_limited_anon'
+              : (data.error ?? 'failed');
+          patch(id, { streaming: false, error: reason });
           return;
         }
         patch(id, {

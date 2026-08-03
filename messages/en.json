@@ -70,7 +70,9 @@
     "errors": {
       "network": "Could not reach Sahn. Check your connection.",
       "classifier_unavailable": "Sahn could not route that safely just now. Please try again in a moment.",
-      "failed": "Something went wrong. Please try again."
+      "failed": "Something went wrong. Please try again.",
+      "rate_limited": "You have sent a lot of messages in a short time. Please wait a minute and try again.",
+      "rate_limited_anon": "That is as many messages as Sahn allows without an account. Sign in — it is free, and the limit is much higher."
     },
     "sourcesNote": "Answers on Islam draw on a vetted Islamic knowledge base — the Qur'an with its translations, and sourced supplications — and every claim from it is cited. Everything else it answers as a general assistant.",
     "everythingElse": "Ask about anything at all — code, cooking, careers, homework. Where a question has an Islamic dimension, Sahn answers with that in view.",
@@ -421,6 +423,26 @@
   },
   "account": {
     "signIn": "Sign in",
-    "signOut": "Sign out"
+    "signOut": "Sign out",
+    "heading": "Your account",
+    "intro": "What Sahn holds about you, and how to take it away.",
+    "signedInAs": "Signed in as",
+    "signedOutNote": "You are not signed in.",
+    "exportHeading": "Export your data",
+    "exportBody": "A complete copy of everything stored against your account — settings, worship records, saved conversations — as a JSON file.",
+    "exportAction": "Download my data",
+    "deleteHeading": "Delete your account",
+    "deleteBody": "This removes your account and every record attached to it: conversations, prayer logs, the qada ledger, bookmarks, fasts and zakat records. It happens immediately and cannot be undone. Export first if you want a copy.",
+    "deleteAction": "Delete my account",
+    "deleteConfirmLabel": "Type {email} to confirm.",
+    "deleteConfirmAction": "Delete permanently",
+    "deleting": "Deleting…",
+    "deleteFailed": "That did not go through. Nothing was deleted — please try again.",
+    "cancel": "Cancel"
+  },
+  "legal": {
+    "updated": "Updated",
+    "privacy": "Privacy",
+    "terms": "Terms"
   }
 }

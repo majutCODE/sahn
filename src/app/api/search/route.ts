@@ -1,6 +1,8 @@
 import { NextResponse, type NextRequest } from 'next/server';
 import { z } from 'zod';
+import { checkRateLimit, rateLimitHeaders } from '@/lib/rate-limit';
 import { searchVerses } from '@/lib/search/retrieve';
+import { createClient } from '@/lib/supabase/server';
 
 const schema = z.object({
   query: z.string().min(2).max(500),
@@ -11,6 +13,20 @@ export async function POST(request: NextRequest) {
   const body = schema.safeParse(await request.json().catch(() => null));
   if (!body.success) {
     return NextResponse.json({ error: 'invalid_body' }, { status: 400 });
+  }
+
+  // Each search is an embedding call against a paid quota.
+  const supabase = await createClient();
+  const {
+    data: { user }
+  } = await supabase.auth.getUser();
+
+  const verdict = await checkRateLimit('search', request, user?.id);
+  if (!verdict.allowed) {
+    return NextResponse.json(
+      { error: 'rate_limited', retryAfter: verdict.retryAfter },
+      { status: 429, headers: rateLimitHeaders(verdict) }
+    );
   }
 
   try {
