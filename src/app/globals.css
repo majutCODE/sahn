@@ -1,0 +1,168 @@
+@import 'tailwindcss';
+
+/* ─────────────────────────────────────────────────────────────
+   Sahn palette. Zellige glaze and the courtyard at night.
+   Raw pigments — do not use these directly in components;
+   use the semantic tokens below so light and dark both work.
+   ───────────────────────────────────────────────────────────── */
+:root {
+  --ink: #10202b;
+  --stone: #f2ede4;
+  --glaze: #1f6f6b;
+  --brass: #b08a46;
+  --clay: #7c4a3b;
+  --muted: #6b7b84;
+
+  /* Semantic — light (limewashed plaster) */
+  --surface: var(--stone);
+  --surface-raised: #faf7f1;
+  --surface-sunk: #e7e0d4;
+  --text: var(--ink);
+  --text-muted: #566771;
+  --line: #d9d1c3;
+  --accent: var(--glaze);
+  --accent-contrast: #ffffff;
+  --highlight: var(--brass);
+  --secondary: var(--clay);
+  --focus: var(--glaze);
+
+  --font-body: var(--font-inter), system-ui, sans-serif;
+  --font-heading: var(--font-fraunces), Georgia, serif;
+  --heading-weight: 500;
+
+  color-scheme: light dark;
+}
+
+/*
+ * Arabic UI runs on IBM Plex Sans Arabic, Latin fallback behind it.
+ * The display serif is Latin-only, so Arabic headings take Plex at a heavier
+ * weight rather than falling through to whatever serif the OS happens to have.
+ */
+[lang='ar'] {
+  --font-body: var(--font-plex-arabic), var(--font-inter), system-ui, sans-serif;
+  --font-heading: var(--font-plex-arabic), system-ui, sans-serif;
+  --heading-weight: 600;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: var(--ink);
+    --surface-raised: #162b38;
+    --surface-sunk: #0b1821;
+    --text: #eef3f5;
+    --text-muted: #9aabb4;
+    --line: #24404f;
+    --accent: #2c8d88;
+    --accent-contrast: #041418;
+    --focus: #4fb3ac;
+  }
+}
+
+/* Explicit override wins over the media query in both directions. */
+:root[data-theme='light'] {
+  --surface: var(--stone);
+  --surface-raised: #faf7f1;
+  --surface-sunk: #e7e0d4;
+  --text: var(--ink);
+  --text-muted: #566771;
+  --line: #d9d1c3;
+  --accent: var(--glaze);
+  --accent-contrast: #ffffff;
+  --focus: var(--glaze);
+}
+
+:root[data-theme='dark'] {
+  --surface: var(--ink);
+  --surface-raised: #162b38;
+  --surface-sunk: #0b1821;
+  --text: #eef3f5;
+  --text-muted: #9aabb4;
+  --line: #24404f;
+  --accent: #2c8d88;
+  --accent-contrast: #041418;
+  --focus: #4fb3ac;
+}
+
+@theme inline {
+  --color-surface: var(--surface);
+  --color-raised: var(--surface-raised);
+  --color-sunk: var(--surface-sunk);
+  --color-ink: var(--text);
+  --color-muted: var(--text-muted);
+  --color-line: var(--line);
+  --color-glaze: var(--accent);
+  --color-on-glaze: var(--accent-contrast);
+  --color-brass: var(--highlight);
+  --color-clay: var(--secondary);
+
+  --font-sans: var(--font-body);
+  --font-display: var(--font-heading);
+  --font-quran: var(--font-amiri-quran), serif;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--surface);
+    color: var(--text);
+    font-family: var(--font-body);
+    /* Arabic ascenders and descenders need the room. */
+    line-height: 1.65;
+  }
+
+  .font-display {
+    font-weight: var(--heading-weight);
+  }
+
+  /* Quranic text is never set in the UI face, in either locale. */
+  .quran {
+    font-family: var(--font-amiri-quran), serif;
+    line-height: 2.2;
+    letter-spacing: normal;
+    font-size: 1.5rem;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--accent) 30%, transparent);
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Motion budget: the rail's load stagger, and (later) the tasbih
+   press. Nothing else in Sahn animates.
+   ───────────────────────────────────────────────────────────── */
+@keyframes doorway-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.doorway-stagger {
+  animation: doorway-in 420ms cubic-bezier(0.2, 0.6, 0.2, 1) both;
+  animation-delay: calc(var(--doorway-index, 0) * 45ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

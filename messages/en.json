@@ -1,0 +1,420 @@
+{
+  "app": {
+    "name": "Sahn",
+    "tagline": "Sourced and cited, never decreed",
+    "description": "An Islamic assistant that retrieves and cites — prayer times, the Quran, duas, zakat and more."
+  },
+  "nav": {
+    "modules": "Modules",
+    "chat": "Assistant",
+    "language": "Language",
+    "skipToContent": "Skip to content",
+    "backToCourtyard": "Courtyard",
+    "locale": {
+      "en": "English",
+      "ar": "العربية"
+    },
+    "newChat": "New chat",
+    "menu": "Menu",
+    "closeMenu": "Close",
+    "groups": {
+      "worship": "Worship",
+      "read": "Read",
+      "money": "Money",
+      "support": "Support"
+    }
+  },
+  "landing": {
+    "heading": "One courtyard, ten doors.",
+    "body": "A general assistant that answers anything, with prayer times, the Qur'an, duas and zakat built in — and an Islamic knowledge base behind it when the question calls for one.",
+    "promise": "Sahn does not issue rulings. Every answer on fiqh traces back to a named source and school, or it is not given at all.",
+    "modulesHeading": "The doors"
+  },
+  "composer": {
+    "label": "Ask the assistant",
+    "placeholder": "Ask anything…",
+    "send": "Ask",
+    "hint": "Enter to send, Shift + Enter for a new line",
+    "suggestionsLabel": "Examples",
+    "suggestions": {
+      "one": "How do the schools differ on combining prayers when travelling?",
+      "two": "Help me plan a week of meals on a tight budget",
+      "three": "Explain how compound interest works"
+    }
+  },
+  "shell": {
+    "notBuiltYet": "This room is not built yet.",
+    "phaseNote": "It arrives in phase {phase} of the build.",
+    "tier": {
+      "free": "Free",
+      "paid": "Paid plan",
+      "paidShort": "Paid"
+    }
+  },
+  "chat": {
+    "heading": "Ask.",
+    "summary": "Ask anything at all. Where a question has an Islamic dimension, Sahn answers with that in view — and any question of Islamic law is answered only from retrieved sources, with the school named.",
+    "you": "You",
+    "assistant": "Sahn",
+    "notConnected": "The assistant is not connected yet.",
+    "notConnectedNote": "Retrieval, the classifier and the citation engine arrive in phase {phase}. Your message stayed in this browser tab — nothing was sent anywhere.",
+    "routeTag": {
+      "fiqh": "Cited",
+      "general": "General knowledge"
+    },
+    "thinking": "Thinking…",
+    "sourcesLabel": "Sources",
+    "closeSource": "Close",
+    "openInReader": "Open in the reader",
+    "uncited": "General knowledge, not scholarship — no source was cited for this.",
+    "errors": {
+      "network": "Could not reach Sahn. Check your connection.",
+      "classifier_unavailable": "Sahn could not route that safely just now. Please try again in a moment.",
+      "failed": "Something went wrong. Please try again."
+    },
+    "sourcesNote": "Answers on Islam draw on a vetted Islamic knowledge base — the Qur'an with its translations, and sourced supplications — and every claim from it is cited. Everything else it answers as a general assistant.",
+    "everythingElse": "Ask about anything at all — code, cooking, careers, homework. Where a question has an Islamic dimension, Sahn answers with that in view.",
+    "incognito": "Incognito",
+    "incognitoOn": "Incognito — not saved",
+    "threadsHeading": "Chats",
+    "deleteThread": "Delete chat"
+  },
+  "modules": {
+    "prayer": {
+      "name": "Prayer times & Qibla",
+      "summary": "Next prayer, Qibla bearing and notifications — computed on your device."
+    },
+    "tracker": {
+      "name": "Salah tracker",
+      "summary": "Log the five, keep a qada ledger, watch the streak build."
+    },
+    "duas": {
+      "name": "Dua library",
+      "summary": "Duas by situation, with source, audio and the morning and evening adhkar."
+    },
+    "quran": {
+      "name": "Quran",
+      "summary": "The full mushaf with translations, tafsir, recitation and reading plans."
+    },
+    "search": {
+      "name": "Verse search",
+      "summary": "Ask in plain language, receive the ayat. Nothing added on top."
+    },
+    "ramadan": {
+      "name": "Ramadan planner",
+      "summary": "Suhoor and iftar, the juz plan, taraweeh, fidya and Laylatul Qadr."
+    },
+    "calendar": {
+      "name": "Hijri calendar",
+      "summary": "Convert both ways, with the key days and the recommended fasts marked."
+    },
+    "zakat": {
+      "name": "Zakat calculator",
+      "summary": "Every asset class, live nisab, a hawl reminder and saved records."
+    },
+    "finance": {
+      "name": "Halal finance",
+      "summary": "Riba, mortgages, pensions and screening — explained, never recommended."
+    },
+    "counsel": {
+      "name": "Counsel",
+      "summary": "A quieter room for strain, doubt and grief. It listens before it answers."
+    }
+  },
+  "prayer": {
+    "next": "Next prayer",
+    "nextTomorrow": "Next prayer, tomorrow",
+    "nextTag": "Next",
+    "at": "at {time}",
+    "needLocation": "Set a location to begin.",
+    "needLocationNote": "Everything here is worked out on your device, so it keeps working with no signal. Nothing about where you are leaves this browser.",
+    "calculatedNote": "Times are calculated from your location and the method you have chosen. Where your local mosque differs, follow your mosque.",
+    "names": {
+      "fajr": "Fajr",
+      "sunrise": "Sunrise",
+      "dhuhr": "Dhuhr",
+      "asr": "Asr",
+      "maghrib": "Maghrib",
+      "isha": "Isha"
+    },
+    "location": {
+      "label": "Location",
+      "none": "Not set",
+      "set": "Set location",
+      "change": "Change",
+      "useDevice": "Use my current location",
+      "locating": "Finding you…",
+      "denied": "Location permission was refused. You can still choose a city below.",
+      "unavailable": "Your device could not provide a location. Choose a city below.",
+      "searchLabel": "Or choose a city",
+      "searchPlaceholder": "Start typing a city name",
+      "noMatches": "No city by that name yet — this list is still short.",
+      "coordinates": "{lat}, {lon}"
+    },
+    "settings": {
+      "toggle": "Calculation settings",
+      "method": "Calculation method",
+      "asr": "Asr",
+      "highLatitude": "High latitude rule",
+      "highLatitudeNote": "Only affects places where the sun does not reach the twilight angle.",
+      "methods": {
+        "mwl": "Muslim World League",
+        "isna": "ISNA (North America)",
+        "umm_al_qura": "Umm al-Qura (Mecca)",
+        "karachi": "Karachi",
+        "egyptian": "Egyptian General Authority",
+        "moonsighting": "Moonsighting Committee"
+      },
+      "asrMethods": {
+        "standard": "Standard (Shafi'i, Maliki, Hanbali)",
+        "hanafi": "Hanafi"
+      },
+      "highLatitudeRules": {
+        "auto": "Recommended for my latitude",
+        "middle_of_the_night": "Middle of the night",
+        "seventh_of_the_night": "One seventh of the night",
+        "twilight_angle": "Twilight angle"
+      }
+    }
+  },
+  "quran": {
+    "indexHeading": "The mushaf",
+    "indexNote": "One hundred and fourteen surahs. Choose one to begin reading.",
+    "versesCount": "{count} verses",
+    "revelation": {
+      "makkah": "Meccan",
+      "madinah": "Medinan"
+    },
+    "loadError": "The Quran service could not be reached. Nothing is wrong with Sahn itself — prayer times and the calendar still work offline.",
+    "searchLabel": "Find a surah",
+    "searchPlaceholder": "Name or number",
+    "noMatches": "No surah by that name.",
+    "fontSize": "Text size",
+    "fontSizeStep": "Text size {step}",
+    "arabicOnly": "Arabic only",
+    "previousSurah": "Previous surah",
+    "nextSurah": "Next surah"
+  },
+  "tracker": {
+    "signedOut": "Sign in to keep a record.",
+    "signedOutNote": "Your prayer record is private to you. It is stored against your account so it survives a lost phone, and it is never read by the assistant.",
+    "signIn": "Sign in",
+    "loadError": "Could not load your record. Try again in a moment.",
+    "streakLabel": "Unbroken",
+    "streakDays": "{count} days",
+    "streakNote": "Counted up to yesterday, so today is still open.",
+    "streakNoneNote": "Start wherever you are. Today is enough.",
+    "todayHeading": "Today",
+    "todayNote": "Tap a marked answer again to clear it.",
+    "monthHeading": "Last thirty days",
+    "monthNote": "Filled days are the ones with all five accounted for.",
+    "qadaHeading": "Qada ledger",
+    "qadaNote": "A place to hold a backlog and work it down at your own pace. Nothing here is reported anywhere.",
+    "qadaRemaining": "{count} left to make up.",
+    "qadaPrayer": "Prayer",
+    "qadaOwed": "Owed",
+    "qadaMadeUp": "Made up",
+    "qadaLeft": "Left",
+    "qadaOwedFor": "Owed, {prayer}",
+    "qadaMadeUpFor": "Made up, {prayer}",
+    "privacyNote": "This record is yours alone. It is never used to answer questions in chat, and you can delete it at any time.",
+    "prayers": {
+      "fajr": "Fajr",
+      "dhuhr": "Dhuhr",
+      "asr": "Asr",
+      "maghrib": "Maghrib",
+      "isha": "Isha"
+    },
+    "statuses": {
+      "prayed": "Prayed",
+      "jamaah": "In jamaah",
+      "qada": "Made up",
+      "missed": "Not yet"
+    }
+  },
+  "hijri": {
+    "todayLabel": "Today",
+    "prevMonth": "Previous month",
+    "nextMonth": "Next month",
+    "backToToday": "Back to today",
+    "keyDatesHeading": "Key dates in {year} AH",
+    "fastsHeading": "Recommended fasts",
+    "fastsNote": "Mondays and Thursdays, and the white days — the 13th, 14th and 15th of each month.",
+    "converterHeading": "Convert a date",
+    "gregorianLabel": "Gregorian date",
+    "hijriLabel": "Hijri date",
+    "hijriYear": "Year",
+    "hijriMonth": "Month",
+    "hijriDay": "Day",
+    "moonsightingNote": "These dates are calculated from the Umm al-Qura calendar. Local moonsighting decides the real start of a month, and your community may differ by a day.",
+    "keyDates": {
+      "muharram": "Islamic New Year",
+      "ashura": "Ashura",
+      "ramadan": "First of Ramadan",
+      "eid-al-fitr": "Eid al-Fitr",
+      "arafah": "Day of Arafah",
+      "eid-al-adha": "Eid al-Adha"
+    },
+    "fasts": {
+      "monday": "Monday fast",
+      "thursday": "Thursday fast",
+      "ayyam-al-beed": "Ayyam al-Beed"
+    }
+  },
+  "qibla": {
+    "heading": "Qibla",
+    "needLocation": "Set a location above and the bearing will appear here.",
+    "bearingLabel": "Bearing to the Kaaba",
+    "degrees": "{value}° from true north",
+    "dialLabel": "Qibla dial, {degrees} degrees from true north",
+    "north": "N",
+    "enableCompass": "Turn on the live compass",
+    "liveNote": "The needle is tracking your device. Hold the phone flat.",
+    "manualNote": "This device has no compass available, so the dial is drawn against true north. Line up north on a compass and follow the needle.",
+    "accuracyNote": "Phone compasses drift near metal and electronics. For anything that matters, check against a second source."
+  },
+  "auth": {
+    "title": "Sign in",
+    "body": "We will email you a link. No password to remember, and none to lose.",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Email me a link",
+    "sending": "Sending…",
+    "sent": "Link sent to {email}. Open it on this device.",
+    "error": "We could not accept that address. Check it and try again."
+  },
+  "notFound": {
+    "title": "This door is not here.",
+    "body": "There is nothing at that address. The courtyard is one step back.",
+    "back": "Back to the courtyard"
+  },
+  "duas": {
+    "heading": "Duas",
+    "intro": "Supplications by situation, each with its source. Search by how you feel or what you are about to do.",
+    "searchLabel": "Search",
+    "searchPlaceholder": "travel, anxiety, before sleep…",
+    "searchNote": "Plain-language search arrives in phase 4. For now this matches words and situations.",
+    "noMatches": "Nothing matches that yet — the library is still small.",
+    "translationPending": "An English translation is not licensed yet. The Arabic and transliteration are complete.",
+    "translationFromQuran": "translation from the Qur'an",
+    "licenceNote": "The Arabic is Qur'an and hadith and carries no restriction. Qur'anic du'as are translated under our Quran.com licence. The standard English translation of the prophetic du'as is under copyright, so it is not reproduced here until it is licensed.",
+    "loadError": "Could not load the dua library.",
+    "tags": {
+      "anxiety": "Anxiety",
+      "grief": "Grief",
+      "travel": "Travel",
+      "illness": "Illness",
+      "exams": "Exams",
+      "forgiveness": "Forgiveness",
+      "family": "Family",
+      "marriage": "Marriage",
+      "children": "Children",
+      "sleep": "Before sleep",
+      "morning": "Morning",
+      "evening": "Evening",
+      "mosque": "Mosque",
+      "everyday": "Everyday",
+      "hardship": "Hardship",
+      "work": "Work",
+      "study": "Study",
+      "knowledge": "Knowledge",
+      "patience": "Patience",
+      "distress": "Distress",
+      "fear": "Fear",
+      "trust": "Trust",
+      "death": "Death",
+      "loss": "Loss",
+      "debt": "Debt",
+      "guilt": "Guilt",
+      "healing": "Healing",
+      "provision": "Provision",
+      "speaking": "Speaking",
+      "general": "General",
+      "hajj": "Hajj"
+    }
+  },
+  "verseSearch": {
+    "heading": "Verse search",
+    "intro": "Ask in plain language. Sahn returns the ayat and nothing more — no summary, no interpretation.",
+    "label": "What are you looking for?",
+    "placeholder": "verses about patience when losing someone",
+    "submit": "Search",
+    "searching": "Searching…",
+    "noResults": "Nothing matched closely enough. Try describing it differently.",
+    "resultsLabel": "{count} verses",
+    "openReader": "Read in context",
+    "error": "Search is unavailable right now.",
+    "note": "Results are ranked by meaning, not by keyword. They are a starting point for reading, not an answer."
+  },
+  "zakat": {
+    "dueLabel": "Zakat due",
+    "loadingSpot": "Fetching today's gold and silver prices…",
+    "spotError": "Could not fetch metal prices, so the nisab cannot be worked out right now.",
+    "aboveNisab": "Your net zakatable wealth is above the nisab of {nisab}.",
+    "belowNisab": "Your net zakatable wealth is below the nisab of {nisab}, so nothing is due.",
+    "nisabHeading": "Nisab standard",
+    "nisabNote": "The silver nisab is much lower, so more people owe zakat under it. Both are held by recognised positions — Sahn does not choose for you.",
+    "basis": {
+      "silver": "Silver (612.36g)",
+      "gold": "Gold (87.48g)"
+    },
+    "assetsHeading": "What you own",
+    "liabilitiesHeading": "What you owe",
+    "grams": "In grams",
+    "assets": {
+      "cash": "Cash in hand",
+      "bank": "Bank balances",
+      "gold": "Gold",
+      "silver": "Silver",
+      "business_inventory": "Business inventory",
+      "receivables": "Money owed to you",
+      "shares": "Shares",
+      "crypto": "Crypto",
+      "property_for_sale": "Property held for sale",
+      "pension": "Pension"
+    },
+    "liabilities": {
+      "debts": "Debts",
+      "bills_due": "Bills due now",
+      "business_payables": "Business payables"
+    },
+    "contested": {
+      "receivables": "Schools differ on debts unlikely to be repaid.",
+      "shares": "Treatment differs for long-term holdings versus trading stock.",
+      "pension": "Schools differ on pensions you cannot yet access.",
+      "property_for_sale": "Zakatable if held for sale; not if held to live in or let.",
+      "crypto": "Widely treated as a currency or trade asset, but not settled."
+    },
+    "assetTotal": "Total assets",
+    "liabilityTotal": "Total liabilities",
+    "netWorth": "Net zakatable wealth",
+    "nisabValue": "Nisab",
+    "spotUsed": "Calculated with gold at {gold} and silver at {silver} per troy ounce, as of {date}.",
+    "hawlNote": "If today starts your hawl, the next one falls on {date} — a lunar year, not a solar one.",
+    "save": "Save this calculation",
+    "saving": "Saving…",
+    "saved": "Saved",
+    "saveError": "Could not save. Try again.",
+    "signInToSave": "<link>Sign in</link> to save this calculation and be reminded at your hawl.",
+    "print": "Print or save as PDF",
+    "disclaimer": "This is a calculator, not a fatwa. Where schools differ on an asset the difference is noted rather than decided, and anything unusual in your circumstances should go to a qualified scholar."
+  },
+  "finance": {
+    "heading": "Halal finance",
+    "intro": "Explanations of how Islamic financial structures work, and where scholars disagree about them. Reference material — Sahn does not recommend products.",
+    "disclaimer": "This is educational content, not financial advice. Sahn is not a regulated financial adviser and does not recommend or endorse any product or provider. Regulated advice for your circumstances should come from an authorised adviser; the religious question should go to a qualified scholar.",
+    "regionsHeading": "By region",
+    "regions": {
+      "all": "Everywhere",
+      "gb": "United Kingdom",
+      "gulf": "Gulf"
+    },
+    "readMore": "Read",
+    "backToGuide": "All topics",
+    "notFound": "No such topic.",
+    "sourcesHeading": "Where to read further",
+    "sourcesNote": "Sahn summarises and links out rather than reproducing these. The standards themselves are the authority, not this page.",
+    "aaoifi": "AAOIFI Shari'ah Standards",
+    "fca": "Financial Conduct Authority (UK)"
+  }
+}
