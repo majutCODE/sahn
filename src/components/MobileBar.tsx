@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { Link, usePathname } from '@/i18n/navigation';
 import { MODULE_GROUPS, modulesInGroup } from '@/lib/modules';
 import GirihDoorway from './GirihDoorway';
+import AccountMenu from './AccountMenu';
 import LocaleSwitcher from './LocaleSwitcher';
 
 /**
@@ -91,6 +92,10 @@ export default function MobileBar() {
               >
                 {t('nav.newChat')}
               </Link>
+            </div>
+
+            <div className="border-b border-line px-4 py-3">
+              <AccountMenu />
             </div>
 
             <div className="mt-4 flex-1 overflow-y-auto px-2 pb-6">

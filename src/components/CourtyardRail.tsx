@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import { MODULE_GROUPS, modulesInGroup } from '@/lib/modules';
 import GirihDoorway from './GirihDoorway';
+import AccountMenu from './AccountMenu';
 import LocaleSwitcher from './LocaleSwitcher';
 import ThreadList from './ThreadList';
 
@@ -96,7 +97,10 @@ export default function CourtyardRail() {
       </div>
 
       <div className="border-t border-line px-4 py-3">
-        <LocaleSwitcher />
+        <AccountMenu />
+        <div className="mt-2">
+          <LocaleSwitcher />
+        </div>
       </div>
     </nav>
   );

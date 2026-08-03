@@ -416,5 +416,9 @@
     "sourcesNote": "Sahn summarises and links out rather than reproducing these. The standards themselves are the authority, not this page.",
     "aaoifi": "AAOIFI Shari'ah Standards",
     "fca": "Financial Conduct Authority (UK)"
+  },
+  "account": {
+    "signIn": "Sign in",
+    "signOut": "Sign out"
   }
 }
