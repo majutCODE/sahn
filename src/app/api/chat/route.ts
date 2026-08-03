@@ -198,6 +198,7 @@ export async function POST(request: NextRequest) {
 
   return new Response(body_, {
     headers: {
+      ...rateLimitHeaders(verdict),
       'content-type': 'text/event-stream; charset=utf-8',
       'cache-control': 'no-cache, no-transform',
       connection: 'keep-alive'

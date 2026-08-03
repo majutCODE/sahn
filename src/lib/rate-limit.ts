@@ -24,6 +24,13 @@ export type RateLimitVerdict = {
   allowed: boolean;
   retryAfter: number;
   hourRemaining: number;
+  /**
+   * Why the verdict is what it is. A limiter that fails open is invisible
+   * when it breaks — it just stops limiting, and everything looks fine until
+   * the bill arrives. This is surfaced as a response header so the state can
+   * be checked from outside without reading logs.
+   */
+  state: 'ok' | 'unconfigured' | 'error';
 };
 
 /**
@@ -58,11 +65,16 @@ export async function checkRateLimit(
 ): Promise<RateLimitVerdict> {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  const open = { allowed: true, retryAfter: 0, hourRemaining: -1 };
+  const open = (state: 'unconfigured' | 'error'): RateLimitVerdict => ({
+    allowed: true,
+    retryAfter: 0,
+    hourRemaining: -1,
+    state
+  });
 
   if (!url || !key) {
     console.error('[rate-limit] not configured; allowing request');
-    return open;
+    return open('unconfigured');
   }
 
   const limits = userId ? LIMITS[route].user : LIMITS[route].anon;
@@ -82,7 +94,7 @@ export async function checkRateLimit(
 
     if (error || !data) {
       console.error('[rate-limit] rpc failed:', error?.message);
-      return open;
+      return open('error');
     }
 
     const result = data as {
@@ -94,17 +106,18 @@ export async function checkRateLimit(
     return {
       allowed: result.allowed,
       retryAfter: result.retry_after,
-      hourRemaining: result.hour_remaining
+      hourRemaining: result.hour_remaining,
+      state: 'ok'
     };
   } catch (error) {
     console.error('[rate-limit] unavailable:', error);
-    return open;
+    return open('error');
   }
 }
 
 /** Headers a client can act on rather than guess from. */
-export function rateLimitHeaders(verdict: RateLimitVerdict): HeadersInit {
-  const headers: Record<string, string> = {};
+export function rateLimitHeaders(verdict: RateLimitVerdict): Record<string, string> {
+  const headers: Record<string, string> = { 'x-ratelimit-state': verdict.state };
   if (verdict.hourRemaining >= 0) {
     headers['x-ratelimit-remaining'] = String(verdict.hourRemaining);
   }
