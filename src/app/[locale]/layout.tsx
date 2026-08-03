@@ -3,6 +3,7 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Amiri_Quran, Fraunces, IBM_Plex_Sans_Arabic, Inter } from 'next/font/google';
 import { notFound } from 'next/navigation';
+import Analytics from '@/components/Analytics';
 import CourtyardRail from '@/components/CourtyardRail';
 import MobileBar from '@/components/MobileBar';
 import { SettingsProvider } from '@/components/SettingsProvider';
@@ -118,6 +119,7 @@ export default async function LocaleLayout({
             </div>
           </SettingsProvider>
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );

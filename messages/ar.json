@@ -79,7 +79,8 @@
     "incognito": "وضع خفي",
     "incognitoOn": "وضع خفي — لا يُحفظ",
     "threadsHeading": "المحادثات",
-    "deleteThread": "حذف المحادثة"
+    "deleteThread": "حذف المحادثة",
+    "renameThread": "إعادة تسمية المحادثة"
   },
   "modules": {
     "prayer": {

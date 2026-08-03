@@ -79,7 +79,8 @@
     "incognito": "Incognito",
     "incognitoOn": "Incognito — not saved",
     "threadsHeading": "Chats",
-    "deleteThread": "Delete chat"
+    "deleteThread": "Delete chat",
+    "renameThread": "Rename chat"
   },
   "modules": {
     "prayer": {
