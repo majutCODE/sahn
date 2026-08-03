@@ -60,10 +60,15 @@ export type Classification = PreFilterResult & {
   islamic: boolean;
 };
 
+/** Thrown when the service cannot work at all, as opposed to failing once. */
+export class MisconfiguredError extends Error {}
+
 let client: Anthropic | null = null;
 function anthropic(): Anthropic {
   if (!process.env.ANTHROPIC_API_KEY) {
-    throw new Error('ANTHROPIC_API_KEY is not set');
+    // Distinguished from a runtime failure so a missing key in a deployment
+    // does not present as a transient outage — they need opposite responses.
+    throw new MisconfiguredError('ANTHROPIC_API_KEY is not set');
   }
   client ??= new Anthropic();
   return client;

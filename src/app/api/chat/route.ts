@@ -2,7 +2,7 @@ import Anthropic from '@anthropic-ai/sdk';
 import { NextResponse, type NextRequest } from 'next/server';
 import { z } from 'zod';
 import { locales, type Locale } from '@/i18n/routing';
-import { classify } from '@/lib/chat/classify';
+import { MisconfiguredError, classify } from '@/lib/chat/classify';
 import { createClient } from '@/lib/supabase/server';
 import { crisisResources } from '@/lib/chat/crisis';
 import { fiqhPrompt, generalPrompt, sensitiveResponse } from '@/lib/chat/prompts';
@@ -52,10 +52,19 @@ export async function POST(request: NextRequest) {
   let route;
   try {
     route = await classify(message);
-  } catch {
-    // Fail closed. Guessing a route on a classifier outage risks answering a
-    // fiqh question generatively or missing a disclosure — both worse than
-    // telling the user to try again.
+  } catch (error) {
+    // Fail closed either way — guessing a route risks answering a fiqh
+    // question generatively or missing a disclosure. But a missing key is a
+    // deployment fault that will never fix itself, and saying "try again" for
+    // it wastes everyone's time.
+    if (error instanceof MisconfiguredError) {
+      console.error('[chat] misconfigured:', error.message);
+      return NextResponse.json(
+        { error: 'not_configured', detail: error.message },
+        { status: 503 }
+      );
+    }
+    console.error('[chat] classifier failed:', error);
     return NextResponse.json({ error: 'classifier_unavailable' }, { status: 503 });
   }
 
