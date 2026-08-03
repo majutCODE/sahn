@@ -13,7 +13,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const origin = siteUrl();
   const paths = [
     '',
-    ...modules.map((m) => m.href),
+    // Counsel is deliberately absent: the page is noindex, and listing it in
+    // the sitemap would contradict that.
+    ...modules.filter((m) => m.id !== 'counsel').map((m) => m.href),
     ...TOPICS.map((t) => `/finance/${t.slug}`),
     ...LEGAL_DOCUMENTS.map((d) => `/${d.slug}`),
     // 114 surahs are real, indexable pages and the bulk of the useful surface.

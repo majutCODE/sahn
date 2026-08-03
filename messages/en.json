@@ -444,5 +444,56 @@
     "updated": "Updated",
     "privacy": "Privacy",
     "terms": "Terms"
+  },
+  "ramadan": {
+    "loading": "Loading…",
+    "signedOut": "Sign in to keep your Ramadan record.",
+    "signIn": "Sign in",
+    "loadFailed": "Could not load your record. Please try again.",
+    "hijriYear": "Ramadan {year}",
+    "range": "{from} to {to} · {days} days",
+    "stats": {
+      "fasted": "Fasted",
+      "taraweeh": "Taraweeh",
+      "juz": "Juz read",
+      "owed": "Fasts owed"
+    },
+    "daysHeading": "The month",
+    "fasted": "Mark as fasted",
+    "taraweeh": "Mark taraweeh prayed",
+    "short": {
+      "fast": "Fast",
+      "taraweeh": "Tar"
+    },
+    "more": "More",
+    "juzLabel": "Juz read today",
+    "juzNone": "None",
+    "reflectionLabel": "Reflection (private)",
+    "missedHeading": "Fasts to make up",
+    "missedBody": "Days missed for travel, illness, menstruation or another reason, and how many you have made up since. Whether a missed fast is made up, compensated by fidya, or both depends on why it was missed — ask someone qualified about your own case.",
+    "missedCount": "Missed",
+    "madeUp": "Made up",
+    "fidyaPaid": "Fidya paid",
+    "note": "Your record is private to your account. Ramadan dates here are calculated from the Umm al-Qura calendar; your local moon-sighting authority decides when the month actually begins."
+  },
+  "counsel": {
+    "you": "You",
+    "sahn": "Sahn",
+    "privacyNote": "Nothing said here is saved unless you choose to save it, and anything you do save is encrypted in this browser with a passphrase only you hold. Sahn is not a therapist or a scholar — for a ruling, or for care, speak to someone qualified.",
+    "placeholder": "Say as much or as little as you want.",
+    "send": "Send",
+    "sending": "Sending…",
+    "thinking": "…",
+    "failed": "Something went wrong. Please try again.",
+    "saveHeading": "Keep a private copy",
+    "saveBody": "Encrypted in this browser before it is sent, so the server stores something it cannot read. Choose a passphrase of at least eight characters. If you forget it the transcript cannot be recovered — not by us, not by anyone.",
+    "passphraseLabel": "Passphrase",
+    "saveAction": "Save this conversation",
+    "saving": "Encrypting…",
+    "saved": "Saved.",
+    "saveFailed": "Could not save. Nothing was sent.",
+    "openSaved": "Open",
+    "deleteSaved": "Delete",
+    "wrongPassphrase": "That passphrase does not open this transcript."
   }
 }
