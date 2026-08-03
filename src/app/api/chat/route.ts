@@ -72,15 +72,7 @@ export async function POST(request: NextRequest) {
         ? (error as { status?: number }).status
         : undefined;
     return NextResponse.json(
-      {
-        error: 'classifier_unavailable',
-        upstream: upstream ?? null,
-        // Temporary: the error carried no HTTP status, so the failure is not an
-        // API rejection. Name and first line only — never the full message.
-        kind: error instanceof Error ? error.name : typeof error,
-        hint:
-          error instanceof Error ? error.message.slice(0, 120) : undefined
-      },
+      { error: 'classifier_unavailable', upstream: upstream ?? null },
       { status: 503 }
     );
   }
