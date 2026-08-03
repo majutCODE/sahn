@@ -26,18 +26,5 @@
         }
       ]
     }
-  ],
-  "redirects": [
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.sahn-ai.com"
-        }
-      ],
-      "destination": "https://sahn-ai.com/",
-      "permanent": true
-    }
   ]
 }
