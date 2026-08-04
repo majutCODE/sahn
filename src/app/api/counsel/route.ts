@@ -8,6 +8,7 @@ import { counselPrompt, sensitiveResponse } from '@/lib/chat/prompts';
 import { checkRateLimit, rateLimitHeaders } from '@/lib/rate-limit';
 import { formatPassages, searchSources } from '@/lib/search/retrieve';
 import { requestCountry } from '@/lib/geo';
+import { reportError } from '@/lib/observability/report';
 import { createClient } from '@/lib/supabase/server';
 
 export const runtime = 'nodejs';
@@ -78,10 +79,10 @@ export async function POST(request: NextRequest) {
     route = await classify(message);
   } catch (error) {
     if (error instanceof MisconfiguredError) {
-      console.error('[counsel] misconfigured:', error.message);
+      void reportError('counsel', error, 'missing or invalid API key');
       return NextResponse.json({ error: 'not_configured' }, { status: 503 });
     }
-    console.error('[counsel] classifier failed:', error);
+    void reportError('classifier', error, 'counsel route');
     return NextResponse.json({ error: 'classifier_unavailable' }, { status: 503 });
   }
 

@@ -1,5 +1,6 @@
 import { createHash } from 'node:crypto';
 import { createClient } from '@supabase/supabase-js';
+import { reportError } from '@/lib/observability/report';
 import type { NextRequest } from 'next/server';
 
 /**
@@ -73,7 +74,7 @@ export async function checkRateLimit(
   });
 
   if (!url || !key) {
-    console.error('[rate-limit] not configured; allowing request');
+    void reportError('rate-limit', new Error('not configured'), 'requests are NOT being limited');
     return open('unconfigured');
   }
 
@@ -93,7 +94,7 @@ export async function checkRateLimit(
     });
 
     if (error || !data) {
-      console.error('[rate-limit] rpc failed:', error?.message);
+      void reportError('rate-limit', new Error(error?.message ?? 'rpc failed'), 'requests are NOT being limited');
       return open('error');
     }
 
@@ -110,7 +111,7 @@ export async function checkRateLimit(
       state: 'ok'
     };
   } catch (error) {
-    console.error('[rate-limit] unavailable:', error);
+    void reportError('rate-limit', error, 'requests are NOT being limited');
     return open('error');
   }
 }

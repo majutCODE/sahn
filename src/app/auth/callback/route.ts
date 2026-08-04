@@ -1,4 +1,5 @@
 import { NextResponse, type NextRequest } from 'next/server';
+import { reportError } from '@/lib/observability/report';
 import { createClient } from '@/lib/supabase/server';
 import { defaultLocale, locales } from '@/i18n/routing';
 
@@ -44,14 +45,27 @@ export async function GET(request: NextRequest) {
 
   if (code) {
     const { error } = await supabase.auth.exchangeCodeForSession(code);
-    if (error) return fail('exchange');
+    if (error) {
+      // Sign-in breaking is silent by nature: the person gives up and never
+      // says anything. It is the last failure that should go unreported.
+      void reportError('auth', error, 'exchanging a PKCE code');
+      return fail('exchange');
+    }
   } else if (tokenHash && type) {
     const { error } = await supabase.auth.verifyOtp({
       type: type as 'magiclink' | 'email' | 'signup' | 'recovery' | 'invite',
       token_hash: tokenHash
     });
-    if (error) return fail('exchange');
+    if (error) {
+      void reportError('auth', error, 'verifying an emailed token');
+      return fail('exchange');
+    }
   } else {
+    void reportError(
+      'auth',
+      new Error('callback reached with neither code nor token_hash'),
+      'the email template may be sending a link this route cannot consume'
+    );
     return fail('missing_code');
   }
 

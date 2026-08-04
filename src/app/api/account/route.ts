@@ -1,6 +1,7 @@
 import { createClient as createAdminClient } from '@supabase/supabase-js';
 import { NextResponse, type NextRequest } from 'next/server';
 import { z } from 'zod';
+import { reportError } from '@/lib/observability/report';
 import { createClient } from '@/lib/supabase/server';
 
 export const runtime = 'nodejs';
@@ -45,7 +46,7 @@ export async function DELETE(request: NextRequest) {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!url || !key) {
-    console.error('[account] delete requested but service role is not configured');
+    void reportError('account', new Error('service role not configured'), 'account deletion is unavailable');
     return NextResponse.json({ error: 'not_configured' }, { status: 503 });
   }
 
@@ -58,7 +59,7 @@ export async function DELETE(request: NextRequest) {
 
   const { error } = await admin.auth.admin.deleteUser(user.id);
   if (error) {
-    console.error('[account] delete failed:', error.message);
+    void reportError('account', error, 'deleting a user');
     return NextResponse.json({ error: 'delete_failed' }, { status: 503 });
   }
 

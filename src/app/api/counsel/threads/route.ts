@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from 'next/server';
 import { z } from 'zod';
+import { reportError } from '@/lib/observability/report';
 import { createClient } from '@/lib/supabase/server';
 
 export const runtime = 'nodejs';
@@ -62,7 +63,7 @@ export async function POST(request: NextRequest) {
     .single();
 
   if (error) {
-    console.error('[counsel] save failed:', error.message);
+    void reportError('counsel', error, 'saving an encrypted transcript');
     return NextResponse.json({ error: 'write_failed' }, { status: 500 });
   }
 

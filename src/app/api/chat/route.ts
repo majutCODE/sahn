@@ -4,6 +4,7 @@ import { z } from 'zod';
 import { locales, type Locale } from '@/i18n/routing';
 import { MisconfiguredError, classify } from '@/lib/chat/classify';
 import { requestCountry } from '@/lib/geo';
+import { reportError } from '@/lib/observability/report';
 import { createClient } from '@/lib/supabase/server';
 import { crisisResources } from '@/lib/chat/crisis';
 import { fiqhPrompt, generalPrompt, sensitiveResponse } from '@/lib/chat/prompts';
@@ -78,13 +79,13 @@ export async function POST(request: NextRequest) {
     // deployment fault that will never fix itself, and saying "try again" for
     // it wastes everyone's time.
     if (error instanceof MisconfiguredError) {
-      console.error('[chat] misconfigured:', error.message);
+      void reportError('chat', error, 'missing or invalid API key');
       return NextResponse.json(
         { error: 'not_configured', detail: error.message },
         { status: 503 }
       );
     }
-    console.error('[chat] classifier failed:', error);
+    void reportError('classifier', error, 'chat route');
     // The upstream status alone, never the message — enough to tell a bad key
     // (401) from a rate limit (429) or an outage (5xx) without leaking detail.
     const upstream =
@@ -144,6 +145,12 @@ export async function POST(request: NextRequest) {
           { error: 'retrieval_busy', retryAfter: error.retryAfter },
           { status: 429, headers: { 'retry-after': String(error.retryAfter) } }
         );
+      }
+      // A throttle is expected and already handled above. Anything else
+      // reaching here means retrieval is broken, and a fiqh route that
+      // quietly stops citing is the failure hardest to notice from outside.
+      if (!(error instanceof RateLimitedError)) {
+        void reportError('retrieval', error, `route: ${route.route}`);
       }
       // The general route can still answer usefully without passages; its
       // prompt already forbids quoting scripture from memory.
