@@ -45,6 +45,10 @@ language is preserved. The `token_hash` branch in
 `src/app/auth/callback/route.ts` is what consumes it — if that branch is ever
 removed, these emails stop working.
 
+Keep the file pure ASCII. The dashboard field did not round-trip an em dash
+in a real send - it arrived as a mojibake byte - so use `-` and HTML entities
+such as `&middot;` rather than the characters themselves.
+
 Do not add a background image, a web font, or a tracking pixel. The first two
 will not render for most readers, and the third would contradict the privacy
 notice in `src/lib/legal.ts`.
