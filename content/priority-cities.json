@@ -1,0 +1,463 @@
+{
+  "note": "Cities shipped first, chosen by Muslim population density and daily prayer-time search demand rather than by size. A population threshold misses most of these: Blackburn, Dewsbury and Mostar will out-search plenty of anonymous 250k cities. Pulled from the same GeoNames dump regardless of population, so coordinates and timezones are real. The `ar` field is an override, used only where GeoNames has no usable tagged Arabic name.",
+  "cities": [
+    {
+      "country": "GB",
+      "slug": "london"
+    },
+    {
+      "country": "GB",
+      "slug": "birmingham"
+    },
+    {
+      "country": "GB",
+      "slug": "bradford"
+    },
+    {
+      "country": "GB",
+      "slug": "manchester"
+    },
+    {
+      "country": "GB",
+      "slug": "leicester"
+    },
+    {
+      "country": "GB",
+      "slug": "blackburn",
+      "ar": "بلاكبيرن"
+    },
+    {
+      "country": "GB",
+      "slug": "luton",
+      "ar": "لوتون"
+    },
+    {
+      "country": "GB",
+      "slug": "slough",
+      "ar": "سلاو"
+    },
+    {
+      "country": "GB",
+      "slug": "bolton",
+      "ar": "بولتون"
+    },
+    {
+      "country": "GB",
+      "slug": "rochdale",
+      "ar": "روتشديل"
+    },
+    {
+      "country": "GB",
+      "slug": "oldham",
+      "ar": "أولدهام"
+    },
+    {
+      "country": "GB",
+      "slug": "dewsbury",
+      "ar": "ديوزبري"
+    },
+    {
+      "country": "GB",
+      "slug": "sheffield"
+    },
+    {
+      "country": "GB",
+      "slug": "leeds"
+    },
+    {
+      "country": "GB",
+      "slug": "glasgow"
+    },
+    {
+      "country": "GB",
+      "slug": "cardiff"
+    },
+    {
+      "country": "GB",
+      "slug": "nottingham"
+    },
+    {
+      "country": "GB",
+      "slug": "coventry"
+    },
+    {
+      "country": "GB",
+      "slug": "preston",
+      "ar": "بريستون"
+    },
+    {
+      "country": "GB",
+      "slug": "peterborough",
+      "ar": "بيتربره"
+    },
+    {
+      "country": "GB",
+      "slug": "walsall",
+      "ar": "والسول"
+    },
+    {
+      "country": "US",
+      "slug": "dearborn",
+      "ar": "ديربورن"
+    },
+    {
+      "country": "US",
+      "slug": "detroit"
+    },
+    {
+      "country": "US",
+      "slug": "new-york-city"
+    },
+    {
+      "country": "US",
+      "slug": "chicago"
+    },
+    {
+      "country": "US",
+      "slug": "houston"
+    },
+    {
+      "country": "US",
+      "slug": "los-angeles"
+    },
+    {
+      "country": "US",
+      "slug": "minneapolis"
+    },
+    {
+      "country": "US",
+      "slug": "paterson",
+      "ar": "باترسون"
+    },
+    {
+      "country": "US",
+      "slug": "philadelphia"
+    },
+    {
+      "country": "US",
+      "slug": "atlanta"
+    },
+    {
+      "country": "US",
+      "slug": "dallas"
+    },
+    {
+      "country": "US",
+      "slug": "columbus"
+    },
+    {
+      "country": "CA",
+      "slug": "toronto"
+    },
+    {
+      "country": "CA",
+      "slug": "mississauga",
+      "ar": "ميسيساغا"
+    },
+    {
+      "country": "CA",
+      "slug": "montreal"
+    },
+    {
+      "country": "CA",
+      "slug": "ottawa"
+    },
+    {
+      "country": "CA",
+      "slug": "calgary"
+    },
+    {
+      "country": "CA",
+      "slug": "edmonton"
+    },
+    {
+      "country": "CA",
+      "slug": "vancouver"
+    },
+    {
+      "country": "FR",
+      "slug": "paris"
+    },
+    {
+      "country": "FR",
+      "slug": "marseille"
+    },
+    {
+      "country": "FR",
+      "slug": "lyon"
+    },
+    {
+      "country": "FR",
+      "slug": "toulouse"
+    },
+    {
+      "country": "FR",
+      "slug": "lille"
+    },
+    {
+      "country": "FR",
+      "slug": "strasbourg"
+    },
+    {
+      "country": "FR",
+      "slug": "roubaix",
+      "ar": "روبيه"
+    },
+    {
+      "country": "FR",
+      "slug": "montpellier"
+    },
+    {
+      "country": "FR",
+      "slug": "nice"
+    },
+    {
+      "country": "DE",
+      "slug": "berlin"
+    },
+    {
+      "country": "DE",
+      "slug": "hamburg"
+    },
+    {
+      "country": "DE",
+      "slug": "koeln"
+    },
+    {
+      "country": "DE",
+      "slug": "frankfurt-am-main"
+    },
+    {
+      "country": "DE",
+      "slug": "munich"
+    },
+    {
+      "country": "DE",
+      "slug": "duisburg"
+    },
+    {
+      "country": "DE",
+      "slug": "essen"
+    },
+    {
+      "country": "DE",
+      "slug": "stuttgart"
+    },
+    {
+      "country": "DE",
+      "slug": "duesseldorf"
+    },
+    {
+      "country": "NL",
+      "slug": "amsterdam"
+    },
+    {
+      "country": "NL",
+      "slug": "rotterdam"
+    },
+    {
+      "country": "NL",
+      "slug": "the-hague"
+    },
+    {
+      "country": "NL",
+      "slug": "utrecht"
+    },
+    {
+      "country": "BE",
+      "slug": "brussels"
+    },
+    {
+      "country": "BE",
+      "slug": "antwerp"
+    },
+    {
+      "country": "SE",
+      "slug": "stockholm"
+    },
+    {
+      "country": "SE",
+      "slug": "malmoe",
+      "ar": "مالمو"
+    },
+    {
+      "country": "SE",
+      "slug": "gothenburg",
+      "ar": "غوتنبرغ"
+    },
+    {
+      "country": "NO",
+      "slug": "oslo"
+    },
+    {
+      "country": "DK",
+      "slug": "copenhagen"
+    },
+    {
+      "country": "BA",
+      "slug": "sarajevo"
+    },
+    {
+      "country": "BA",
+      "slug": "mostar",
+      "ar": "موستار"
+    },
+    {
+      "country": "BA",
+      "slug": "tuzla",
+      "ar": "توزلا"
+    },
+    {
+      "country": "BA",
+      "slug": "zenica",
+      "ar": "زينيتسا"
+    },
+    {
+      "country": "RS",
+      "slug": "novi-pazar",
+      "ar": "نوفي بازار"
+    },
+    {
+      "country": "MK",
+      "slug": "skopje"
+    },
+    {
+      "country": "MK",
+      "slug": "tetovo",
+      "ar": "تيتوفو"
+    },
+    {
+      "country": "AL",
+      "slug": "tirana"
+    },
+    {
+      "country": "AU",
+      "slug": "sydney"
+    },
+    {
+      "country": "AU",
+      "slug": "melbourne"
+    },
+    {
+      "country": "ZA",
+      "slug": "cape-town"
+    },
+    {
+      "country": "ZA",
+      "slug": "johannesburg"
+    },
+    {
+      "country": "ZA",
+      "slug": "durban"
+    },
+    {
+      "country": "KE",
+      "slug": "nairobi"
+    },
+    {
+      "country": "KE",
+      "slug": "mombasa"
+    },
+    {
+      "country": "TZ",
+      "slug": "dar-es-salaam"
+    },
+    {
+      "country": "SG",
+      "slug": "singapore"
+    },
+    {
+      "country": "MY",
+      "slug": "kuala-lumpur"
+    },
+    {
+      "country": "ID",
+      "slug": "jakarta"
+    },
+    {
+      "country": "TR",
+      "slug": "istanbul"
+    },
+    {
+      "country": "PK",
+      "slug": "karachi"
+    },
+    {
+      "country": "PK",
+      "slug": "lahore"
+    },
+    {
+      "country": "BD",
+      "slug": "dhaka"
+    },
+    {
+      "country": "IN",
+      "slug": "hyderabad",
+      "ar": "حيدر آباد"
+    },
+    {
+      "country": "EG",
+      "slug": "cairo"
+    },
+    {
+      "country": "SA",
+      "slug": "makkah"
+    },
+    {
+      "country": "SA",
+      "slug": "madinah"
+    },
+    {
+      "country": "SA",
+      "slug": "riyadh"
+    },
+    {
+      "country": "SA",
+      "slug": "jeddah"
+    },
+    {
+      "country": "AE",
+      "slug": "dubai"
+    },
+    {
+      "country": "AE",
+      "slug": "abu-dhabi"
+    },
+    {
+      "country": "QA",
+      "slug": "doha"
+    },
+    {
+      "country": "KW",
+      "slug": "kuwait-city"
+    },
+    {
+      "country": "MA",
+      "slug": "casablanca"
+    },
+    {
+      "country": "MA",
+      "slug": "rabat"
+    },
+    {
+      "country": "JO",
+      "slug": "amman"
+    },
+    {
+      "country": "IQ",
+      "slug": "baghdad"
+    },
+    {
+      "country": "NG",
+      "slug": "kano"
+    },
+    {
+      "country": "NG",
+      "slug": "lagos"
+    },
+    {
+      "country": "SN",
+      "slug": "dakar"
+    }
+  ]
+}
