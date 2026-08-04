@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import type { Locale } from '@/i18n/routing';
 import AnswerBody from './AnswerBody';
 import Composer, { DRAFT_KEY } from './Composer';
+import FirstRunSetup, { useNeedsSetup } from './FirstRunSetup';
 import GirihDoorway from './GirihDoorway';
 import { NEW_CHAT_EVENT } from './NewChatButton';
 import SourcePanel, { type Citation } from './SourcePanel';
@@ -36,6 +37,7 @@ export default function ChatRoom({ threadId: initialThread }: { threadId?: strin
   const threadRef = useRef<string | undefined>(initialThread);
   const endRef = useRef<HTMLDivElement>(null);
   const nextId = useRef(0);
+  const setup = useNeedsSetup();
 
   const patch = useCallback((id: number, changes: Partial<Turn>) => {
     setTurns((prev) => prev.map((t) => (t.id === id ? { ...t, ...changes } : t)));
@@ -225,7 +227,13 @@ export default function ChatRoom({ threadId: initialThread }: { threadId?: strin
   return (
     <div className="mx-auto flex w-full max-w-2xl flex-1 flex-col px-5 py-8 sm:px-8">
       {turns.length === 0 ? (
-        <div className="flex flex-1 flex-col justify-center pb-8">
+        // Centred normally, top-aligned when the setup card is up: a centred
+        // column that overflows hides its own last rows behind the composer.
+        <div
+          className={`flex flex-1 flex-col pb-8 ${
+            setup.needed ? 'justify-start pt-2' : 'justify-center'
+          }`}
+        >
           <GirihDoorway variant={0} size={44} className="text-glaze" />
           <h1 className="mt-5 font-display text-3xl text-ink sm:text-4xl">
             {t('heading')}
@@ -238,6 +246,9 @@ export default function ChatRoom({ threadId: initialThread }: { threadId?: strin
           <p className="mt-4 max-w-prose border-s-2 border-brass ps-4 text-sm text-muted">
             {t('sourcesNote')}
           </p>
+          {/* Only on an empty chat. Interrupting a conversation in progress to
+              ask for a postcode would be worse than never asking. */}
+          {setup.needed && <FirstRunSetup onDismiss={setup.dismiss} />}
         </div>
       ) : (
         <ol className="flex-1 space-y-10 pb-8">
@@ -355,7 +366,11 @@ export default function ChatRoom({ threadId: initialThread }: { threadId?: strin
         </div>
         <Composer
           autoFocus
-          showSuggestions={turns.length === 0}
+          // The setup card and three example prompts compete for the same
+          // attention on a first visit, and together they push the card under
+          // the composer on a laptop screen. The card wins; the suggestions
+          // come back the moment it is answered or dismissed.
+          showSuggestions={turns.length === 0 && !setup.needed}
           onSubmit={(text) => void ask(text)}
         />
       </div>

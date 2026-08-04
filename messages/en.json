@@ -497,5 +497,10 @@
     "openSaved": "Open",
     "deleteSaved": "Delete",
     "wrongPassphrase": "That passphrase does not open this transcript."
+  },
+  "setup": {
+    "heading": "Set your location",
+    "body": "Prayer times, the Qibla direction, the Hijri calendar and the salah tracker all need to know where you are. It is computed on your device and never sent anywhere — and you can change it any time from the prayer times screen.",
+    "notNow": "Not now"
   }
 }
