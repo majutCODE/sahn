@@ -1,6 +1,7 @@
 import 'server-only';
 import { createClient } from '@/lib/supabase/server';
-import { embedOne, toVectorLiteral } from '@/lib/embeddings/voyage';
+import { embedQueryCached } from '@/lib/embeddings/cache';
+import { toVectorLiteral } from '@/lib/embeddings/voyage';
 
 /**
  * Retrieval over the embedded corpora — Qur'an and hadith.
@@ -43,7 +44,7 @@ export async function searchVerses(
   query: string,
   options: RetrievalOptions = {}
 ): Promise<VerseMatch[]> {
-  const embedding = await embedOne(query, 'query');
+  const embedding = await embedQueryCached(query);
   return matchVerses(embedding, options);
 }
 
@@ -91,7 +92,7 @@ export async function searchSources(
   query: string,
   options: RetrievalOptions = {}
 ): Promise<Sources> {
-  const embedding = await embedOne(query, 'query');
+  const embedding = await embedQueryCached(query);
   const [verses, hadith] = await Promise.all([
     matchVerses(embedding, options),
     matchHadith(embedding, options)
