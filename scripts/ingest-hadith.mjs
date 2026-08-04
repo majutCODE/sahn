@@ -43,6 +43,12 @@ const TOKEN_BUDGET = PACED ? 7500 : 100_000;
 const MIN_GAP_MS = PACED ? 21_000 : 0;
 const MAX_BATCH = 128;
 
+// How many rows go into one INSERT. Deliberately not the same as the embedding
+// batch: that one is sized to the Voyage rate limit and every batch costs a
+// 21-second pacing gap, so shrinking it slows the whole run. Writes cost no
+// Voyage quota, so they can be chunked as small as the database wants.
+const WRITE_CHUNK = 32;
+
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const estimateTokens = (t) => Math.ceil(t.length / 3);
 
@@ -95,21 +101,65 @@ async function embed(texts) {
   throw new Error('Voyage failed after retries');
 }
 
+/**
+ * Writes a batch, splitting and retrying rather than dying.
+ *
+ * A six-hour run died here on `57014: canceling statement due to statement
+ * timeout`. Nothing was wrong with the data: writing 128 rows of 1024
+ * dimensions means 128 HNSW index insertions in one statement, and that gets
+ * slower as the table grows, so a batch that was comfortable at 3,000 rows
+ * eventually exceeds the timeout at 18,000.
+ *
+ * Retrying the same batch would just time out again, so a timeout halves the
+ * batch and tries the halves. Embeddings are already paid for by this point —
+ * throwing them away over a slow write is the expensive mistake.
+ */
 async function upsert(rows) {
-  const res = await fetchResilient(
-    `${SUPABASE_URL}/rest/v1/hadith_chunks?on_conflict=collection,hadith_number`,
-    {
-      method: 'POST',
-      headers: {
-        apikey: SERVICE_KEY,
-        authorization: `Bearer ${SERVICE_KEY}`,
-        'content-type': 'application/json',
-        prefer: 'resolution=merge-duplicates,return=minimal'
-      },
-      body: JSON.stringify(rows)
+  if (rows.length === 0) return;
+
+  // Split before trying, not only after failing: at full corpus size a large
+  // statement is slow enough to be at risk, and the halving below is a
+  // recovery path rather than the plan.
+  if (rows.length > WRITE_CHUNK) {
+    for (let i = 0; i < rows.length; i += WRITE_CHUNK) {
+      await upsert(rows.slice(i, i + WRITE_CHUNK));
     }
-  );
-  if (!res.ok) throw new Error(`Upsert ${res.status}: ${await res.text()}`);
+    return;
+  }
+
+  for (let attempt = 0; attempt < 4; attempt += 1) {
+    const res = await fetchResilient(
+      `${SUPABASE_URL}/rest/v1/hadith_chunks?on_conflict=collection,hadith_number`,
+      {
+        method: 'POST',
+        headers: {
+          apikey: SERVICE_KEY,
+          authorization: `Bearer ${SERVICE_KEY}`,
+          'content-type': 'application/json',
+          prefer: 'resolution=merge-duplicates,return=minimal'
+        },
+        body: JSON.stringify(rows)
+      }
+    );
+
+    if (res.ok) return;
+
+    const body = await res.text();
+    const timedOut = body.includes('57014') || body.includes('statement timeout');
+
+    if (timedOut && rows.length > 1) {
+      const half = Math.ceil(rows.length / 2);
+      process.stdout.write(` [split ${rows.length}->${half}] `);
+      await upsert(rows.slice(0, half));
+      await upsert(rows.slice(half));
+      return;
+    }
+
+    // A genuine 4xx will not improve with time; a 5xx might.
+    if (res.status < 500) throw new Error(`Upsert ${res.status}: ${body}`);
+    if (attempt === 3) throw new Error(`Upsert ${res.status} after retries: ${body}`);
+    await sleep(2000 * 2 ** attempt);
+  }
 }
 
 /** Hadith numbers already embedded, so a resumed run skips them. */
