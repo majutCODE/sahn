@@ -1,13 +1,15 @@
 'use client';
 
 import { useLocale, useTranslations } from 'next-intl';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from '@/i18n/navigation';
 import type { Locale } from '@/i18n/routing';
 import { formatNumber } from '@/lib/format';
 import { starPath } from '@/lib/girih';
+import type { AyahAudio } from '@/lib/quran/audio';
 import type { ReaderAyah } from '@/lib/quran/surah';
 import type { Chapter } from '@/lib/quran/types';
+import AyahTools from './AyahTools';
 
 const SCALES = [1, 1.15, 1.3, 1.5] as const;
 const PREFS_KEY = 'sahn:quran-prefs';
@@ -16,10 +18,12 @@ type Prefs = { scale: number; arabicOnly: boolean };
 
 export default function SurahReader({
   chapter,
-  ayat
+  ayat,
+  audio = []
 }: {
   chapter: Chapter;
   ayat: ReaderAyah[];
+  audio?: AyahAudio[];
 }) {
   const t = useTranslations('quran');
   const locale = useLocale() as Locale;
@@ -49,6 +53,59 @@ export default function SurahReader({
       return next;
     });
   }
+
+  const audioByKey = useMemo(
+    () => new Map(audio.map((file) => [file.key, file.url])),
+    [audio]
+  );
+
+  // One element for the whole surah rather than one per ayah: 286 <audio>
+  // tags is 286 connections, and only one can usefully play at a time.
+  const playerRef = useRef<HTMLAudioElement>(null);
+  const [playingKey, setPlayingKey] = useState<string | null>(null);
+
+  const play = useCallback(
+    (key: string) => {
+      const player = playerRef.current;
+      const url = audioByKey.get(key);
+      if (!player || !url) return;
+
+      if (playingKey === key && !player.paused) {
+        player.pause();
+        setPlayingKey(null);
+        return;
+      }
+
+      player.src = url;
+      setPlayingKey(key);
+      void player.play().catch(() => setPlayingKey(null));
+    },
+    [audioByKey, playingKey]
+  );
+
+  /**
+   * Recitation continues into the next ayah rather than stopping.
+   *
+   * Anyone listening to the Qur'an is listening to a passage, not a sentence,
+   * and having to press play 286 times would make the feature pointless.
+   */
+  const playNext = useCallback(() => {
+    const index = ayat.findIndex((a) => a.key === playingKey);
+    const next = index >= 0 ? ayat[index + 1] : undefined;
+    if (!next || !audioByKey.has(next.key)) {
+      setPlayingKey(null);
+      return;
+    }
+    play(next.key);
+  }, [ayat, playingKey, audioByKey, play]);
+
+  // Keep the ayah being recited on screen during continuous playback.
+  useEffect(() => {
+    if (!playingKey) return;
+    document
+      .getElementById(`ayah-${playingKey.split(':')[1]}`)
+      ?.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  }, [playingKey]);
 
   const scale = prefs?.scale ?? 1;
   const arabicOnly = prefs?.arabicOnly ?? false;
@@ -130,7 +187,9 @@ export default function SurahReader({
           <li
             key={ayah.key}
             id={`ayah-${ayah.number}`}
-            className="scroll-mt-4 border-b border-line py-6"
+            className={`scroll-mt-4 border-b border-line py-6 ${
+              playingKey === ayah.key ? 'bg-sunk' : ''
+            }`}
           >
             <p
               className="quran text-ink"
@@ -147,9 +206,24 @@ export default function SurahReader({
                 {ayah.translation}
               </p>
             )}
+
+            <AyahTools
+              verseKey={ayah.key}
+              hasAudio={audioByKey.has(ayah.key)}
+              playing={playingKey === ayah.key}
+              onPlay={() => play(ayah.key)}
+            />
           </li>
         ))}
       </ol>
+
+      <audio
+        ref={playerRef}
+        onEnded={playNext}
+        onPause={() => setPlayingKey((k) => (playerRef.current?.ended ? k : null))}
+        preload="none"
+        className="hidden"
+      />
 
       <nav className="mt-8 flex items-center justify-between gap-4 text-sm">
         {chapter.id > 1 ? (

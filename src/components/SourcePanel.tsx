@@ -2,7 +2,8 @@
 
 import { useTranslations } from 'next-intl';
 import { useEffect, useRef } from 'react';
-import { Link } from '@/i18n/navigation';
+import { Link, useRouter } from '@/i18n/navigation';
+import { PREFILL_KEY } from './Composer';
 
 export type Citation = {
   id: string;
@@ -28,6 +29,7 @@ export default function SourcePanel({
   citation: Citation | null;
   onClose: () => void;
 }) {
+  const router = useRouter();
   const closeRef = useRef<HTMLButtonElement>(null);
   const t = useTranslations('chat');
 
@@ -77,7 +79,7 @@ export default function SourcePanel({
           <p className="mt-5 text-base text-muted">{citation.text}</p>
         </div>
 
-        <footer className="border-t border-line px-5 py-4">
+        <footer className="flex flex-wrap gap-x-5 gap-y-2 border-t border-line px-5 py-4">
           <Link
             href={citation.href}
             onClick={onClose}
@@ -85,6 +87,22 @@ export default function SourcePanel({
           >
             {t('openInReader')}
           </Link>
+          {/* The other direction of the same loop as the reader's button:
+              from a cited source back into a question about it. */}
+          <button
+            type="button"
+            onClick={() => {
+              sessionStorage.setItem(
+                PREFILL_KEY,
+                t('askPrefill', { reference: citation.reference })
+              );
+              onClose();
+              router.push('/');
+            }}
+            className="text-sm text-muted underline underline-offset-2 hover:text-ink"
+          >
+            {t('askAboutThis')}
+          </button>
         </footer>
       </aside>
     </>

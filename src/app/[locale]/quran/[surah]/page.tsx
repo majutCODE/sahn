@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import SurahReader from '@/components/SurahReader';
+import { fetchRecitation } from '@/lib/quran/audio';
 import { defaultTranslationFor } from '@/lib/quran/resources';
 import { fetchSurah } from '@/lib/quran/surah';
 
@@ -35,13 +36,15 @@ export default async function SurahPage({ params }: Params) {
   const t = await getTranslations('quran');
 
   try {
-    const { chapter, ayat } = await fetchSurah(id, {
-      locale,
-      translationId: defaultTranslationFor(locale)
-    });
+    // Recitation is fetched beside the text but must never cost it: a
+    // reciter's mirror being down is not a reason to fail a page of Qur'an.
+    const [{ chapter, ayat }, audio] = await Promise.all([
+      fetchSurah(id, { locale, translationId: defaultTranslationFor(locale) }),
+      fetchRecitation(id).catch(() => [])
+    ]);
     return (
       <div className="mx-auto max-w-2xl px-5 py-10 sm:px-8 sm:py-14">
-        <SurahReader chapter={chapter} ayat={ayat} />
+        <SurahReader chapter={chapter} ayat={ayat} audio={audio} />
       </div>
     );
   } catch {

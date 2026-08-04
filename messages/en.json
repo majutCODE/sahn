@@ -81,7 +81,9 @@
     "incognitoOn": "Incognito — not saved",
     "threadsHeading": "Chats",
     "deleteThread": "Delete chat",
-    "renameThread": "Rename chat"
+    "renameThread": "Rename chat",
+    "askAboutThis": "Ask about this",
+    "askPrefill": "About {reference} — "
   },
   "modules": {
     "prayer": {
@@ -197,7 +199,17 @@
     "fontSizeStep": "Text size {step}",
     "arabicOnly": "Arabic only",
     "previousSurah": "Previous surah",
-    "nextSurah": "Next surah"
+    "nextSurah": "Next surah",
+    "listen": "Listen",
+    "pause": "Pause",
+    "tafsirShow": "Tafsir",
+    "tafsirHide": "Hide tafsir",
+    "tafsirLoading": "Loading…",
+    "tafsirFailed": "Could not load the commentary. Please try again.",
+    "tafsirBy": "Tafsir — {name}",
+    "tafsirCovers": "Tafsir — {name}, on {from} to {to}",
+    "askAboutThis": "Ask about this",
+    "askPrefill": "About Qur'an {verse} — "
   },
   "tracker": {
     "signedOut": "Sign in to keep a record.",

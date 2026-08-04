@@ -81,7 +81,9 @@
     "incognitoOn": "وضع خفي — لا يُحفظ",
     "threadsHeading": "المحادثات",
     "deleteThread": "حذف المحادثة",
-    "renameThread": "إعادة تسمية المحادثة"
+    "renameThread": "إعادة تسمية المحادثة",
+    "askAboutThis": "اسأل عن هذا",
+    "askPrefill": "عن {reference} — "
   },
   "modules": {
     "prayer": {
@@ -197,7 +199,17 @@
     "fontSizeStep": "حجم الخط {step}",
     "arabicOnly": "العربية وحدها",
     "previousSurah": "السورة السابقة",
-    "nextSurah": "السورة التالية"
+    "nextSurah": "السورة التالية",
+    "listen": "استماع",
+    "pause": "إيقاف",
+    "tafsirShow": "التفسير",
+    "tafsirHide": "إخفاء التفسير",
+    "tafsirLoading": "جارٍ التحميل…",
+    "tafsirFailed": "تعذّر تحميل التفسير. أعد المحاولة.",
+    "tafsirBy": "تفسير — {name}",
+    "tafsirCovers": "تفسير — {name}، للآيات من {from} إلى {to}",
+    "askAboutThis": "اسأل عن هذه الآية",
+    "askPrefill": "عن قوله تعالى في {verse} — "
   },
   "tracker": {
     "signedOut": "سجّل الدخول لحفظ سجلك.",

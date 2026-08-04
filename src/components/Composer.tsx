@@ -1,11 +1,21 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useRouter } from '@/i18n/navigation';
 
 /** Where a first message waits while the router moves to /chat. */
 export const DRAFT_KEY = 'sahn:draft';
+
+/**
+ * A question started elsewhere and handed over unfinished.
+ *
+ * Distinct from DRAFT_KEY, which is a complete message and is sent on arrival.
+ * This one is only typed into the box: "Ask about this" on an ayah knows the
+ * reference but not the question, and sending on the reader's behalf would put
+ * words in their mouth.
+ */
+export const PREFILL_KEY = 'sahn:prefill';
 
 type Props = {
   /**
@@ -23,6 +33,21 @@ export default function Composer({ onSubmit, autoFocus, showSuggestions }: Props
   const router = useRouter();
   const [value, setValue] = useState('');
   const areaRef = useRef<HTMLTextAreaElement>(null);
+
+  useEffect(() => {
+    const prefill = sessionStorage.getItem(PREFILL_KEY);
+    if (!prefill) return;
+    sessionStorage.removeItem(PREFILL_KEY);
+    setValue(prefill);
+
+    const area = areaRef.current;
+    if (!area) return;
+    area.focus();
+    // Caret to the end, so they carry on typing their question rather than
+    // landing in front of the reference they were given.
+    area.setSelectionRange(prefill.length, prefill.length);
+    grow(area);
+  }, []);
 
   function grow(el: HTMLTextAreaElement) {
     el.style.height = 'auto';
