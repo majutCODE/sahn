@@ -30,8 +30,20 @@ stylesheet — because a meaningful share of clients strip `<style>` blocks. The
 call to action is a real `<a>` styled as a button, so it stays clickable when
 the styling is stripped entirely.
 
-`{{ .ConfirmationURL }}` appears twice: once behind the button, once as
-visible text for clients that eat the button. Keep both.
+The links deliberately do **not** use `{{ .ConfirmationURL }}`. That resolves
+to the project's `*.supabase.co` verify endpoint, so a sign-in email would ask
+people to click a link on a domain they have never heard of — which is what
+phishing looks like. Instead they use:
+
+```
+{{ .RedirectTo }}&token_hash={{ .TokenHash }}&type=magiclink
+```
+
+`.RedirectTo` is the callback URL the app requested, already carrying
+`?next=/<locale>`, so the whole email stays on sahn-ai.com and the reader's
+language is preserved. The `token_hash` branch in
+`src/app/auth/callback/route.ts` is what consumes it — if that branch is ever
+removed, these emails stop working.
 
 Do not add a background image, a web font, or a tracking pixel. The first two
 will not render for most readers, and the third would contradict the privacy

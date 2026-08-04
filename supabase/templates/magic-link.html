@@ -38,7 +38,7 @@
         <tr>
           <td style="padding:8px 32px 0 32px;">
             <a
-              href="{{ .ConfirmationURL }}"
+              href="{{ .RedirectTo }}&token_hash={{ .TokenHash }}&type=magiclink"
               style="display:inline-block;padding:12px 22px;background:#1f6f6b;color:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:15px;text-decoration:none;"
             >
               Sign in to Sahn
@@ -54,8 +54,8 @@
               If the button does not work, paste this into your browser:
             </p>
             <p style="margin:0;word-break:break-all;">
-              <a href="{{ .ConfirmationURL }}" style="color:#1f6f6b;"
-                >{{ .ConfirmationURL }}</a
+              <a href="{{ .RedirectTo }}&token_hash={{ .TokenHash }}&type=magiclink" style="color:#1f6f6b;"
+                >sahn-ai.com/auth/callback</a
               >
             </p>
           </td>
