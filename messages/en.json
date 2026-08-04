@@ -2,7 +2,7 @@
   "app": {
     "name": "Sahn",
     "tagline": "Sourced and cited, never decreed",
-    "description": "An Islamic assistant that retrieves and cites — prayer times, the Quran, duas, zakat and more."
+    "description": "An Islamic assistant that retrieves and cites - prayer times, the Quran, duas, zakat and more."
   },
   "nav": {
     "modules": "Modules",
@@ -26,7 +26,7 @@
   },
   "landing": {
     "heading": "One courtyard, ten doors.",
-    "body": "A general assistant that answers anything, with prayer times, the Qur'an, duas and zakat built in — and an Islamic knowledge base behind it when the question calls for one.",
+    "body": "A general assistant that answers anything, with prayer times, the Qur'an, duas and zakat built in - and an Islamic knowledge base behind it when the question calls for one.",
     "promise": "Sahn does not issue rulings. Every answer on fiqh traces back to a named source and school, or it is not given at all.",
     "modulesHeading": "The doors"
   },
@@ -53,11 +53,11 @@
   },
   "chat": {
     "heading": "Ask.",
-    "summary": "Ask anything at all. Where a question has an Islamic dimension, Sahn answers with that in view — and any question of Islamic law is answered only from retrieved sources, with the school named.",
+    "summary": "Ask anything at all. Where a question has an Islamic dimension, Sahn answers with that in view - and any question of Islamic law is answered only from retrieved sources, with the school named.",
     "you": "You",
     "assistant": "Sahn",
     "notConnected": "The assistant is not connected yet.",
-    "notConnectedNote": "Retrieval, the classifier and the citation engine arrive in phase {phase}. Your message stayed in this browser tab — nothing was sent anywhere.",
+    "notConnectedNote": "Retrieval, the classifier and the citation engine arrive in phase {phase}. Your message stayed in this browser tab - nothing was sent anywhere.",
     "routeTag": {
       "fiqh": "Cited",
       "general": "General knowledge"
@@ -66,29 +66,29 @@
     "sourcesLabel": "Sources",
     "closeSource": "Close",
     "openInReader": "Open in the reader",
-    "uncited": "General knowledge, not scholarship — no source was cited for this.",
+    "uncited": "General knowledge, not scholarship - no source was cited for this.",
     "errors": {
       "network": "Could not reach Sahn. Check your connection.",
       "classifier_unavailable": "Sahn could not route that safely just now. Please try again in a moment.",
       "failed": "Something went wrong. Please try again.",
       "rate_limited": "You have sent a lot of messages in a short time. Please wait a minute and try again.",
-      "rate_limited_anon": "That is as many messages as Sahn allows without an account. Sign in — it is free, and the limit is much higher.",
-      "retrieval_busy": "Sahn can look up sources a few times a minute at the moment. Wait about {seconds} seconds and ask again — the answer will be properly sourced rather than guessed."
+      "rate_limited_anon": "That is as many messages as Sahn allows without an account. Sign in - it is free, and the limit is much higher.",
+      "retrieval_busy": "Sahn can look up sources a few times a minute at the moment. Wait about {seconds} seconds and ask again - the answer will be properly sourced rather than guessed."
     },
-    "sourcesNote": "Answers on Islam draw on a vetted Islamic knowledge base — the Qur'an with its translations, and sourced supplications — and every claim from it is cited. Everything else it answers as a general assistant.",
-    "everythingElse": "Ask about anything at all — code, cooking, careers, homework. Where a question has an Islamic dimension, Sahn answers with that in view.",
+    "sourcesNote": "Answers on Islam draw on a vetted Islamic knowledge base - the Qur'an with its translations, and sourced supplications - and every claim from it is cited. Everything else it answers as a general assistant.",
+    "everythingElse": "Ask about anything at all - code, cooking, careers, homework. Where a question has an Islamic dimension, Sahn answers with that in view.",
     "incognito": "Incognito",
-    "incognitoOn": "Incognito — not saved",
+    "incognitoOn": "Incognito - not saved",
     "threadsHeading": "Chats",
     "deleteThread": "Delete chat",
     "renameThread": "Rename chat",
     "askAboutThis": "Ask about this",
-    "askPrefill": "About {reference} — "
+    "askPrefill": "About {reference} - "
   },
   "modules": {
     "prayer": {
       "name": "Prayer times & Qibla",
-      "summary": "Next prayer, Qibla bearing and notifications — computed on your device."
+      "summary": "Next prayer, Qibla bearing and notifications - computed on your device."
     },
     "tracker": {
       "name": "Salah tracker",
@@ -120,7 +120,7 @@
     },
     "finance": {
       "name": "Halal finance",
-      "summary": "Riba, mortgages, pensions and screening — explained, never recommended."
+      "summary": "Riba, mortgages, pensions and screening - explained, never recommended."
     },
     "counsel": {
       "name": "Counsel",
@@ -154,7 +154,7 @@
       "unavailable": "Your device could not provide a location. Choose a city below.",
       "searchLabel": "Or choose a city",
       "searchPlaceholder": "Start typing a city name",
-      "noMatches": "No city by that name yet — this list is still short.",
+      "noMatches": "No city by that name yet - this list is still short.",
       "coordinates": "{lat}, {lon}"
     },
     "settings": {
@@ -191,7 +191,7 @@
       "makkah": "Meccan",
       "madinah": "Medinan"
     },
-    "loadError": "The Quran service could not be reached. Nothing is wrong with Sahn itself — prayer times and the calendar still work offline.",
+    "loadError": "The Quran service could not be reached. Nothing is wrong with Sahn itself - prayer times and the calendar still work offline.",
     "searchLabel": "Find a surah",
     "searchPlaceholder": "Name or number",
     "noMatches": "No surah by that name.",
@@ -206,10 +206,10 @@
     "tafsirHide": "Hide tafsir",
     "tafsirLoading": "Loading…",
     "tafsirFailed": "Could not load the commentary. Please try again.",
-    "tafsirBy": "Tafsir — {name}",
-    "tafsirCovers": "Tafsir — {name}, on {from} to {to}",
+    "tafsirBy": "Tafsir - {name}",
+    "tafsirCovers": "Tafsir - {name}, on {from} to {to}",
     "askAboutThis": "Ask about this",
-    "askPrefill": "About Qur'an {verse} — ",
+    "askPrefill": "About Qur'an {verse} - ",
     "reciter": "Reciter"
   },
   "tracker": {
@@ -256,7 +256,7 @@
     "backToToday": "Back to today",
     "keyDatesHeading": "Key dates in {year} AH",
     "fastsHeading": "Recommended fasts",
-    "fastsNote": "Mondays and Thursdays, and the white days — the 13th, 14th and 15th of each month.",
+    "fastsNote": "Mondays and Thursdays, and the white days - the 13th, 14th and 15th of each month.",
     "converterHeading": "Convert a date",
     "gregorianLabel": "Gregorian date",
     "hijriLabel": "Hijri date",
@@ -299,7 +299,7 @@
     "sending": "Sending…",
     "sent": "Link sent to {email}. Open it on this device.",
     "error": "We could not accept that address. Check it and try again.",
-    "linkExpired": "That link has expired. Links are good for one hour and one use — request a new one below.",
+    "linkExpired": "That link has expired. Links are good for one hour and one use - request a new one below.",
     "linkFailed": "We could not complete that sign-in. Request a new link below."
   },
   "notFound": {
@@ -313,7 +313,7 @@
     "searchLabel": "Search",
     "searchPlaceholder": "travel, anxiety, before sleep…",
     "searchNote": "Plain-language search arrives in phase 4. For now this matches words and situations.",
-    "noMatches": "Nothing matches that yet — the library is still small.",
+    "noMatches": "Nothing matches that yet - the library is still small.",
     "translationPending": "An English translation is not licensed yet. The Arabic and transliteration are complete.",
     "translationFromQuran": "translation from the Qur'an",
     "licenceNote": "The Arabic is Qur'an and hadith and carries no restriction. Qur'anic du'as are translated under our Quran.com licence. The standard English translation of the prophetic du'as is under copyright, so it is not reproduced here until it is licensed.",
@@ -354,7 +354,7 @@
   },
   "verseSearch": {
     "heading": "Verse search",
-    "intro": "Ask in plain language. Sahn returns the ayat and nothing more — no summary, no interpretation.",
+    "intro": "Ask in plain language. Sahn returns the ayat and nothing more - no summary, no interpretation.",
     "label": "What are you looking for?",
     "placeholder": "verses about patience when losing someone",
     "submit": "Search",
@@ -372,7 +372,7 @@
     "aboveNisab": "Your net zakatable wealth is above the nisab of {nisab}.",
     "belowNisab": "Your net zakatable wealth is below the nisab of {nisab}, so nothing is due.",
     "nisabHeading": "Nisab standard",
-    "nisabNote": "The silver nisab is much lower, so more people owe zakat under it. Both are held by recognised positions — Sahn does not choose for you.",
+    "nisabNote": "The silver nisab is much lower, so more people owe zakat under it. Both are held by recognised positions - Sahn does not choose for you.",
     "basis": {
       "silver": "Silver (612.36g)",
       "gold": "Gold (87.48g)"
@@ -409,7 +409,7 @@
     "netWorth": "Net zakatable wealth",
     "nisabValue": "Nisab",
     "spotUsed": "Calculated with gold at {gold} and silver at {silver} per troy ounce, as of {date}.",
-    "hawlNote": "If today starts your hawl, the next one falls on {date} — a lunar year, not a solar one.",
+    "hawlNote": "If today starts your hawl, the next one falls on {date} - a lunar year, not a solar one.",
     "save": "Save this calculation",
     "saving": "Saving…",
     "saved": "Saved",
@@ -420,7 +420,7 @@
   },
   "finance": {
     "heading": "Halal finance",
-    "intro": "Explanations of how Islamic financial structures work, and where scholars disagree about them. Reference material — Sahn does not recommend products.",
+    "intro": "Explanations of how Islamic financial structures work, and where scholars disagree about them. Reference material - Sahn does not recommend products.",
     "disclaimer": "This is educational content, not financial advice. Sahn is not a regulated financial adviser and does not recommend or endorse any product or provider. Regulated advice for your circumstances should come from an authorised adviser; the religious question should go to a qualified scholar.",
     "regionsHeading": "By region",
     "regions": {
@@ -444,7 +444,7 @@
     "signedInAs": "Signed in as",
     "signedOutNote": "You are not signed in.",
     "exportHeading": "Export your data",
-    "exportBody": "A complete copy of everything stored against your account — settings, worship records, saved conversations — as a JSON file.",
+    "exportBody": "A complete copy of everything stored against your account - settings, worship records, saved conversations - as a JSON file.",
     "exportAction": "Download my data",
     "deleteHeading": "Delete your account",
     "deleteBody": "This removes your account and every record attached to it: conversations, prayer logs, the qada ledger, bookmarks, fasts and zakat records. It happens immediately and cannot be undone. Export first if you want a copy.",
@@ -452,7 +452,7 @@
     "deleteConfirmLabel": "Type {email} to confirm.",
     "deleteConfirmAction": "Delete permanently",
     "deleting": "Deleting…",
-    "deleteFailed": "That did not go through. Nothing was deleted — please try again.",
+    "deleteFailed": "That did not go through. Nothing was deleted - please try again.",
     "cancel": "Cancel"
   },
   "legal": {
@@ -485,7 +485,7 @@
     "juzNone": "None",
     "reflectionLabel": "Reflection (private)",
     "missedHeading": "Fasts to make up",
-    "missedBody": "Days missed for travel, illness, menstruation or another reason, and how many you have made up since. Whether a missed fast is made up, compensated by fidya, or both depends on why it was missed — ask someone qualified about your own case.",
+    "missedBody": "Days missed for travel, illness, menstruation or another reason, and how many you have made up since. Whether a missed fast is made up, compensated by fidya, or both depends on why it was missed - ask someone qualified about your own case.",
     "missedCount": "Missed",
     "madeUp": "Made up",
     "fidyaPaid": "Fidya paid",
@@ -494,14 +494,14 @@
   "counsel": {
     "you": "You",
     "sahn": "Sahn",
-    "privacyNote": "Nothing said here is saved unless you choose to save it, and anything you do save is encrypted in this browser with a passphrase only you hold. Sahn is not a therapist or a scholar — for a ruling, or for care, speak to someone qualified.",
+    "privacyNote": "Nothing said here is saved unless you choose to save it, and anything you do save is encrypted in this browser with a passphrase only you hold. Sahn is not a therapist or a scholar - for a ruling, or for care, speak to someone qualified.",
     "placeholder": "Say as much or as little as you want.",
     "send": "Send",
     "sending": "Sending…",
     "thinking": "…",
     "failed": "Something went wrong. Please try again.",
     "saveHeading": "Keep a private copy",
-    "saveBody": "Encrypted in this browser before it is sent, so the server stores something it cannot read. Choose a passphrase of at least eight characters. If you forget it the transcript cannot be recovered — not by us, not by anyone.",
+    "saveBody": "Encrypted in this browser before it is sent, so the server stores something it cannot read. Choose a passphrase of at least eight characters. If you forget it the transcript cannot be recovered - not by us, not by anyone.",
     "passphraseLabel": "Passphrase",
     "saveAction": "Save this conversation",
     "saving": "Encrypting…",
@@ -513,7 +513,7 @@
   },
   "setup": {
     "heading": "Set your location",
-    "body": "Prayer times, the Qibla direction, the Hijri calendar and the salah tracker all need to know where you are. It is computed on your device and never sent anywhere — and you can change it any time from the prayer times screen.",
+    "body": "Prayer times, the Qibla direction, the Hijri calendar and the salah tracker all need to know where you are. It is computed on your device and never sent anywhere - and you can change it any time from the prayer times screen.",
     "notNow": "Not now"
   }
 }

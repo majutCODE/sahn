@@ -9,7 +9,7 @@ import type { SensitiveCategory } from './routes';
  * why several countries fall through to the directory.
  *
  * Static by design. A crisis response must not depend on a third party being
- * reachable, and it must be reviewable — nobody can audit a number that
+ * reachable, and it must be reviewable - nobody can audit a number that
  * arrives at runtime.
  *
  * The rule for adding a country: name the operator, not an aggregator, and
@@ -131,7 +131,7 @@ const BY_COUNTRY: Record<string, { self_harm: Helpline[]; abuse: Helpline[] }> =
   },
 
   // moh.gov.sa. Its own page describes 937 as a 24/7 medical consultation
-  // line, not a mental health service — a real route to help, listed as what
+  // line, not a mental health service - a real route to help, listed as what
   // it is, with the directory beside it for a specialist line.
   SA: {
     self_harm: [
@@ -149,7 +149,7 @@ const BY_COUNTRY: Record<string, { self_harm: Helpline[]; abuse: Helpline[] }> =
     abuse: [DIRECTORY, EMERGENCY('997')]
   },
 
-  // hamad.qa · moph.gov.qa — National Mental Health Helpline, operated by
+  // hamad.qa · moph.gov.qa - National Mental Health Helpline, operated by
   // Hamad Medical Corporation.
   QA: {
     self_harm: [
@@ -229,7 +229,7 @@ const BY_COUNTRY: Record<string, { self_harm: Helpline[]; abuse: Helpline[] }> =
 };
 
 /**
- * Fallback for everywhere not covered above — still most of the world,
+ * Fallback for everywhere not covered above - still most of the world,
  * including Kuwait, Bahrain and Oman, where nothing could be traced to an
  * official operator. Naming a directory is more honest than naming a number
  * that may not answer.

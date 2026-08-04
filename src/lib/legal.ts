@@ -1,7 +1,7 @@
 /**
  * Privacy notice and terms of use.
  *
- * ⚠️ Written from what the code actually does, not from a template — every
+ * ⚠️ Written from what the code actually does, not from a template - every
  * processor named below receives data because some line in this repository
  * sends it there. That accuracy is the part worth keeping; the drafting is
  * not legal advice, and a solicitor should review both documents before Sahn
@@ -44,8 +44,8 @@ export const PRIVACY: LegalDocument = {
     {
       heading: { en: 'What is stored', ar: 'ما الذي يُخزَّن' },
       body: {
-        en: 'Your email address, because sign-in is by emailed link and there is no password to hold instead.\n\nYour saved conversations — the questions you ask and the answers returned — unless the conversation was in incognito, which is described below.\n\nWhatever you record in the modules: prayers marked as prayed, missed prayers in the qada ledger, Qur\'an bookmarks and reading position, fasts, and zakat calculations you choose to save.\n\nYour settings: locale, city or coordinates for prayer times, calculation method, and madhhab.\n\nPage views are counted, so that it is possible to know whether anything here is being used. That counting sets no cookie, assigns you no identifier, and follows you nowhere else; it records that a page was requested, not who requested it, and it can see nothing about your account or your worship records.\n\nBeyond that: no advertising identifiers, no tracking pixels, no profile built for marketing, and nothing sold. The only cookies set are the ones that keep you signed in.',
-        ar: 'بريدك الإلكتروني، لأن الدخول برابط يُرسل إليه، وليس ثمّة كلمة مرور تُحفظ بدلًا عنه.\n\nمحادثاتك المحفوظة — أسئلتك والأجوبة عنها — إلا أن تكون المحادثة في وضع التصفح الخفي، وسيأتي بيانه.\n\nما تسجّله في الوحدات: الصلوات المؤدّاة، والفوائت في سجل القضاء، وعلامات القرآن وموضع القراءة، والصيام، وحسابات الزكاة التي تختار حفظها.\n\nإعداداتك: اللغة، والمدينة أو الإحداثيات لأوقات الصلاة، وطريقة الحساب، والمذهب.\n\nوتُحصى مرّات فتح الصفحات، ليُعرف هل يُستعمل هذا الموقع أصلًا. وهذا الإحصاء لا يضع ملف ارتباط، ولا يُسنِد إليك معرّفًا، ولا يتبعك إلى غيره؛ إنما يسجّل أن صفحةً طُلبت لا من طلبها، ولا يرى شيئًا من حسابك ولا من سجلّات عبادتك.\n\nوما عدا ذلك: لا معرّفات إعلانية، ولا بكسل تتبّع، ولا ملفّ تعريفي يُبنى لأغراض تسويقية، ولا بيع لشيء. وليست ملفات الارتباط الموضوعة إلا ما يُبقيك مسجَّل الدخول.'
+        en: 'Your email address, because sign-in is by emailed link and there is no password to hold instead.\n\nYour saved conversations - the questions you ask and the answers returned - unless the conversation was in incognito, which is described below.\n\nWhatever you record in the modules: prayers marked as prayed, missed prayers in the qada ledger, Qur\'an bookmarks and reading position, fasts, and zakat calculations you choose to save.\n\nYour settings: locale, city or coordinates for prayer times, calculation method, and madhhab.\n\nPage views are counted, so that it is possible to know whether anything here is being used. That counting sets no cookie, assigns you no identifier, and follows you nowhere else; it records that a page was requested, not who requested it, and it can see nothing about your account or your worship records.\n\nBeyond that: no advertising identifiers, no tracking pixels, no profile built for marketing, and nothing sold. The only cookies set are the ones that keep you signed in.',
+        ar: 'بريدك الإلكتروني، لأن الدخول برابط يُرسل إليه، وليس ثمّة كلمة مرور تُحفظ بدلًا عنه.\n\nمحادثاتك المحفوظة - أسئلتك والأجوبة عنها - إلا أن تكون المحادثة في وضع التصفح الخفي، وسيأتي بيانه.\n\nما تسجّله في الوحدات: الصلوات المؤدّاة، والفوائت في سجل القضاء، وعلامات القرآن وموضع القراءة، والصيام، وحسابات الزكاة التي تختار حفظها.\n\nإعداداتك: اللغة، والمدينة أو الإحداثيات لأوقات الصلاة، وطريقة الحساب، والمذهب.\n\nوتُحصى مرّات فتح الصفحات، ليُعرف هل يُستعمل هذا الموقع أصلًا. وهذا الإحصاء لا يضع ملف ارتباط، ولا يُسنِد إليك معرّفًا، ولا يتبعك إلى غيره؛ إنما يسجّل أن صفحةً طُلبت لا من طلبها، ولا يرى شيئًا من حسابك ولا من سجلّات عبادتك.\n\nوما عدا ذلك: لا معرّفات إعلانية، ولا بكسل تتبّع، ولا ملفّ تعريفي يُبنى لأغراض تسويقية، ولا بيع لشيء. وليست ملفات الارتباط الموضوعة إلا ما يُبقيك مسجَّل الدخول.'
       }
     },
     {
@@ -58,8 +58,8 @@ export const PRIVACY: LegalDocument = {
     {
       heading: { en: 'Incognito', ar: 'التصفح الخفي' },
       body: {
-        en: 'A conversation marked incognito creates no thread and stores no messages. It is not a display setting: the server discards the thread reference rather than trusting the browser not to send one, so there is nothing for a later change of mind to expose.\n\nThe message is still sent to Anthropic to be answered — it has to be — but nothing about it is written to the database, and it will not appear in your history on any device.',
-        ar: 'المحادثة في الوضع الخفي لا تُنشئ محادثة محفوظة ولا تُخزَّن رسائلها. وليس هذا إعدادًا في الواجهة: فالخادم يُسقط مرجع المحادثة ولا يعتمد على المتصفح في ألّا يرسله، فلا يبقى شيء يكشفه تبدّل رأي لاحق.\n\nوتُرسل الرسالة مع ذلك إلى «أنثروبيك» ليُجاب عنها — ولا بدّ من ذلك — لكن لا يُكتب منها شيء في قاعدة البيانات، ولا تظهر في سجلّك على أي جهاز.'
+        en: 'A conversation marked incognito creates no thread and stores no messages. It is not a display setting: the server discards the thread reference rather than trusting the browser not to send one, so there is nothing for a later change of mind to expose.\n\nThe message is still sent to Anthropic to be answered - it has to be - but nothing about it is written to the database, and it will not appear in your history on any device.',
+        ar: 'المحادثة في الوضع الخفي لا تُنشئ محادثة محفوظة ولا تُخزَّن رسائلها. وليس هذا إعدادًا في الواجهة: فالخادم يُسقط مرجع المحادثة ولا يعتمد على المتصفح في ألّا يرسله، فلا يبقى شيء يكشفه تبدّل رأي لاحق.\n\nوتُرسل الرسالة مع ذلك إلى «أنثروبيك» ليُجاب عنها - ولا بدّ من ذلك - لكن لا يُكتب منها شيء في قاعدة البيانات، ولا تظهر في سجلّك على أي جهاز.'
       }
     },
     {
@@ -72,8 +72,8 @@ export const PRIVACY: LegalDocument = {
     {
       heading: { en: 'How long it is kept', ar: 'مدة الحفظ' },
       body: {
-        en: 'Until you remove it. Individual conversations can be deleted from the sidebar. Deleting your account removes everything at once: the account itself and every record attached to it, by cascade in the database rather than by a script that might miss a table.\n\nDeletion is immediate and cannot be undone. Export first if you want a copy — the account page produces a complete JSON file of everything held about you.',
-        ar: 'إلى أن تحذفها. فيمكن حذف كل محادثة من الشريط الجانبي. وحذف الحساب يزيل كل شيء دفعةً واحدة: الحسابَ وكلَّ سجلّ متعلّق به، بالحذف المتتالي في قاعدة البيانات لا ببرنامج قد يُغفل جدولًا.\n\nوالحذف فوري لا رجعة فيه. فإن أردت نسخة فصدّرها أولًا — وصفحة الحساب تُخرج ملفًا كاملًا بصيغة JSON لكل ما هو محفوظ عنك.'
+        en: 'Until you remove it. Individual conversations can be deleted from the sidebar. Deleting your account removes everything at once: the account itself and every record attached to it, by cascade in the database rather than by a script that might miss a table.\n\nDeletion is immediate and cannot be undone. Export first if you want a copy - the account page produces a complete JSON file of everything held about you.',
+        ar: 'إلى أن تحذفها. فيمكن حذف كل محادثة من الشريط الجانبي. وحذف الحساب يزيل كل شيء دفعةً واحدة: الحسابَ وكلَّ سجلّ متعلّق به، بالحذف المتتالي في قاعدة البيانات لا ببرنامج قد يُغفل جدولًا.\n\nوالحذف فوري لا رجعة فيه. فإن أردت نسخة فصدّرها أولًا - وصفحة الحساب تُخرج ملفًا كاملًا بصيغة JSON لكل ما هو محفوظ عنك.'
       }
     },
     {
@@ -91,7 +91,7 @@ export const TERMS: LegalDocument = {
   title: { en: 'Terms of use', ar: 'شروط الاستخدام' },
   updated: '2026-08-03',
   intro: {
-    en: 'What Sahn is, what it is not, and the terms on which you use it. The limits below are not disclaimers bolted on at the end — they describe how the software is actually built.',
+    en: 'What Sahn is, what it is not, and the terms on which you use it. The limits below are not disclaimers bolted on at the end - they describe how the software is actually built.',
     ar: 'ما سَحْن وما ليس هو، وعلى أيّ شرط تستعمله. وليست الحدود الآتية إخلاءَ مسؤولية أُلحق في آخر الكلام، بل هي وصف لكيفية بناء البرنامج.'
   },
   sections: [
@@ -122,8 +122,8 @@ export const TERMS: LegalDocument = {
     {
       heading: { en: 'Your account and your use', ar: 'حسابك واستعمالك' },
       body: {
-        en: 'Keep access to your email secure — anyone who can read it can sign in as you, because that is what the sign-in link is.\n\nDo not attempt to overwhelm the service, extract its data in bulk, work around its safety routing, or use it to produce material that is unlawful or that would harm someone. Request limits apply to the assistant and to search; they exist to keep the service running and to keep its costs survivable, and signing in raises them.\n\nAccess may be suspended for use that breaches these terms.',
-        ar: 'احفظ الوصول إلى بريدك — فمن قرأه دخل باسمك، إذ رابط الدخول هو هذا.\n\nولا تحاول إثقال الخدمة، ولا سحب بياناتها جملةً، ولا الالتفاف على توجيهها الوقائي، ولا استعمالها في إنتاج ما يخالف القانون أو يضرّ بأحد. وثمّة حدود للطلبات على المساعد والبحث، وُضعت لإبقاء الخدمة عاملة وتكاليفها محتملة، ويوسّعها تسجيلُ الدخول.\n\nوقد يُوقف الوصول عند استعمال يخالف هذه الشروط.'
+        en: 'Keep access to your email secure - anyone who can read it can sign in as you, because that is what the sign-in link is.\n\nDo not attempt to overwhelm the service, extract its data in bulk, work around its safety routing, or use it to produce material that is unlawful or that would harm someone. Request limits apply to the assistant and to search; they exist to keep the service running and to keep its costs survivable, and signing in raises them.\n\nAccess may be suspended for use that breaches these terms.',
+        ar: 'احفظ الوصول إلى بريدك - فمن قرأه دخل باسمك، إذ رابط الدخول هو هذا.\n\nولا تحاول إثقال الخدمة، ولا سحب بياناتها جملةً، ولا الالتفاف على توجيهها الوقائي، ولا استعمالها في إنتاج ما يخالف القانون أو يضرّ بأحد. وثمّة حدود للطلبات على المساعد والبحث، وُضعت لإبقاء الخدمة عاملة وتكاليفها محتملة، ويوسّعها تسجيلُ الدخول.\n\nوقد يُوقف الوصول عند استعمال يخالف هذه الشروط.'
       }
     },
     {

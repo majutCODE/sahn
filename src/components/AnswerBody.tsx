@@ -12,6 +12,16 @@ import Markdown from 'react-markdown';
  * No `rehype-raw`: model output is untrusted text, and enabling raw HTML here
  * would let a retrieved passage or a crafted answer inject markup.
  */
+/**
+ * The prompt asks the model not to use em dashes, and mostly it does not.
+ * "Mostly" is not a house style, so they are also removed here: a prompt is a
+ * request, and this is the last point before the reader sees it. Applies to
+ * restored threads too, which were written before the rule existed.
+ */
+function withoutEmDashes(text: string): string {
+  return text.replace(/\s*—\s*/g, ', ').replace(/,\s*,/g, ',');
+}
+
 export default function AnswerBody({ text }: { text: string }) {
   return (
     <div className="space-y-3 text-base leading-relaxed text-ink">
@@ -58,7 +68,7 @@ export default function AnswerBody({ text }: { text: string }) {
           )
         }}
       >
-        {text}
+        {withoutEmDashes(text)}
       </Markdown>
     </div>
   );

@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { defaultLocale } from '@/i18n/routing';
 
 /**
- * Web app manifest — what a phone reads when someone installs Sahn.
+ * Web app manifest - what a phone reads when someone installs Sahn.
  *
  * `start_url` carries a locale because the app opens straight into it: an
  * installed app that bounces through a locale redirect on every cold start
