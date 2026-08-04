@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+<rect width="1600" height="900" fill="#10202B"/>
+<path d="M96.00 50.00 L101.39 70.98 L120.04 59.96 L109.02 78.61 L130.00 84.00 L109.02 89.39 L120.04 108.04 L101.39 97.02 L96.00 118.00 L90.61 97.02 L71.96 108.04 L82.98 89.39 L62.00 84.00 L82.98 78.61 L71.96 59.96 L90.61 70.98 Z" fill="#1F6F6B"/>
+<text x="152" y="100" font-family="Georgia, 'Times New Roman', serif" font-size="54" fill="#F2EDE4">Sahn</text>
+<text x="1504" y="98" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#9AABB4">Everything inside, free, in English and العربية</text>
+<rect x="96" y="132" width="1408" height="1" fill="#1F6F6B" opacity="0.3"/>
+<rect x="96" y="190" width="334" height="190" fill="#162B38" stroke="#1F6F6B" stroke-opacity="0.22"/>
+<path d="M140.00 222.00 L143.81 236.81 L156.97 229.03 L149.19 242.19 L164.00 246.00 L149.19 249.81 L156.97 262.97 L143.81 255.19 L140.00 270.00 L136.19 255.19 L123.03 262.97 L130.81 249.81 L116.00 246.00 L130.81 242.19 L123.03 229.03 L136.19 236.81 Z" fill="none" stroke="#B08A46" stroke-width="1.8" opacity="0.9"/>
+<text x="126" y="314" font-family="Georgia, 'Times New Roman', serif" font-size="32" fill="#F2EDE4">Chat</text>
+<text x="126" y="348" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#9AABB4">Ask anything at all</text>
+<rect x="454" y="190" width="334" height="190" fill="#162B38" stroke="#1F6F6B" stroke-opacity="0.22"/>
+<path d="M502.68 222.46 L503.53 237.73 L517.96 232.67 L507.76 244.06 L521.54 250.68 L506.27 251.53 L511.33 265.96 L499.94 255.76 L493.32 269.54 L492.47 254.27 L478.04 259.33 L488.24 247.94 L474.46 241.32 L489.73 240.47 L484.67 226.04 L496.06 236.24 Z" fill="none" stroke="#B08A46" stroke-width="1.8" opacity="0.9"/>
+<text x="484" y="314" font-family="Georgia, 'Times New Roman', serif" font-size="32" fill="#F2EDE4">Cited answers</text>
+<text x="484" y="348" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#9AABB4">Qur’an and six hadith books</text>
+<rect x="812" y="190" width="334" height="190" fill="#162B38" stroke="#1F6F6B" stroke-opacity="0.22"/>
+<path d="M865.18 223.83 L863.03 238.97 L878.17 236.82 L865.95 246.00 L878.17 255.18 L863.03 253.03 L865.18 268.17 L856.00 255.95 L846.82 268.17 L848.97 253.03 L833.83 255.18 L846.05 246.00 L833.83 236.82 L848.97 238.97 L846.82 223.83 L856.00 236.05 Z" fill="none" stroke="#B08A46" stroke-width="1.8" opacity="0.9"/>
+<text x="842" y="314" font-family="Georgia, 'Times New Roman', serif" font-size="32" fill="#F2EDE4">Prayer times</text>
+<text x="842" y="348" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#9AABB4">And the Qibla, on device</text>
+<rect x="1170" y="190" width="334" height="190" fill="#162B38" stroke="#1F6F6B" stroke-opacity="0.22"/>
+<path d="M1227.33 226.04 L1222.27 240.47 L1237.54 241.32 L1223.76 247.94 L1233.96 259.33 L1219.53 254.27 L1218.68 269.54 L1212.06 255.76 L1200.67 265.96 L1205.73 251.53 L1190.46 250.68 L1204.24 244.06 L1194.04 232.67 L1208.47 237.73 L1209.32 222.46 L1215.94 236.24 Z" fill="none" stroke="#B08A46" stroke-width="1.8" opacity="0.9"/>
+<text x="1200" y="314" font-family="Georgia, 'Times New Roman', serif" font-size="32" fill="#F2EDE4">Salah tracker</text>
+<text x="1200" y="348" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#9AABB4">Streaks and a qada ledger</text>
+<rect x="96" y="398" width="334" height="190" fill="#162B38" stroke="#1F6F6B" stroke-opacity="0.22"/>
+<path d="M156.97 437.03 L149.19 450.19 L164.00 454.00 L149.19 457.81 L156.97 470.97 L143.81 463.19 L140.00 478.00 L136.19 463.19 L123.03 470.97 L130.81 457.81 L116.00 454.00 L130.81 450.19 L123.03 437.03 L136.19 444.81 L140.00 430.00 L143.81 444.81 Z" fill="none" stroke="#B08A46" stroke-width="1.8" opacity="0.9"/>
+<text x="126" y="522" font-family="Georgia, 'Times New Roman', serif" font-size="32" fill="#F2EDE4">The Qur’an</text>
+<text x="126" y="556" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#9AABB4">114 surahs, 12 reciters</text>
+<rect x="454" y="398" width="334" height="190" fill="#162B38" stroke="#1F6F6B" stroke-opacity="0.22"/>
+<path d="M517.96 440.67 L507.76 452.06 L521.54 458.68 L506.27 459.53 L511.33 473.96 L499.94 463.76 L493.32 477.54 L492.47 462.27 L478.04 467.33 L488.24 455.94 L474.46 449.32 L489.73 448.47 L484.67 434.04 L496.06 444.24 L502.68 430.46 L503.53 445.73 Z" fill="none" stroke="#B08A46" stroke-width="1.8" opacity="0.9"/>
+<text x="484" y="522" font-family="Georgia, 'Times New Roman', serif" font-size="32" fill="#F2EDE4">Tafsir</text>
+<text x="484" y="556" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#9AABB4">Ibn Kathir, verse by verse</text>
+<rect x="812" y="398" width="334" height="190" fill="#162B38" stroke="#1F6F6B" stroke-opacity="0.22"/>
+<path d="M878.17 444.82 L865.95 454.00 L878.17 463.18 L863.03 461.03 L865.18 476.17 L856.00 463.95 L846.82 476.17 L848.97 461.03 L833.83 463.18 L846.05 454.00 L833.83 444.82 L848.97 446.97 L846.82 431.83 L856.00 444.05 L865.18 431.83 L863.03 446.97 Z" fill="none" stroke="#B08A46" stroke-width="1.8" opacity="0.9"/>
+<text x="842" y="522" font-family="Georgia, 'Times New Roman', serif" font-size="32" fill="#F2EDE4">Verse search</text>
+<text x="842" y="556" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#9AABB4">By meaning, not keyword</text>
+<rect x="1170" y="398" width="334" height="190" fill="#162B38" stroke="#1F6F6B" stroke-opacity="0.22"/>
+<path d="M1237.54 449.32 L1223.76 455.94 L1233.96 467.33 L1219.53 462.27 L1218.68 477.54 L1212.06 463.76 L1200.67 473.96 L1205.73 459.53 L1190.46 458.68 L1204.24 452.06 L1194.04 440.67 L1208.47 445.73 L1209.32 430.46 L1215.94 444.24 L1227.33 434.04 L1222.27 448.47 Z" fill="none" stroke="#B08A46" stroke-width="1.8" opacity="0.9"/>
+<text x="1200" y="522" font-family="Georgia, 'Times New Roman', serif" font-size="32" fill="#F2EDE4">Du‘a library</text>
+<text x="1200" y="556" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#9AABB4">Arabic, transliteration, source</text>
+<rect x="96" y="606" width="334" height="190" fill="#162B38" stroke="#1F6F6B" stroke-opacity="0.22"/>
+<path d="M140.00 638.00 L143.81 652.81 L156.97 645.03 L149.19 658.19 L164.00 662.00 L149.19 665.81 L156.97 678.97 L143.81 671.19 L140.00 686.00 L136.19 671.19 L123.03 678.97 L130.81 665.81 L116.00 662.00 L130.81 658.19 L123.03 645.03 L136.19 652.81 Z" fill="none" stroke="#B08A46" stroke-width="1.8" opacity="0.9"/>
+<text x="126" y="730" font-family="Georgia, 'Times New Roman', serif" font-size="32" fill="#F2EDE4">Zakat</text>
+<text x="126" y="764" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#9AABB4">Nisab, hawl, gold or silver</text>
+<rect x="454" y="606" width="334" height="190" fill="#162B38" stroke="#1F6F6B" stroke-opacity="0.22"/>
+<path d="M507.18 639.83 L505.03 654.97 L520.17 652.82 L507.95 662.00 L520.17 671.18 L505.03 669.03 L507.18 684.17 L498.00 671.95 L488.82 684.17 L490.97 669.03 L475.83 671.18 L488.05 662.00 L475.83 652.82 L490.97 654.97 L488.82 639.83 L498.00 652.05 Z" fill="none" stroke="#B08A46" stroke-width="1.8" opacity="0.9"/>
+<text x="484" y="730" font-family="Georgia, 'Times New Roman', serif" font-size="32" fill="#F2EDE4">Halal finance</text>
+<text x="484" y="764" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#9AABB4">Structures and the disagreements</text>
+<rect x="812" y="606" width="334" height="190" fill="#162B38" stroke="#1F6F6B" stroke-opacity="0.22"/>
+<path d="M872.97 645.03 L865.19 658.19 L880.00 662.00 L865.19 665.81 L872.97 678.97 L859.81 671.19 L856.00 686.00 L852.19 671.19 L839.03 678.97 L846.81 665.81 L832.00 662.00 L846.81 658.19 L839.03 645.03 L852.19 652.81 L856.00 638.00 L859.81 652.81 Z" fill="none" stroke="#B08A46" stroke-width="1.8" opacity="0.9"/>
+<text x="842" y="730" font-family="Georgia, 'Times New Roman', serif" font-size="32" fill="#F2EDE4">Ramadan</text>
+<text x="842" y="764" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#9AABB4">Fasts, taraweeh, juz, qada</text>
+<rect x="1170" y="606" width="334" height="190" fill="#162B38" stroke="#1F6F6B" stroke-opacity="0.22"/>
+<path d="M1236.17 652.82 L1223.95 662.00 L1236.17 671.18 L1221.03 669.03 L1223.18 684.17 L1214.00 671.95 L1204.82 684.17 L1206.97 669.03 L1191.83 671.18 L1204.05 662.00 L1191.83 652.82 L1206.97 654.97 L1204.82 639.83 L1214.00 652.05 L1223.18 639.83 L1221.03 654.97 Z" fill="none" stroke="#B08A46" stroke-width="1.8" opacity="0.9"/>
+<text x="1200" y="730" font-family="Georgia, 'Times New Roman', serif" font-size="32" fill="#F2EDE4">Hijri calendar</text>
+<text x="1200" y="764" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#9AABB4">Umm al-Qura, key dates</text>
+<text x="96" y="860" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#F2EDE4">sahn-ai.com</text>
+<text x="1504" y="860" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#1F6F6B">Answers on Islam trace to a named source, or are not given</text>
+</svg>
