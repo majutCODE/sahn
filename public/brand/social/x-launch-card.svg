@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+<rect width="1600" height="900" fill="#10202B"/>
+<path d="M1430.00 20.00 L1498.21 285.33 L1734.06 145.94 L1594.67 381.79 L1860.00 450.00 L1594.67 518.21 L1734.06 754.06 L1498.21 614.67 L1430.00 880.00 L1361.79 614.67 L1125.94 754.06 L1265.33 518.21 L1000.00 450.00 L1265.33 381.79 L1125.94 145.94 L1361.79 285.33 Z" fill="none" stroke="#1F6F6B" stroke-width="2" opacity="0.18"/>
+<path d="M1430.00 210.00 L1468.07 358.09 L1599.71 280.29 L1521.91 411.93 L1670.00 450.00 L1521.91 488.07 L1599.71 619.71 L1468.07 541.91 L1430.00 690.00 L1391.93 541.91 L1260.29 619.71 L1338.09 488.07 L1190.00 450.00 L1338.09 411.93 L1260.29 280.29 L1391.93 358.09 Z" fill="none" stroke="#1F6F6B" stroke-width="2" opacity="0.14"/>
+<path d="M120.00 82.00 L127.30 110.38 L152.53 95.47 L137.62 120.70 L166.00 128.00 L137.62 135.30 L152.53 160.53 L127.30 145.62 L120.00 174.00 L112.70 145.62 L87.47 160.53 L102.38 135.30 L74.00 128.00 L102.38 120.70 L87.47 95.47 L112.70 110.38 Z" fill="#1F6F6B"/>
+<text x="196" y="150" font-family="Georgia, 'Times New Roman', serif" font-size="76" fill="#F2EDE4">Sahn</text>
+<rect x="120" y="196" width="90" height="3" fill="#B08A46"/>
+<text x="120" y="310" font-family="Georgia, 'Times New Roman', serif" font-size="62" fill="#F2EDE4">Ask anything.</text>
+<text x="120" y="388" font-family="Georgia, 'Times New Roman', serif" font-size="62" fill="#1F6F6B">On Islam, every claim is cited.</text>
+<path d="M134.00 460.00 L136.06 468.02 L143.19 463.81 L138.98 470.94 L147.00 473.00 L138.98 475.06 L143.19 482.19 L136.06 477.98 L134.00 486.00 L131.94 477.98 L124.81 482.19 L129.02 475.06 L121.00 473.00 L129.02 470.94 L124.81 463.81 L131.94 468.02 Z" fill="#B08A46" opacity="0.85"/>
+<text x="170" y="486" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#F2EDE4">Prayer times, Qibla and the Hijri calendar</text>
+<text x="170" y="520" font-family="Helvetica, Arial, sans-serif" font-size="23" fill="#9AABB4">Computed on your device, and they work offline</text>
+<path d="M134.00 544.00 L136.06 552.02 L143.19 547.81 L138.98 554.94 L147.00 557.00 L138.98 559.06 L143.19 566.19 L136.06 561.98 L134.00 570.00 L131.94 561.98 L124.81 566.19 L129.02 559.06 L121.00 557.00 L129.02 554.94 L124.81 547.81 L131.94 552.02 Z" fill="#B08A46" opacity="0.85"/>
+<text x="170" y="570" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#F2EDE4">The Qur’an with recitation and tafsir</text>
+<text x="170" y="604" font-family="Helvetica, Arial, sans-serif" font-size="23" fill="#9AABB4">Twelve reciters, Ibn Kathir, verse by verse</text>
+<path d="M134.00 628.00 L136.06 636.02 L143.19 631.81 L138.98 638.94 L147.00 641.00 L138.98 643.06 L143.19 650.19 L136.06 645.98 L134.00 654.00 L131.94 645.98 L124.81 650.19 L129.02 643.06 L121.00 641.00 L129.02 638.94 L124.81 631.81 L131.94 636.02 Z" fill="#B08A46" opacity="0.85"/>
+<text x="170" y="654" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#F2EDE4">Zakat calculator and a halal finance guide</text>
+<text x="170" y="688" font-family="Helvetica, Arial, sans-serif" font-size="23" fill="#9AABB4">Nisab, hawl, and where the schools disagree</text>
+<path d="M134.00 712.00 L136.06 720.02 L143.19 715.81 L138.98 722.94 L147.00 725.00 L138.98 727.06 L143.19 734.19 L136.06 729.98 L134.00 738.00 L131.94 729.98 L124.81 734.19 L129.02 727.06 L121.00 725.00 L129.02 722.94 L124.81 715.81 L131.94 720.02 Z" fill="#B08A46" opacity="0.85"/>
+<text x="170" y="738" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#F2EDE4">Salah tracker, qada ledger, Ramadan planner</text>
+<text x="170" y="772" font-family="Helvetica, Arial, sans-serif" font-size="23" fill="#9AABB4">Private to your account, and yours to delete</text>
+<rect x="120" y="808" width="1360" height="1" fill="#1F6F6B" opacity="0.35"/>
+<text x="120" y="858" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#F2EDE4">sahn-ai.com</text>
+<text x="1480" y="858" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#9AABB4">English and العربية</text>
+</svg>
