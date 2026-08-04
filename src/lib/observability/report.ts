@@ -1,6 +1,7 @@
 import 'server-only';
 import { createHash } from 'node:crypto';
 import { createClient } from '@supabase/supabase-js';
+import { after } from 'next/server';
 import { PRODUCTION_ORIGIN, siteUrl } from '@/lib/site';
 
 /**
@@ -59,8 +60,12 @@ function describe(error: unknown): { message: string; detail: string | null } {
 /**
  * Records an error and emails on the first occurrence of each kind.
  *
- * Awaiting this is optional and usually wrong — the caller is already in a
- * failure path and the user is waiting. Call it without await.
+ * Scheduled with `after()` rather than left as a floating promise. A route
+ * handler that returns while an unawaited write is still in flight is frozen
+ * by the platform the moment it responds, and the write never lands — which
+ * is exactly what happened on the first attempt at this: the failure was
+ * reported correctly and recorded nowhere. `after()` keeps the invocation
+ * alive until the work finishes, without making the user wait for it.
  */
 export async function reportError(
   scope: ErrorScope,
@@ -76,6 +81,24 @@ export async function reportError(
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!url || !key) return;
 
+  const work = () => persist(url, key, scope, message, detail, context);
+
+  try {
+    after(work);
+  } catch {
+    // Outside a request scope — a script, or a test. Just do it inline.
+    await work();
+  }
+}
+
+async function persist(
+  url: string,
+  key: string,
+  scope: ErrorScope,
+  message: string,
+  detail: string | null,
+  context?: string
+): Promise<void> {
   try {
     const admin = createClient(url, key, {
       auth: { persistSession: false, autoRefreshToken: false }
