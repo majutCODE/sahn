@@ -7,6 +7,12 @@ import type { Locale } from '@/i18n/routing';
 import { formatNumber } from '@/lib/format';
 import { starPath } from '@/lib/girih';
 import type { AyahAudio } from '@/lib/quran/audio';
+import {
+  DEFAULT_RECITER,
+  RECITER_LIST,
+  isReciterId,
+  type ReciterId
+} from '@/lib/quran/resources';
 import type { ReaderAyah } from '@/lib/quran/surah';
 import type { Chapter } from '@/lib/quran/types';
 import AyahTools from './AyahTools';
@@ -14,7 +20,7 @@ import AyahTools from './AyahTools';
 const SCALES = [1, 1.15, 1.3, 1.5] as const;
 const PREFS_KEY = 'sahn:quran-prefs';
 
-type Prefs = { scale: number; arabicOnly: boolean };
+type Prefs = { scale: number; arabicOnly: boolean; reciter: ReciterId };
 
 export default function SurahReader({
   chapter,
@@ -34,10 +40,11 @@ export default function SurahReader({
       const raw = JSON.parse(localStorage.getItem(PREFS_KEY) ?? 'null');
       setPrefs({
         scale: SCALES.includes(raw?.scale) ? raw.scale : 1,
-        arabicOnly: raw?.arabicOnly === true
+        arabicOnly: raw?.arabicOnly === true,
+        reciter: isReciterId(raw?.reciter) ? raw.reciter : DEFAULT_RECITER
       });
     } catch {
-      setPrefs({ scale: 1, arabicOnly: false });
+      setPrefs({ scale: 1, arabicOnly: false, reciter: DEFAULT_RECITER });
     }
   }, []);
 
@@ -54,9 +61,42 @@ export default function SurahReader({
     });
   }
 
+  const reciter = prefs?.reciter ?? DEFAULT_RECITER;
+  // Starts as the files the server rendered with, so the default reciter costs
+  // no round trip and the reader is never briefly silent.
+  const [files, setFiles] = useState<AyahAudio[]>(audio);
+  const [loadingAudio, setLoadingAudio] = useState(false);
+
+  useEffect(() => {
+    if (!prefs || reciter === DEFAULT_RECITER) {
+      setFiles(audio);
+      return;
+    }
+
+    let cancelled = false;
+    setLoadingAudio(true);
+    fetch(`/api/quran/recitation?surah=${chapter.id}&reciter=${reciter}`)
+      .then((r) => (r.ok ? r.json() : Promise.reject()))
+      .then((d) => {
+        // A slow response for a reciter the reader has since changed away from
+        // must not overwrite the one they are now listening to.
+        if (!cancelled) setFiles(d.audio as AyahAudio[]);
+      })
+      .catch(() => {
+        if (!cancelled) setFiles([]);
+      })
+      .finally(() => {
+        if (!cancelled) setLoadingAudio(false);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [reciter, chapter.id, audio, prefs]);
+
   const audioByKey = useMemo(
-    () => new Map(audio.map((file) => [file.key, file.url])),
-    [audio]
+    () => new Map(files.map((file) => [file.key, file.url])),
+    [files]
   );
 
   // One element for the whole surah rather than one per ayah: 286 <audio>
@@ -156,6 +196,29 @@ export default function SurahReader({
             ))}
           </div>
         </div>
+
+        {files.length > 0 || loadingAudio ? (
+          <label className="flex items-center gap-2 text-xs text-muted">
+            {t('reciter')}
+            <select
+              value={reciter}
+              onChange={(e) => {
+                // Stop first: the element is about to point at a different
+                // recording, and leaving it playing mid-ayah is jarring.
+                playerRef.current?.pause();
+                setPlayingKey(null);
+                update({ reciter: Number(e.target.value) as ReciterId });
+              }}
+              className="border border-line bg-raised px-2 py-1 text-xs text-ink"
+            >
+              {RECITER_LIST.map((r) => (
+                <option key={r.id} value={r.id}>
+                  {r.style ? `${r.name} · ${r.style}` : r.name}
+                </option>
+              ))}
+            </select>
+          </label>
+        ) : null}
 
         {hasTranslation && (
           <label className="flex items-center gap-2 text-xs text-muted">

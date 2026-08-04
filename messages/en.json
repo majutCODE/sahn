@@ -209,7 +209,8 @@
     "tafsirBy": "Tafsir — {name}",
     "tafsirCovers": "Tafsir — {name}, on {from} to {to}",
     "askAboutThis": "Ask about this",
-    "askPrefill": "About Qur'an {verse} — "
+    "askPrefill": "About Qur'an {verse} — ",
+    "reciter": "Reciter"
   },
   "tracker": {
     "signedOut": "Sign in to keep a record.",
