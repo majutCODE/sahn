@@ -5,9 +5,9 @@ import { starPath } from '@/lib/girih';
  * The card X, Slack, iMessage and every link preview will render.
  *
  * Generated rather than committed as a PNG so it cannot drift from the palette
- * — the star comes from the same `starPath` the app draws with.
+ *, the star comes from the same `starPath` the app draws with.
  */
-export const alt = 'Sahn — sourced and cited, never decreed';
+export const alt = 'Sahn, sourced and cited, never decreed';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -16,7 +16,7 @@ const STONE = '#F2EDE4';
 const GLAZE = '#2C8D88';
 
 /**
- * Fraunces, fetched at render time. If the fetch fails the card still renders —
+ * Fraunces, fetched at render time. If the fetch fails the card still renders -
  * satori falls back to its default face rather than throwing, and a slightly
  * off-brand preview beats a broken one.
  */
@@ -81,7 +81,7 @@ export default async function Image() {
           An assistant that retrieves and cites.
         </div>
         <div style={{ fontSize: 30, color: '#9AABB4', marginTop: 18, maxWidth: 860 }}>
-          Prayer times, the Qur&apos;an, duas and zakat — and answers on Islamic
+          Prayer times, the Qur&apos;an, duas and zakat, and answers on Islamic
           law that trace to a named source and school, or are not given.
         </div>
       </div>
