@@ -20,6 +20,31 @@ export const EMBEDDING_DIMENSIONS = 1024;
  */
 export type InputType = 'document' | 'query';
 
+/**
+ * Voyage refused because the minute's budget is spent.
+ *
+ * Distinguished from every other failure so the caller can say something true
+ * — "wait twenty seconds" — instead of the generic "no sources were found",
+ * which is indistinguishable from a corpus that does not contain the answer.
+ */
+export class RateLimitedError extends Error {
+  /** Seconds to wait before the window resets. */
+  readonly retryAfter: number;
+
+  constructor(retryAfter = RATE_LIMIT_WINDOW_SECONDS) {
+    super('Voyage rate limit reached');
+    this.name = 'RateLimitedError';
+    this.retryAfter = retryAfter;
+  }
+}
+
+/**
+ * An account with no payment method gets 3 requests per minute in total,
+ * across every user of the site. One question needs one embedding, so this is
+ * the real ceiling on concurrent use until a card is added.
+ */
+export const RATE_LIMIT_WINDOW_SECONDS = 20;
+
 /** Voyage caps a request at 128 inputs. */
 const MAX_BATCH = 128;
 
@@ -50,6 +75,8 @@ export async function embed(
         })
       })
     );
+
+    if (response.status === 429) throw new RateLimitedError();
 
     if (!response.ok) {
       throw new Error(
@@ -82,7 +109,11 @@ export async function embed(
  */
 async function withRetry(
   send: () => Promise<Response>,
-  attempts = 4
+  // One retry, not four. Each 429 retry sleeps 20 seconds, so the old default
+  // left someone staring at a spinner for eighty seconds before being told
+  // nothing useful. Failing fast and explaining is better than waiting and
+  // then failing.
+  attempts = 1
 ): Promise<Response> {
   let response = await send();
   for (let i = 0; i < attempts && !ok(response); i += 1) {

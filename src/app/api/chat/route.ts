@@ -13,6 +13,7 @@ import {
   toCitations,
   type Citation
 } from '@/lib/search/retrieve';
+import { RateLimitedError } from '@/lib/embeddings/voyage';
 import { MADHHABS, type Madhhab } from '@/lib/madhhab';
 import { checkRateLimit, rateLimitHeaders } from '@/lib/rate-limit';
 
@@ -133,9 +134,19 @@ export async function POST(request: NextRequest) {
       const sources = await searchSources(message, { limit: 6 });
       passages = formatPassages(sources);
       citations = toCitations(sources);
-    } catch {
-      // A retrieval outage must not silently become an ungrounded fiqh answer.
-      // Empty passages make the fiqh prompt's own rule apply: say so and stop.
+    } catch (error) {
+      // Being throttled is not the same as finding nothing, and answering
+      // "there is no source material for this" when 36,000 narrations are
+      // sitting there unqueried is simply untrue. Say what actually happened
+      // and refuse before spending a completion on a groundless answer.
+      if (error instanceof RateLimitedError && route.route === 'fiqh') {
+        return NextResponse.json(
+          { error: 'retrieval_busy', retryAfter: error.retryAfter },
+          { status: 429, headers: { 'retry-after': String(error.retryAfter) } }
+        );
+      }
+      // The general route can still answer usefully without passages; its
+      // prompt already forbids quoting scripture from memory.
       passages = '';
       citations = [];
     }

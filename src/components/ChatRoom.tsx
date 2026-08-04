@@ -21,6 +21,8 @@ type Turn = {
   crisis: boolean;
   streaming: boolean;
   error: string | null;
+  /** Seconds to wait, when the error is a limit rather than a fault. */
+  retryAfter: number | null;
 };
 
 export default function ChatRoom({ threadId: initialThread }: { threadId?: string } = {}) {
@@ -53,7 +55,8 @@ export default function ChatRoom({ threadId: initialThread }: { threadId?: strin
           resources: [],
           crisis: false,
           streaming: true,
-          error: null
+          error: null,
+          retryAfter: null
         }
       ]);
 
@@ -105,7 +108,11 @@ export default function ChatRoom({ threadId: initialThread }: { threadId?: strin
             data.error === 'rate_limited' && !data.signedIn
               ? 'rate_limited_anon'
               : (data.error ?? 'failed');
-          patch(id, { streaming: false, error: reason });
+          patch(id, {
+            streaming: false,
+            error: reason,
+            retryAfter: data.retryAfter ?? null
+          });
           return;
         }
         patch(id, {
@@ -189,7 +196,8 @@ export default function ChatRoom({ threadId: initialThread }: { threadId?: strin
             resources: [],
             crisis: false,
             streaming: false,
-            error: null
+            error: null,
+            retryAfter: null
           });
         }
         setTurns(restored);
@@ -266,7 +274,9 @@ export default function ChatRoom({ threadId: initialThread }: { threadId?: strin
                     {/* Only known keys are looked up — an unexpected error
                         string must not become a missing-message crash. */}
                     {t.has(`errors.${turn.error}`)
-                      ? t(`errors.${turn.error}`)
+                      ? t(`errors.${turn.error}`, {
+                          seconds: turn.retryAfter ?? 20
+                        })
                       : t('errors.failed')}
                   </p>
                 ) : (

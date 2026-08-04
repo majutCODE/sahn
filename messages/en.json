@@ -72,7 +72,8 @@
       "classifier_unavailable": "Sahn could not route that safely just now. Please try again in a moment.",
       "failed": "Something went wrong. Please try again.",
       "rate_limited": "You have sent a lot of messages in a short time. Please wait a minute and try again.",
-      "rate_limited_anon": "That is as many messages as Sahn allows without an account. Sign in — it is free, and the limit is much higher."
+      "rate_limited_anon": "That is as many messages as Sahn allows without an account. Sign in — it is free, and the limit is much higher.",
+      "retrieval_busy": "Sahn can look up sources a few times a minute at the moment. Wait about {seconds} seconds and ask again — the answer will be properly sourced rather than guessed."
     },
     "sourcesNote": "Answers on Islam draw on a vetted Islamic knowledge base — the Qur'an with its translations, and sourced supplications — and every claim from it is cited. Everything else it answers as a general assistant.",
     "everythingElse": "Ask about anything at all — code, cooking, careers, homework. Where a question has an Islamic dimension, Sahn answers with that in view.",
