@@ -7,6 +7,7 @@ import { crisisResources } from '@/lib/chat/crisis';
 import { counselPrompt, sensitiveResponse } from '@/lib/chat/prompts';
 import { checkRateLimit, rateLimitHeaders } from '@/lib/rate-limit';
 import { formatPassages, searchSources } from '@/lib/search/retrieve';
+import { requestCountry } from '@/lib/geo';
 import { createClient } from '@/lib/supabase/server';
 
 export const runtime = 'nodejs';
@@ -55,7 +56,8 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'invalid_body' }, { status: 400 });
   }
 
-  const { message, locale, country } = body.data;
+  const { message, locale } = body.data;
+  const country = requestCountry(request) ?? body.data.country;
   const history = body.data.history ?? [];
 
   const supabase = await createClient();

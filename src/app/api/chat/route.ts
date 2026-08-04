@@ -3,6 +3,7 @@ import { NextResponse, type NextRequest } from 'next/server';
 import { z } from 'zod';
 import { locales, type Locale } from '@/i18n/routing';
 import { MisconfiguredError, classify } from '@/lib/chat/classify';
+import { requestCountry } from '@/lib/geo';
 import { createClient } from '@/lib/supabase/server';
 import { crisisResources } from '@/lib/chat/crisis';
 import { fiqhPrompt, generalPrompt, sensitiveResponse } from '@/lib/chat/prompts';
@@ -45,7 +46,8 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'invalid_body' }, { status: 400 });
   }
 
-  const { message, locale, country } = body.data;
+  const { message, locale } = body.data;
+  const country = requestCountry(request) ?? body.data.country;
   const madhhab: Madhhab = body.data.madhhab ?? 'all';
   const incognito = body.data.incognito === true;
   const threadId = incognito ? undefined : body.data.threadId;
