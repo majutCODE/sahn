@@ -1,9 +1,10 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Amiri_Quran, Fraunces, IBM_Plex_Sans_Arabic, Inter } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import Analytics from '@/components/Analytics';
+import ServiceWorker from '@/components/ServiceWorker';
 import CourtyardRail from '@/components/CourtyardRail';
 import MobileBar from '@/components/MobileBar';
 import { SettingsProvider } from '@/components/SettingsProvider';
@@ -74,9 +75,35 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: t('name'),
       description: t('description')
+    },
+    manifest: '/manifest.webmanifest',
+    appleWebApp: {
+      capable: true,
+      title: t('name'),
+      // The status bar sits over the page, so the header's own background
+      // shows through instead of a black bar above it.
+      statusBarStyle: 'default'
     }
   };
 }
+
+/**
+ * Installed-app chrome.
+ *
+ * `viewportFit: 'cover'` lets the page reach under the notch and the home
+ * indicator; without `themeColor` the status bar area renders white above a
+ * stone page, which is the single most obvious tell that something is a
+ * website in a shell rather than an app.
+ */
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#f2ede4' },
+    { media: '(prefers-color-scheme: dark)', color: '#10202b' }
+  ]
+};
 
 export default async function LocaleLayout({
   children,
@@ -120,6 +147,7 @@ export default async function LocaleLayout({
           </SettingsProvider>
         </NextIntlClientProvider>
         <Analytics />
+        <ServiceWorker />
       </body>
     </html>
   );
