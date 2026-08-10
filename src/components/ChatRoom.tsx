@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import type { Locale } from '@/i18n/routing';
 import AnswerBody from './AnswerBody';
 import Composer, { DRAFT_KEY } from './Composer';
+import { CTA_SOURCE_KEY } from './CityAssistantCard';
 import FirstRunSetup, { useNeedsSetup } from './FirstRunSetup';
 import GirihDoorway from './GirihDoorway';
 import { NEW_CHAT_EVENT } from './NewChatButton';
@@ -38,6 +39,16 @@ export default function ChatRoom({ threadId: initialThread }: { threadId?: strin
   const endRef = useRef<HTMLDivElement>(null);
   const nextId = useRef(0);
   const setup = useNeedsSetup();
+
+  // Read once, on the first message only. A conversation begun from a city
+  // page is one conversion, however many turns it runs to.
+  const sourceRef = useRef<string | undefined>(undefined);
+  useEffect(() => {
+    const source = sessionStorage.getItem(CTA_SOURCE_KEY);
+    if (!source) return;
+    sessionStorage.removeItem(CTA_SOURCE_KEY);
+    sourceRef.current = source;
+  }, []);
 
   const patch = useCallback((id: number, changes: Partial<Turn>) => {
     setTurns((prev) => prev.map((t) => (t.id === id ? { ...t, ...changes } : t)));
@@ -90,7 +101,8 @@ export default function ChatRoom({ threadId: initialThread }: { threadId?: strin
             message: question,
             locale,
             threadId: threadRef.current,
-            incognito
+            incognito,
+            source: sourceRef.current
           })
         });
       } catch {
@@ -161,6 +173,8 @@ export default function ChatRoom({ threadId: initialThread }: { threadId?: strin
         }
       }
 
+      // Spent. Later turns are the same conversation.
+      sourceRef.current = undefined;
       patch(id, { streaming: false });
     },
     [locale, patch, incognito]

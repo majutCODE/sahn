@@ -4,6 +4,7 @@ import { z } from 'zod';
 import { locales, type Locale } from '@/i18n/routing';
 import { MisconfiguredError, classify } from '@/lib/chat/classify';
 import { requestCountry } from '@/lib/geo';
+import { recordCta } from '@/lib/analytics/cta';
 import { reportError } from '@/lib/observability/report';
 import { createClient } from '@/lib/supabase/server';
 import { crisisResources } from '@/lib/chat/crisis';
@@ -39,7 +40,14 @@ const bodySchema = z.object({
    * by the client choosing not to send — a privacy mode the server can
    * override is not a privacy mode.
    */
-  incognito: z.boolean().optional()
+  incognito: z.boolean().optional(),
+  /**
+   * The content page this conversation started from, when it started from
+   * one. Recorded as a count per page, never against a person: it answers
+   * "do the prayer-time pages produce conversations", which is the only
+   * number that says whether to build more of them.
+   */
+  source: z.string().max(200).optional()
 });
 
 export async function POST(request: NextRequest) {
@@ -61,6 +69,8 @@ export async function POST(request: NextRequest) {
   const {
     data: { user }
   } = await supabase.auth.getUser();
+
+  if (body.data.source) void recordCta(body.data.source, locale);
 
   const verdict = await checkRateLimit('chat', request, user?.id);
   if (!verdict.allowed) {

@@ -515,5 +515,154 @@
     "heading": "Set your location",
     "body": "Prayer times, the Qibla direction, the Hijri calendar and the salah tracker all need to know where you are. It is computed on your device and never sent anywhere - and you can change it any time from the prayer times screen.",
     "notNow": "Not now"
+  },
+  "prayerPages": {
+    "breadcrumb": "Breadcrumb",
+    "allPrayerTimes": "Prayer times",
+    "englishOnly": "in English",
+    "metaTitle": "Prayer Times in {city}, {country} | Today's Salah Times",
+    "metaDescription": "Today in {city}: Fajr {fajr}, Maghrib {maghrib}. Full month of salah times, the Qibla bearing, and the calculation method used.",
+    "cityHeading": "Prayer times in {city}",
+    "todayLine": "{date}",
+    "todayTable": "Today's prayer times in {city}",
+    "countdown": "{prayer} in {time}",
+    "qiblaHeading": "Which way to face",
+    "qiblaBody": "From {city}, the Qibla is {bearing} degrees from true north, measured as a great circle to the Kaaba. A phone compass reads magnetic north, which differs from true north by a few degrees in most places, so treat a compass reading as close rather than exact.",
+    "methodHeading": "How these times are calculated",
+    "methodApproximatedNote": "The national authority here uses its own convention, which is not one of the presets available. The nearest equivalent is used, and the result can differ from a local timetable by a minute or two.",
+    "monthHeading": "Every day this month in {city}",
+    "faqHeading": "Questions",
+    "nearbyHeading": "Nearby cities",
+    "attribution": "City data from {source}.",
+    "assistantPrompt": "How do I combine Maghrib and Isha when travelling?",
+    "hubHeading": "Prayer times by city",
+    "hubIntro": "Times, the Qibla bearing and the calculation method for cities around the world, computed rather than fetched.",
+    "countryHeading": "Prayer times in {country}",
+    "countryIntro": "{count} cities in {country}, each with today's times, the full month, and the Qibla bearing.",
+    "countryMetaTitle": "Prayer Times in {country} | Salah Times by City",
+    "countryMetaDescription": "Salah times for cities across {country}, with the Qibla bearing and the calculation method used in each.",
+    "slots": {
+      "date": "Date",
+      "fajr": "Fajr",
+      "sunrise": "Sunrise",
+      "dhuhr": "Dhuhr",
+      "asr": "Asr",
+      "maghrib": "Maghrib",
+      "isha": "Isha"
+    },
+    "methods": {
+      "mwl": "Muslim World League",
+      "isna": "ISNA",
+      "umm_al_qura": "Umm al-Qura",
+      "karachi": "University of Islamic Sciences, Karachi",
+      "egyptian": "Egyptian General Authority of Survey",
+      "moonsighting": "Moonsighting Committee"
+    },
+    "methodWhy": {
+      "mwl": "These use the Muslim World League convention, which sets Fajr at 18 degrees of solar depression and Isha at 17. It is the most widely applied standard in {country} and across Europe generally, and it is what most mosques there follow.",
+      "isna": "These use the ISNA convention, 15 degrees for both Fajr and Isha. It is the standard most mosques in {country} follow, and the shallower angle produces noticeably later Fajr and earlier Isha than the European standards at the same latitude.",
+      "umm_al_qura": "These use Umm al-Qura, the convention of the Two Holy Mosques and the standard throughout {country}. Fajr is set at 18.5 degrees, and Isha is fixed at 90 minutes after Maghrib rather than by a solar angle.",
+      "karachi": "These use the University of Islamic Sciences in Karachi convention, 18 degrees for both Fajr and Isha. It is the standard across {country} and the wider subcontinent.",
+      "egyptian": "These use the Egyptian General Authority of Survey convention, 19.5 degrees for Fajr and 17.5 for Isha. It is the standard in {country} and much of the region.",
+      "moonsighting": "These use the Moonsighting Committee method, which adjusts the twilight angle by season and latitude rather than holding it fixed."
+    },
+    "sections": {
+      "extremeLatitude": {
+        "heading": "This far north, the sun does not cooperate",
+        "body": "{city} sits at {latitude} degrees. The longest day of the year runs to about {longest} hours and the shortest to about {shortest}, so for part of the summer true astronomical twilight never ends and Fajr and Isha cannot be determined by solar angle at all. The times here use the nearest-latitude rule, which borrows the pattern from the last date the angles were reachable. Local mosques may use a different rule, and where they do, theirs governs."
+      },
+      "highLatitude": {
+        "heading": "Why Fajr moves so much here",
+        "body": "{city} is at {latitude} degrees, far enough north that the gap between the earliest and latest Fajr across the year is about {spreadHours} hours. Fajr reaches {earliestFajr} at midsummer while Isha does not fall until {latestIsha}, which leaves a very short night. This is a property of the latitude rather than of the calculation, and it is why the summer months are demanding here in a way they are not nearer the equator."
+      },
+      "equatorial": {
+        "heading": "Times barely move here",
+        "body": "{city} is at {latitude} degrees, close enough to the equator that day length varies by only about {rangeMinutes} minutes across the entire year. Prayer times shift by a few minutes between seasons and little more, so a timetable printed in January is still broadly right in July."
+      },
+      "moderateVariation": {
+        "heading": "Across the year",
+        "body": "In {city} Fajr ranges from {earliestFajr} at the height of summer to {latestFajr} in deep winter, a spread of about {spreadMinutes} minutes. The shift is gradual, a minute or so every few days, which is why a monthly table is more useful than a single day's figures."
+      },
+      "southernSeasons": {
+        "heading": "Southern hemisphere",
+        "body": "The seasons here run opposite to most published guidance on prayer times, which is written from a northern perspective. The longest days fall in December and January, and Ramadan moves through the seasons in the reverse direction to how it is usually described."
+      },
+      "methodApproximated": {
+        "heading": "About the local authority",
+        "body": "The national religious authority here publishes its own timetable using a convention of its own. The figures on this page are computed with the closest standard convention and will normally agree to within a minute or two, but where they differ, the local timetable is the one to follow."
+      },
+      "ummAlQuraIsha": {
+        "heading": "Isha is fixed, not calculated",
+        "body": "Under Umm al-Qura, Isha is not derived from a solar angle. It is set at 90 minutes after Maghrib for most of the year and 120 minutes during Ramadan. That is why Isha here moves in step with sunset rather than drifting against it as it does under angle-based conventions."
+      },
+      "hanafiAsr": {
+        "heading": "A note on Asr",
+        "body": "The Asr on this page uses the majority position, where the shadow of an object equals its own length plus the noon shadow. The Hanafi school, which is followed by most Muslims in this region, waits until the shadow is twice that length, which typically falls between forty minutes and an hour and a half later. If your mosque prays Asr noticeably later than shown here, this is usually why."
+      }
+    },
+    "faq": {
+      "tomorrowFajr": {
+        "q": "What time is Fajr in {city} tomorrow?",
+        "a": "Fajr is at {tomorrowFajr} tomorrow in {city}, computed for the city's own timezone."
+      },
+      "todayIsha": {
+        "q": "What time is Isha in {city} today?",
+        "a": "Isha is at {isha} today. Today's Fajr was {fajr}."
+      },
+      "qiblaDirection": {
+        "q": "Which direction is the Qibla from {city}?",
+        "a": "{bearing} degrees from true north. A phone compass shows magnetic north, which is a few degrees off true north in most places."
+      },
+      "methodUsed": {
+        "q": "Which calculation method is used for {city}?",
+        "a": "{method}. It is the convention most widely followed locally, and the section above explains what it sets."
+      },
+      "summerFajr": {
+        "q": "Why is Fajr so early in {city} in summer?",
+        "a": "The latitude. The sun dips only briefly below the horizon in midsummer, so the angle that defines Fajr is reached very soon after Isha. It is a property of where the city is, not of the method."
+      },
+      "winterIsha": {
+        "q": "Why is Isha so early in {city} in winter?",
+        "a": "Short winter days mean the sun sets early and reaches the Isha angle soon after. Maghrib and Isha can fall within about an hour of each other at midwinter."
+      }
+    },
+    "countries": {
+      "GB": "United Kingdom",
+      "US": "United States",
+      "CA": "Canada",
+      "FR": "France",
+      "DE": "Germany",
+      "NL": "Netherlands",
+      "BE": "Belgium",
+      "SE": "Sweden",
+      "NO": "Norway",
+      "DK": "Denmark",
+      "BA": "Bosnia and Herzegovina",
+      "RS": "Serbia",
+      "MK": "North Macedonia",
+      "AL": "Albania",
+      "AU": "Australia",
+      "ZA": "South Africa",
+      "KE": "Kenya",
+      "TZ": "Tanzania",
+      "SG": "Singapore",
+      "MY": "Malaysia",
+      "ID": "Indonesia",
+      "TR": "Turkey",
+      "PK": "Pakistan",
+      "BD": "Bangladesh",
+      "IN": "India",
+      "EG": "Egypt",
+      "SA": "Saudi Arabia",
+      "AE": "United Arab Emirates",
+      "QA": "Qatar",
+      "KW": "Kuwait",
+      "MA": "Morocco",
+      "JO": "Jordan",
+      "IQ": "Iraq",
+      "NG": "Nigeria",
+      "SN": "Senegal"
+    },
+    "ogQibla": "Qibla {bearing} degrees"
   }
 }

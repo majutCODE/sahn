@@ -20,6 +20,12 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/auth/', '/c/']
       }
     ],
-    sitemap: `${siteUrl()}/sitemap.xml`
+    // One entry per shard. Search Console reports coverage per sitemap, so
+    // this is what makes "are the city pages indexing" an answerable question.
+    sitemap: [
+      `${siteUrl()}/sitemap/static.xml`,
+      `${siteUrl()}/sitemap/prayer-countries.xml`,
+      `${siteUrl()}/sitemap/prayer-cities.xml`
+    ]
   };
 }
