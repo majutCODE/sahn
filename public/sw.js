@@ -17,7 +17,7 @@
  *     so someone who reads a surah can read it again on the Underground.
  */
 
-const VERSION = 'sahn-v1';
+const VERSION = 'sahn-v2';
 const SHELL = `${VERSION}-shell`;
 const PAGES = `${VERSION}-pages`;
 const AUDIO = `${VERSION}-audio`;
@@ -93,25 +93,42 @@ self.addEventListener('fetch', (event) => {
 
   if (url.origin !== self.location.origin || neverCache(url)) return;
 
-  // Everything else: network first, falling back to whatever was last seen.
-  // Fresh when online, still there when not — and never stale while online,
-  // which matters for a product whose content is edited daily.
+  /**
+   * Navigations only. Everything else - scripts, stylesheets, RSC payloads,
+   * fonts - goes straight to the network untouched.
+   *
+   * The first version of this handled every same-origin GET and fell back to
+   * cached HTML whenever the network failed. That is fine for a page and
+   * catastrophic for a chunk: after a deploy the old chunk URLs 404, the
+   * worker answered with an HTML document, and the browser tried to parse a
+   * page as JavaScript. The site then appeared broken for exactly the people
+   * who had visited before, which is the worst possible group to break for,
+   * and it looked fine to anyone testing in a fresh browser.
+   *
+   * Static assets need no help from us in any case: they are content-hashed
+   * and already immutable at the CDN.
+   */
+  if (request.mode !== 'navigate') return;
+
   event.respondWith(
     fetch(request)
       .then((response) => {
-        if (response.ok && request.mode === 'navigate') {
+        if (response.ok) {
           const copy = response.clone();
           caches.open(PAGES).then((cache) => cache.put(request, copy));
         }
         return response;
       })
       .catch(async () => {
+        // A cached copy of this same page, or the offline-capable prayer page.
+        // Never a different document type: both of these are HTML, and the
+        // request that got here is a navigation.
         const cached =
           (await caches.match(request)) ?? (await caches.match('/en/prayer'));
         if (cached) return cached;
         return new Response('Offline', {
           status: 503,
-          headers: { 'content-type': 'text/plain' }
+          headers: { 'content-type': 'text/html; charset=utf-8' }
         });
       })
   );

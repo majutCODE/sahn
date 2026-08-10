@@ -56,4 +56,12 @@ describe('service worker scope', () => {
   it('drops caches from older versions on activate', () => {
     expect(sw).toContain('caches.delete');
   });
+
+  it('only intercepts navigations', () => {
+    // Handling every same-origin GET meant a failed chunk request was answered
+    // with an HTML document, which the browser then tried to parse as
+    // JavaScript. It broke the site for returning visitors only, and looked
+    // perfect in a fresh browser.
+    expect(sw).toContain("request.mode !== 'navigate'");
+  });
 });
