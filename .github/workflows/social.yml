@@ -5,7 +5,7 @@ name: Post to X
 # under load; for a post every few days that does not matter.
 on:
   schedule:
-    - cron: '0 10 */3 * *'
+      - cron: '7 * * * *'
   # So you can fire one by hand from the Actions tab, and dry-run it first.
   workflow_dispatch:
     inputs:
