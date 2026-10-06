@@ -8,6 +8,19 @@ import posts from '../content/social-posts.json';
 describe('social post rotation', () => {
   const all = posts.posts;
 
+  it('is lowercase with no punctuation', () => {
+    for (const p of all) {
+      expect(p.text, p.keyword).not.toMatch(/[.,!?;:]/);
+      if (p.lang === 'en') expect(p.text, p.keyword).not.toMatch(/[A-Z]/);
+    }
+  });
+
+  it('carries both languages and both voices', () => {
+    expect(all.some((p) => p.lang === 'ar')).toBe(true);
+    expect(all.some((p) => p.person === 'first')).toBe(true);
+    expect(all.some((p) => p.person === 'impersonal')).toBe(true);
+  });
+
   it('fits inside the character limit with the link appended', () => {
     for (const p of all) {
       const length = p.text.length + posts.link.length + 2;
@@ -19,8 +32,8 @@ describe('social post rotation', () => {
     expect(new Set(all.map((p) => p.text)).size).toBe(all.length);
   });
 
-  it('names a feature for every post', () => {
-    for (const p of all) expect(p.feature.length).toBeGreaterThan(0);
+  it('names the search term every post is aimed at', () => {
+    for (const p of all) expect(p.keyword.length, p.text).toBeGreaterThan(0);
   });
 
   it('makes no claim Sahn does not hold', () => {

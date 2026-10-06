@@ -1,54 +1,55 @@
 {
-  "note": "The rotation the X bot posts from. One per run, chosen deterministically from the date so the same post never goes out twice in a cycle and no state has to be stored. Keep every entry under 270 characters to leave room for the link. House line: the entire Qur'an loaded into AI, Claude from an Islamic perspective.",
+  "note": "One-liners for the X bot. House rules: lowercase, no punctuation, one idea. `person` alternates between first ('i built') and impersonal ('sahn does'), `lang` between en and ar, and `keyword` records the search term the line is aimed at - taken from real Search Console queries, not guessed. The link is appended to roughly one post in three; a bare line travels further on X, so it is spent rather than attached by default.",
   "link": "https://sahn-ai.com",
   "posts": [
-    {
-      "feature": "corpus",
-      "text": "The entire Qur'an is loaded into Sahn. 6,236 ayat and 36,057 narrations across all six canonical collections, searchable by meaning rather than by keyword.\n\nClaude's intelligence, from an Islamic perspective."
-    },
-    {
-      "feature": "citations",
-      "text": "Ask a general AI about Islam and it answers confidently. Ask where the answer came from and it goes quiet.\n\nSahn retrieves from the Qur'an and the six books, cites every claim, and names the school. Where the sources do not settle it, it says so."
-    },
-    {
-      "feature": "prayer",
-      "text": "Prayer times in Sahn are computed on your device from your location, not fetched from a server.\n\nWhich means they work on a plane, in a basement, and with no signal at all. The Qibla bearing too."
-    },
-    {
-      "feature": "quran",
-      "text": "The Qur'an in Sahn comes with twelve reciters and Ibn Kathir's tafsir, verse by verse.\n\nTap any ayah to listen, read the commentary, or ask about it. Recitation continues into the next verse rather than stopping."
-    },
-    {
-      "feature": "hifz",
-      "text": "New in Sahn: a hifz tracker with spaced review.\n\nAdd what you have memorised, and it schedules reviews at widening intervals. Marking a portion shaky brings it back quickly rather than starting it over."
-    },
-    {
-      "feature": "zakat",
-      "text": "Sahn's zakat calculator applies published rules to figures you enter, and tells you which rule it applied.\n\nGold or silver nisab, your choice. Liabilities deducted before the threshold is tested. The contested cases marked as contested."
-    },
-    {
-      "feature": "refusal",
-      "text": "Sahn does not issue fatwa.\n\nOn a question of Islamic law it retrieves, cites and names the school. Where the sources do not answer, it says so and stops. A ruling for your situation comes from a qualified scholar who knows it."
-    },
-    {
-      "feature": "bilingual",
-      "text": "سَحْن متاح بالعربية كاملًا، لا ترجمةً للواجهة فحسب.\n\nالقرآن كاملًا في الذكاء الاصطناعي، وأوقات الصلاة والحفظ والزكاة، وأجوبة تُسند إلى مصادرها."
-    },
-    {
-      "feature": "finance",
-      "text": "Sahn's halal finance guide explains murabaha, ijara, sukuk and tawarruq, and states the criticism of each alongside the structure.\n\nA guide that only gives the marketing case for a product is worse than no guide."
-    },
-    {
-      "feature": "offline",
-      "text": "Sahn installs to your home screen and works without a connection.\n\nPrayer times, the Qibla and the Hijri calendar are computed on the device, so they do not need the network to be reachable."
-    },
-    {
-      "feature": "search",
-      "text": "Search Sahn for \"patience in hardship\" and it returns verses and narrations that never use the word.\n\nThe Qur'an and all six hadith collections, searched by meaning. Every hadith shown with its grading."
-    },
-    {
-      "feature": "privacy",
-      "text": "Your worship records in Sahn are private at the database level, not just in the interface. A query for a row that is not yours returns nothing.\n\nIncognito saves nothing at all, and you can export or delete everything in one click."
-    }
+    { "lang": "en", "person": "first", "keyword": "prayer times", "text": "i built prayer times that work with no signal because they are computed on your phone not fetched" },
+    { "lang": "en", "person": "impersonal", "keyword": "prayer times", "text": "sahn calculates prayer times on your device so they still work on a plane" },
+    { "lang": "en", "person": "first", "keyword": "quran ai", "text": "i loaded the entire quran into ai and it answers from the text not from memory" },
+    { "lang": "en", "person": "impersonal", "keyword": "quran ai", "text": "the entire quran and all six hadith collections live inside sahn searchable by meaning" },
+    { "lang": "en", "person": "first", "keyword": "islamic ai", "text": "i wanted claude but from an islamic perspective so i built it" },
+    { "lang": "en", "person": "impersonal", "keyword": "islamic ai", "text": "an islamic assistant that shows you where every answer came from" },
+    { "lang": "en", "person": "impersonal", "keyword": "hadith search", "text": "36057 narrations across the six books searchable by what you mean not what you type" },
+    { "lang": "en", "person": "first", "keyword": "hadith search", "text": "i indexed every hadith in the six books so you can search them by meaning" },
+    { "lang": "en", "person": "impersonal", "keyword": "qibla direction", "text": "qibla bearing from anywhere in the world computed on your phone in degrees from true north" },
+    { "lang": "en", "person": "first", "keyword": "zakat calculator", "text": "i built a zakat calculator that tells you which rule it applied and where scholars disagree" },
+    { "lang": "en", "person": "impersonal", "keyword": "zakat nisab", "text": "gold nisab or silver nisab your choice and sahn shows you what changes" },
+    { "lang": "en", "person": "impersonal", "keyword": "quran tafsir", "text": "every ayah in sahn comes with twelve reciters and ibn kathir beside it" },
+    { "lang": "en", "person": "first", "keyword": "quran recitation", "text": "i added twelve reciters to the quran reader and it keeps playing into the next ayah" },
+    { "lang": "en", "person": "first", "keyword": "hifz tracker", "text": "i built a hifz tracker that schedules your review before you forget" },
+    { "lang": "en", "person": "impersonal", "keyword": "memorise quran", "text": "mark a portion shaky and sahn brings it back in two days instead of thirty" },
+    { "lang": "en", "person": "impersonal", "keyword": "islamic ai", "text": "ask a general ai about islam and it answers confidently ask it for the source and it goes quiet" },
+    { "lang": "en", "person": "impersonal", "keyword": "fatwa", "text": "sahn does not issue fatwa it retrieves cites and names the school or says it does not know" },
+    { "lang": "en", "person": "first", "keyword": "islamic ai", "text": "i made it say i dont know when the sources dont settle it which is harder than it sounds" },
+    { "lang": "en", "person": "impersonal", "keyword": "shariah compliant bank", "text": "the halal finance guide explains murabaha and sukuk and names the criticism of each" },
+    { "lang": "en", "person": "impersonal", "keyword": "islamic finance", "text": "a finance guide that only gives the marketing case for a product is worse than no guide" },
+    { "lang": "en", "person": "first", "keyword": "ramadan planner", "text": "i built a ramadan planner that tracks fasts taraweeh and juz and remembers what you owe" },
+    { "lang": "en", "person": "impersonal", "keyword": "qada prayers", "text": "mark a prayer missed and sahn adds it to your qada ledger without you doing it twice" },
+    { "lang": "en", "person": "impersonal", "keyword": "hijri calendar", "text": "hijri dates computed on your device from the umm al qura calendar" },
+    { "lang": "en", "person": "impersonal", "keyword": "dua", "text": "every dua in sahn carries its arabic its transliteration and the narration it came from" },
+    { "lang": "en", "person": "first", "keyword": "quran search", "text": "i searched my own quran index for feeling hopeless and it returned verses that never use the word" },
+    { "lang": "en", "person": "impersonal", "keyword": "islamic app", "text": "installs to your home screen and the worship tools keep working with no connection" },
+    { "lang": "en", "person": "impersonal", "keyword": "privacy", "text": "your worship records are private at the database level not just hidden in the interface" },
+    { "lang": "en", "person": "first", "keyword": "islamic ai", "text": "i made incognito actually mean nothing is stored rather than nothing is shown" },
+    { "lang": "en", "person": "impersonal", "keyword": "prayer times uk", "text": "prayer times for blackburn bradford dewsbury and everywhere else that never gets its own page" },
+    { "lang": "en", "person": "impersonal", "keyword": "prayer times", "text": "fajr moves five hours across the year in northern england and sahn explains why on the page" },
+    { "lang": "en", "person": "first", "keyword": "quran ai", "text": "6236 ayat 36057 hadith nine collections all of it searchable by meaning" },
+    { "lang": "en", "person": "impersonal", "keyword": "islamic assistant", "text": "ask it anything at all on islam it answers only from cited sources" },
+
+    { "lang": "ar", "person": "impersonal", "keyword": "اوقات الصلاة", "text": "أوقات الصلاة في سحن محسوبة على جهازك فتعمل بلا اتصال" },
+    { "lang": "ar", "person": "first", "keyword": "اوقات الصلاة", "text": "صنعت أوقات صلاة تُحسب على الهاتف لا تُجلب من خادم" },
+    { "lang": "ar", "person": "impersonal", "keyword": "مواقيت الصلاة", "text": "مواقيت الصلاة واتجاه القبلة لأي مدينة محسوبة لا مجلوبة" },
+    { "lang": "ar", "person": "first", "keyword": "القرآن الذكاء الاصطناعي", "text": "أدخلت القرآن كاملا في الذكاء الاصطناعي فصار يجيب من النص لا من الذاكرة" },
+    { "lang": "ar", "person": "impersonal", "keyword": "القرآن الذكاء الاصطناعي", "text": "القرآن كاملا والكتب الستة داخل سحن يُبحث فيها بالمعنى" },
+    { "lang": "ar", "person": "impersonal", "keyword": "الفتوى", "text": "سحن لا يفتي بل يسترجع ويعزو ويسمي المذهب أو يقول لا أعلم" },
+    { "lang": "ar", "person": "impersonal", "keyword": "حاسبة الزكاة", "text": "حاسبة زكاة تبين أي قاعدة طبقت وأين اختلف العلماء" },
+    { "lang": "ar", "person": "impersonal", "keyword": "نصاب الزكاة", "text": "نصاب الذهب أو الفضة تختار أنت وسحن يبين لك الفرق" },
+    { "lang": "ar", "person": "impersonal", "keyword": "تفسير القرآن", "text": "كل آية في سحن معها اثنا عشر قارئا وتفسير ابن كثير" },
+    { "lang": "ar", "person": "first", "keyword": "حفظ القرآن", "text": "بنيت متابعة حفظ ترتب لك المراجعة قبل أن تنسى" },
+    { "lang": "ar", "person": "impersonal", "keyword": "البحث في الحديث", "text": "ستة وثلاثون ألف حديث في الكتب الستة يبحث فيها بالمعنى لا باللفظ" },
+    { "lang": "ar", "person": "impersonal", "keyword": "التقويم الهجري", "text": "التقويم الهجري بتقويم أم القرى محسوبا على جهازك" },
+    { "lang": "ar", "person": "first", "keyword": "الذكاء الاصطناعي الإسلامي", "text": "أردت كلود من منظور إسلامي فصنعته" },
+    { "lang": "ar", "person": "impersonal", "keyword": "الذكاء الاصطناعي الإسلامي", "text": "اسأله عن أي شيء وفي الإسلام لا يجيب إلا من مصدر معزو" },
+    { "lang": "ar", "person": "impersonal", "keyword": "الأدعية", "text": "كل دعاء في سحن معه نصه العربي ونطقه ومصدره" },
+    { "lang": "ar", "person": "impersonal", "keyword": "الخصوصية", "text": "سجل عبادتك محفوظ لك وحدك على مستوى قاعدة البيانات لا في الواجهة فقط" }
   ]
 }
