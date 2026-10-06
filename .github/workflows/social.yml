@@ -1,0 +1,40 @@
+name: Post to X
+
+# Every three days at 10:00 UTC, which is late morning in the UK and early
+# evening in the Gulf. GitHub's scheduler is best-effort and can run late
+# under load; for a post every few days that does not matter.
+on:
+  schedule:
+    - cron: '0 10 */3 * *'
+  # So you can fire one by hand from the Actions tab, and dry-run it first.
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Print the post without sending it'
+        type: boolean
+        default: true
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # A manual run defaults to a dry run so the first thing you do cannot
+      # accidentally be a live post. The schedule always posts for real.
+      - name: Post
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.dry_run }}" = "true" ]; then
+            node scripts/post-to-x.mjs --dry-run
+          else
+            node scripts/post-to-x.mjs
+          fi
