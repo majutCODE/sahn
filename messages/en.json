@@ -685,7 +685,17 @@
       "JO": "Jordan",
       "IQ": "Iraq",
       "NG": "Nigeria",
-      "SN": "Senegal"
+      "SN": "Senegal",
+      "BH": "Bahrain",
+      "DZ": "Algeria",
+      "LB": "Lebanon",
+      "LY": "Libya",
+      "OM": "Oman",
+      "PS": "Palestine",
+      "SD": "Sudan",
+      "SY": "Syria",
+      "TN": "Tunisia",
+      "YE": "Yemen"
     },
     "ogQibla": "Qibla {bearing} degrees"
   },

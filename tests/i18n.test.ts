@@ -85,3 +85,35 @@ describe('direction and numerals', () => {
     expect(latin).toBe('2,026');
   });
 });
+
+/**
+ * Every shipped country needs a name in both locales.
+ *
+ * Adding cities and adding their country names are two separate edits, and the
+ * second is easy to forget: the build logged MISSING_MESSAGE for ten countries
+ * the first time this set expanded, which next-intl turns into a thrown error
+ * on the page rather than a quiet fallback.
+ */
+describe('prayer page country names', () => {
+  it('covers every country in the shipped set', async () => {
+    const cities = (await import('../content/cities.json')).default as {
+      countries: Record<string, Array<{ country: string; priority?: boolean }>>;
+    };
+    const shipped = [
+      ...new Set(
+        Object.values(cities.countries)
+          .flat()
+          .filter((c) => c.priority)
+          .map((c) => c.country)
+      )
+    ];
+
+    for (const locale of ['en', 'ar'] as const) {
+      const messages = (await import(`../messages/${locale}.json`)).default as {
+        prayerPages: { countries: Record<string, string> };
+      };
+      const missing = shipped.filter((c) => !messages.prayerPages.countries[c]);
+      expect(missing, `${locale} is missing country names`).toEqual([]);
+    }
+  });
+});
