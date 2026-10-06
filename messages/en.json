@@ -664,5 +664,15 @@
       "SN": "Senegal"
     },
     "ogQibla": "Qibla {bearing} degrees"
+  },
+  "notifications": {
+    "titles": {
+      "fajr": "Fajr",
+      "dhuhr": "Dhuhr",
+      "asr": "Asr",
+      "maghrib": "Maghrib",
+      "isha": "Isha"
+    },
+    "body": "It is time to pray."
   }
 }

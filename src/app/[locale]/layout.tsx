@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Amiri_Quran, Fraunces, IBM_Plex_Sans_Arabic, Inter } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import Analytics from '@/components/Analytics';
+import NativeBridge from '@/components/NativeBridge';
 import ServiceWorker from '@/components/ServiceWorker';
 import CourtyardRail from '@/components/CourtyardRail';
 import MobileBar from '@/components/MobileBar';
@@ -144,6 +145,10 @@ export default async function LocaleLayout({
                 </main>
               </div>
             </div>
+            {/* Inside the providers on purpose: it reads settings and
+                translations. Analytics and the service worker below need
+                neither, which is why they sit outside. */}
+            <NativeBridge />
           </SettingsProvider>
         </NextIntlClientProvider>
         <Analytics />
