@@ -27,3 +27,6 @@ android/build/
 android/app/build/
 android/app/src/main/assets/public/
 android/local.properties
+
+# Throwaway design mockups, never committed
+public/_uipreview/

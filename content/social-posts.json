@@ -1,0 +1,54 @@
+{
+  "note": "The rotation the X bot posts from. One per run, chosen deterministically from the date so the same post never goes out twice in a cycle and no state has to be stored. Keep every entry under 270 characters to leave room for the link. House line: the entire Qur'an loaded into AI, Claude from an Islamic perspective.",
+  "link": "https://sahn-ai.com",
+  "posts": [
+    {
+      "feature": "corpus",
+      "text": "The entire Qur'an is loaded into Sahn. 6,236 ayat and 36,057 narrations across all six canonical collections, searchable by meaning rather than by keyword.\n\nClaude's intelligence, from an Islamic perspective."
+    },
+    {
+      "feature": "citations",
+      "text": "Ask a general AI about Islam and it answers confidently. Ask where the answer came from and it goes quiet.\n\nSahn retrieves from the Qur'an and the six books, cites every claim, and names the school. Where the sources do not settle it, it says so."
+    },
+    {
+      "feature": "prayer",
+      "text": "Prayer times in Sahn are computed on your device from your location, not fetched from a server.\n\nWhich means they work on a plane, in a basement, and with no signal at all. The Qibla bearing too."
+    },
+    {
+      "feature": "quran",
+      "text": "The Qur'an in Sahn comes with twelve reciters and Ibn Kathir's tafsir, verse by verse.\n\nTap any ayah to listen, read the commentary, or ask about it. Recitation continues into the next verse rather than stopping."
+    },
+    {
+      "feature": "hifz",
+      "text": "New in Sahn: a hifz tracker with spaced review.\n\nAdd what you have memorised, and it schedules reviews at widening intervals. Marking a portion shaky brings it back quickly rather than starting it over."
+    },
+    {
+      "feature": "zakat",
+      "text": "Sahn's zakat calculator applies published rules to figures you enter, and tells you which rule it applied.\n\nGold or silver nisab, your choice. Liabilities deducted before the threshold is tested. The contested cases marked as contested."
+    },
+    {
+      "feature": "refusal",
+      "text": "Sahn does not issue fatwa.\n\nOn a question of Islamic law it retrieves, cites and names the school. Where the sources do not answer, it says so and stops. A ruling for your situation comes from a qualified scholar who knows it."
+    },
+    {
+      "feature": "bilingual",
+      "text": "سَحْن متاح بالعربية كاملًا، لا ترجمةً للواجهة فحسب.\n\nالقرآن كاملًا في الذكاء الاصطناعي، وأوقات الصلاة والحفظ والزكاة، وأجوبة تُسند إلى مصادرها."
+    },
+    {
+      "feature": "finance",
+      "text": "Sahn's halal finance guide explains murabaha, ijara, sukuk and tawarruq, and states the criticism of each alongside the structure.\n\nA guide that only gives the marketing case for a product is worse than no guide."
+    },
+    {
+      "feature": "offline",
+      "text": "Sahn installs to your home screen and works without a connection.\n\nPrayer times, the Qibla and the Hijri calendar are computed on the device, so they do not need the network to be reachable."
+    },
+    {
+      "feature": "search",
+      "text": "Search Sahn for \"patience in hardship\" and it returns verses and narrations that never use the word.\n\nThe Qur'an and all six hadith collections, searched by meaning. Every hadith shown with its grading."
+    },
+    {
+      "feature": "privacy",
+      "text": "Your worship records in Sahn are private at the database level, not just in the interface. A query for a row that is not yours returns nothing.\n\nIncognito saves nothing at all, and you can export or delete everything in one click."
+    }
+  ]
+}
