@@ -458,6 +458,138 @@
     {
       "country": "SN",
       "slug": "dakar"
+    },
+    {
+      "country": "JO",
+      "slug": "zarqa"
+    },
+    {
+      "country": "JO",
+      "slug": "irbid"
+    },
+    {
+      "country": "JO",
+      "slug": "russeifa"
+    },
+    {
+      "country": "JO",
+      "slug": "aqaba"
+    },
+    {
+      "country": "QA",
+      "slug": "ar-rayyan"
+    },
+    {
+      "country": "QA",
+      "slug": "al-wakrah"
+    },
+    {
+      "country": "AE",
+      "slug": "sharjah"
+    },
+    {
+      "country": "AE",
+      "slug": "ajman"
+    },
+    {
+      "country": "BH",
+      "slug": "manama"
+    },
+    {
+      "country": "OM",
+      "slug": "muscat"
+    },
+    {
+      "country": "OM",
+      "slug": "salalah"
+    },
+    {
+      "country": "KW",
+      "slug": "al-ahmadi"
+    },
+    {
+      "country": "KW",
+      "slug": "hawalli"
+    },
+    {
+      "country": "SA",
+      "slug": "dammam"
+    },
+    {
+      "country": "SA",
+      "slug": "taif"
+    },
+    {
+      "country": "SA",
+      "slug": "buraydah"
+    },
+    {
+      "country": "SA",
+      "slug": "tabuk"
+    },
+    {
+      "country": "EG",
+      "slug": "alexandria"
+    },
+    {
+      "country": "EG",
+      "slug": "giza"
+    },
+    {
+      "country": "IQ",
+      "slug": "basrah"
+    },
+    {
+      "country": "IQ",
+      "slug": "mosul"
+    },
+    {
+      "country": "IQ",
+      "slug": "erbil"
+    },
+    {
+      "country": "LB",
+      "slug": "beirut"
+    },
+    {
+      "country": "SY",
+      "slug": "damascus"
+    },
+    {
+      "country": "PS",
+      "slug": "gaza"
+    },
+    {
+      "country": "DZ",
+      "slug": "algiers"
+    },
+    {
+      "country": "TN",
+      "slug": "tunis"
+    },
+    {
+      "country": "LY",
+      "slug": "tripoli"
+    },
+    {
+      "country": "MA",
+      "slug": "marrakesh"
+    },
+    {
+      "country": "MA",
+      "slug": "fes"
+    },
+    {
+      "country": "MA",
+      "slug": "tangier"
+    },
+    {
+      "country": "SD",
+      "slug": "khartoum"
+    },
+    {
+      "country": "YE",
+      "slug": "sanaa"
     }
   ]
 }
