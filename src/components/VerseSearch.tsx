@@ -14,14 +14,34 @@ type Verse = {
   similarity: number;
 };
 
+type Hadith = {
+  collection: string;
+  collection_name: string;
+  hadith_number: string;
+  arabic: string;
+  text: string;
+  grades: Array<{ name?: string; grade?: string }> | null;
+  reference: string;
+  similarity: number;
+};
+
 type State = 'idle' | 'searching' | 'done' | 'error';
+
+/** Which corpus the reader is looking at. */
+type Scope = 'quran' | 'hadith';
 
 export default function VerseSearch() {
   const t = useTranslations('verseSearch');
   const locale = useLocale() as Locale;
   const [query, setQuery] = useState('');
   const [verses, setVerses] = useState<Verse[]>([]);
+  const [hadith, setHadith] = useState<Hadith[]>([]);
   const [state, setState] = useState<State>('idle');
+  // Both corpora come back from one request, so switching is instant and
+  // costs nothing. Tabs rather than a merged list: a verse and a narration
+  // carry different authority, and interleaving them by cosine distance would
+  // quietly imply they do not.
+  const [scope, setScope] = useState<Scope>('quran');
 
   async function search(event: React.FormEvent) {
     event.preventDefault();
@@ -39,7 +59,8 @@ export default function VerseSearch() {
         return;
       }
       const data = await res.json();
-      setVerses(data.verses);
+      setVerses(data.verses ?? []);
+      setHadith(data.hadith ?? []);
       setState('done');
     } catch {
       setState('error');
@@ -77,13 +98,69 @@ export default function VerseSearch() {
         </p>
       )}
 
-      {state === 'done' && verses.length === 0 && (
+      {state === 'done' && verses.length === 0 && hadith.length === 0 && (
         <p className="mt-6 text-sm text-muted">{t('noResults')}</p>
       )}
 
-      {verses.length > 0 && (
+      {(verses.length > 0 || hadith.length > 0) && (
+        <div className="mt-8 flex gap-2">
+          {(['quran', 'hadith'] as const).map((value) => (
+            <button
+              key={value}
+              type="button"
+              onClick={() => setScope(value)}
+              aria-pressed={scope === value}
+              className={`border px-3 py-1.5 text-sm transition-colors ${
+                scope === value
+                  ? 'border-glaze bg-glaze text-on-glaze'
+                  : 'border-line text-muted hover:text-ink'
+              }`}
+            >
+              {t(`scopes.${value}`, {
+                count: formatNumber(
+                  locale,
+                  value === 'quran' ? verses.length : hadith.length
+                )
+              })}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {scope === 'hadith' && hadith.length > 0 && (
+        <ol className="mt-4 border-t border-line">
+          {hadith.map((h) => (
+            <li key={`${h.collection}-${h.hadith_number}`} className="border-b border-line py-5">
+              {h.arabic && (
+                <p className="quran text-xl text-ink" dir="rtl" lang="ar">
+                  {h.arabic}
+                </p>
+              )}
+              <p className="mt-3 text-base text-muted">{h.text}</p>
+              <div className="mt-3 flex flex-wrap items-center gap-3">
+                <span className="text-xs text-muted">{h.reference}</span>
+                {/* The grading travels with the narration or not at all.
+                    Showing a hadith without it invites the reader to treat
+                    every narration as equally established, which is the one
+                    thing this corpus must not imply. */}
+                {h.grades?.map((g, i) => (
+                  <span key={i} className="border border-line px-2 py-0.5 text-xs text-muted">
+                    {[g.name, g.grade].filter(Boolean).join(': ')}
+                  </span>
+                ))}
+              </div>
+            </li>
+          ))}
+        </ol>
+      )}
+
+      {scope === 'hadith' && hadith.length === 0 && state === 'done' && (
+        <p className="mt-4 text-sm text-muted">{t('noHadith')}</p>
+      )}
+
+      {scope === 'quran' && verses.length > 0 && (
         <>
-          <p className="mt-8 text-xs text-muted">
+          <p className="mt-4 text-xs text-muted">
             {t('resultsLabel', { count: formatNumber(locale, verses.length) })}
           </p>
           <ol className="mt-2 border-t border-line">

@@ -103,8 +103,8 @@
       "summary": "The full mushaf with translations, tafsir, recitation and reading plans."
     },
     "search": {
-      "name": "Verse search",
-      "summary": "Ask in plain language, receive the ayat. Nothing added on top."
+      "name": "Search the sources",
+      "summary": "Search the Qur’an and the six hadith collections by meaning, not by keyword."
     },
     "ramadan": {
       "name": "Ramadan planner",
@@ -363,7 +363,12 @@
     "resultsLabel": "{count} verses",
     "openReader": "Read in context",
     "error": "Search is unavailable right now.",
-    "note": "Results are ranked by meaning, not by keyword. They are a starting point for reading, not an answer."
+    "note": "Results are ranked by meaning, not by keyword. They are a starting point for reading, not an answer.",
+    "scopes": {
+      "quran": "Qur'an ({count})",
+      "hadith": "Hadith ({count})"
+    },
+    "noHadith": "No narrations matched closely enough to show."
   },
   "zakat": {
     "dueLabel": "Zakat due",
@@ -458,7 +463,8 @@
   "legal": {
     "updated": "Updated",
     "privacy": "Privacy",
-    "terms": "Terms"
+    "terms": "Terms",
+    "about": "About"
   },
   "ramadan": {
     "loading": "Loading…",
@@ -674,5 +680,16 @@
       "isha": "Isha"
     },
     "body": "It is time to pray."
+  },
+  "errorPage": {
+    "heading": "Something went wrong",
+    "body": "This page failed to load. It has been reported, so we know about it. Trying again often works, because most of these are momentary.",
+    "retry": "Try again",
+    "home": "Go home",
+    "reference": "Reference: {digest}"
+  },
+  "about": {
+    "title": "How Sahn answers",
+    "intro": "What it draws on, what it refuses to do, and why a question of Islamic law is treated differently from everything else."
   }
 }

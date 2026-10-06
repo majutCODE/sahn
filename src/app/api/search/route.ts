@@ -1,13 +1,23 @@
 import { NextResponse, type NextRequest } from 'next/server';
 import { z } from 'zod';
 import { checkRateLimit, rateLimitHeaders } from '@/lib/rate-limit';
-import { searchVerses } from '@/lib/search/retrieve';
+import { searchSources } from '@/lib/search/retrieve';
 import { createClient } from '@/lib/supabase/server';
 
 const schema = z.object({
   query: z.string().min(2).max(500),
   limit: z.number().int().min(1).max(20).optional()
 });
+
+/**
+ * Both corpora, from one embedding.
+ *
+ * The module searched only the Qur'an while 36,000 narrations sat embedded and
+ * indexed beside it, reachable from chat and from nowhere else. searchSources
+ * runs both queries in parallel off a single embedding, so covering the hadith
+ * costs no extra Voyage request - which is the whole reason it was written
+ * that way.
+ */
 
 export async function POST(request: NextRequest) {
   const body = schema.safeParse(await request.json().catch(() => null));
@@ -31,11 +41,11 @@ export async function POST(request: NextRequest) {
 
   try {
     // Deliberately no summary, no commentary, no "these verses suggest".
-    // The spec is explicit: return the verses and let the user read them.
-    const verses = await searchVerses(body.data.query, {
-      limit: body.data.limit ?? 10
+    // The spec is explicit: return the sources and let the user read them.
+    const { verses, hadith } = await searchSources(body.data.query, {
+      limit: body.data.limit ?? 8
     });
-    return NextResponse.json({ verses });
+    return NextResponse.json({ verses, hadith });
   } catch {
     return NextResponse.json({ error: 'search_failed' }, { status: 503 });
   }

@@ -70,6 +70,7 @@ function staticPages(): MetadataRoute.Sitemap {
     ...modules.filter((m) => m.id !== 'counsel').map((m) => m.href),
     ...TOPICS.map((t) => `/finance/${t.slug}`),
     ...LEGAL_DOCUMENTS.map((d) => `/${d.slug}`),
+    '/about',
     // 114 surahs are real, indexable pages and the bulk of the useful surface.
     ...Array.from({ length: 114 }, (_, i) => `/quran/${i + 1}`)
   ];

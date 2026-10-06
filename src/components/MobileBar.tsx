@@ -96,7 +96,10 @@ export default function MobileBar() {
             <div className="border-b border-line px-4 py-3">
               <AccountMenu />
               <nav className="mt-3 flex gap-3 text-[11px] text-muted">
-                <Link href="/privacy" className="hover:text-ink">
+                <Link href="/about" className="hover:text-ink">
+            {t('legal.about')}
+          </Link>
+          <Link href="/privacy" className="hover:text-ink">
                   {t('legal.privacy')}
                 </Link>
                 <Link href="/terms" className="hover:text-ink">
