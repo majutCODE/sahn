@@ -2,7 +2,9 @@
   "app": {
     "name": "Sahn",
     "tagline": "Sourced and cited, never decreed",
-    "description": "An Islamic assistant that retrieves and cites - prayer times, the Quran, duas, zakat and more."
+    "description": "An Islamic assistant that retrieves and cites - prayer times, the Quran, duas, zakat and more.",
+    "homeTitle": "Sahn | The entire Qur’an, loaded into AI",
+    "homeDescription": "The entire Qur’an and six hadith collections loaded into AI. Claude’s intelligence, from an Islamic perspective. Prayer times, hifz, zakat, and answers that cite their sources."
   },
   "nav": {
     "modules": "Modules",
@@ -88,47 +90,58 @@
   "modules": {
     "prayer": {
       "name": "Prayer times & Qibla",
-      "summary": "Next prayer, Qibla bearing and notifications - computed on your device."
+      "summary": "Next prayer, Qibla bearing and notifications - computed on your device.",
+      "seoTitle": "Prayer Times and Qibla Direction, Computed Offline"
     },
     "tracker": {
       "name": "Salah tracker",
-      "summary": "Log the five, keep a qada ledger, watch the streak build."
+      "summary": "Log the five, keep a qada ledger, watch the streak build.",
+      "seoTitle": "Salah Tracker and Qada Ledger"
     },
     "duas": {
       "name": "Dua library",
-      "summary": "Duas by situation, with source, audio and the morning and evening adhkar."
+      "summary": "Duas by situation, with source, audio and the morning and evening adhkar.",
+      "seoTitle": "Du'a Library with Arabic, Transliteration and Sources"
     },
     "quran": {
       "name": "Quran",
-      "summary": "The full mushaf with translations, tafsir, recitation and reading plans."
+      "summary": "The full mushaf with translations, tafsir, recitation and reading plans.",
+      "seoTitle": "Read the Qur'an with Recitation and Tafsir"
     },
     "search": {
       "name": "Search the sources",
-      "summary": "Search the Qur’an and the six hadith collections by meaning, not by keyword."
+      "summary": "Search the Qur’an and the six hadith collections by meaning, not by keyword.",
+      "seoTitle": "Search the Qur'an and Six Hadith Collections"
     },
     "ramadan": {
       "name": "Ramadan planner",
-      "summary": "Suhoor and iftar, the juz plan, taraweeh, fidya and Laylatul Qadr."
+      "summary": "Suhoor and iftar, the juz plan, taraweeh, fidya and Laylatul Qadr.",
+      "seoTitle": "Ramadan Planner: Fasts, Taraweeh and Juz"
     },
     "calendar": {
       "name": "Hijri calendar",
-      "summary": "Convert both ways, with the key days and the recommended fasts marked."
+      "summary": "Convert both ways, with the key days and the recommended fasts marked.",
+      "seoTitle": "Hijri Calendar and Islamic Dates"
     },
     "zakat": {
       "name": "Zakat calculator",
-      "summary": "Every asset class, live nisab, a hawl reminder and saved records."
+      "summary": "Every asset class, live nisab, a hawl reminder and saved records.",
+      "seoTitle": "Zakat Calculator: Nisab, Hawl, Gold and Silver"
     },
     "finance": {
       "name": "Halal finance",
-      "summary": "Riba, mortgages, pensions and screening - explained, never recommended."
+      "summary": "Riba, mortgages, pensions and screening - explained, never recommended.",
+      "seoTitle": "Halal Finance Guide: Structures and Disagreements"
     },
     "counsel": {
       "name": "Counsel",
-      "summary": "A quieter room for strain, doubt and grief. It listens before it answers."
+      "summary": "A quieter room for strain, doubt and grief. It listens before it answers.",
+      "seoTitle": "Counsel"
     },
     "hifz": {
       "name": "Hifz tracker",
-      "summary": "What you have memorised, and what is due for review today."
+      "summary": "What you have memorised, and what is due for review today.",
+      "seoTitle": "Hifz Tracker with Spaced Review"
     }
   },
   "prayer": {

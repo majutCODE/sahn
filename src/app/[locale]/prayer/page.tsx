@@ -12,7 +12,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'modules.prayer' });
-  return { title: t('name'), description: t('summary') };
+  return { title: t('seoTitle'), description: t('summary') };
 }
 
 export default async function PrayerPage({
@@ -24,9 +24,16 @@ export default async function PrayerPage({
   setRequestLocale(locale);
   const t = await getTranslations('qibla');
   const tp = await getTranslations('prayerPages');
+  const tm = await getTranslations();
 
   return (
     <div className="mx-auto max-w-2xl px-5 py-10 sm:px-8 sm:py-14">
+      <h1 className="font-display text-3xl text-ink sm:text-4xl">
+        {tm('modules.prayer.name')}
+      </h1>
+      <p className="mt-3 mb-8 max-w-prose text-base text-muted">
+        {tm('modules.prayer.summary')}
+      </p>
       <PrayerTimesPanel />
 
       <section className="mt-14 border-t border-line pt-10">

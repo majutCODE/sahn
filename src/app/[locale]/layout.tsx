@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Amiri_Quran, Fraunces, IBM_Plex_Sans_Arabic, Inter } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import Analytics from '@/components/Analytics';
+import JsonLd from '@/components/JsonLd';
 import NativeBridge from '@/components/NativeBridge';
 import ServiceWorker from '@/components/ServiceWorker';
 import CourtyardRail from '@/components/CourtyardRail';
@@ -56,8 +57,10 @@ export async function generateMetadata({
 
   return {
     metadataBase: new URL(siteUrl()),
-    title: { default: t('name'), template: `%s · ${t('name')}` },
-    description: t('description'),
+    // The home title is the strongest on-page signal on the site and was the
+    // bare product name. The template keeps the brand on every other page.
+    title: { default: t('homeTitle'), template: `%s · ${t('name')}` },
+    description: t('homeDescription'),
     alternates: {
       canonical: `${siteUrl()}/${locale}`,
       languages: Object.fromEntries(
@@ -69,7 +72,7 @@ export async function generateMetadata({
       url: `${siteUrl()}/${locale}`,
       siteName: t('name'),
       title: t('name'),
-      description: t('description'),
+      description: t('homeDescription'),
       locale: locale === 'ar' ? 'ar_AR' : 'en_GB'
     },
     twitter: {
@@ -119,6 +122,7 @@ export default async function LocaleLayout({
 
   const dir = localeDirection[locale as Locale];
   const t = await getTranslations('nav');
+  const ta = await getTranslations('app');
 
   return (
     <html
@@ -151,6 +155,43 @@ export default async function LocaleLayout({
             <NativeBridge />
           </SettingsProvider>
         </NextIntlClientProvider>
+        {/* Site-level structured data, emitted once. WebSite with a
+            SearchAction is what lets Google offer a search box against the
+            site in results; Organization is what ties the name, the logo and
+            the social profile together into one entity rather than three
+            unrelated strings. */}
+        <JsonLd
+          data={{
+            '@context': 'https://schema.org',
+            '@graph': [
+              {
+                '@type': 'WebSite',
+                '@id': `${siteUrl()}/#website`,
+                url: siteUrl(),
+                name: ta('name'),
+                description: ta('homeDescription'),
+                inLanguage: locale,
+                publisher: { '@id': `${siteUrl()}/#organization` },
+                potentialAction: {
+                  '@type': 'SearchAction',
+                  target: {
+                    '@type': 'EntryPoint',
+                    urlTemplate: `${siteUrl()}/${locale}/search?q={search_term_string}`
+                  },
+                  'query-input': 'required name=search_term_string'
+                }
+              },
+              {
+                '@type': 'Organization',
+                '@id': `${siteUrl()}/#organization`,
+                name: ta('name'),
+                url: siteUrl(),
+                logo: `${siteUrl()}/apple-icon`,
+                sameAs: ['https://x.com/sahn_ai']
+              }
+            ]
+          }}
+        />
         <Analytics />
         <ServiceWorker />
       </body>

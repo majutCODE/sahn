@@ -9,7 +9,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'modules.zakat' });
-  return { title: t('name'), description: t('summary') };
+  return { title: t('seoTitle'), description: t('summary') };
 }
 
 export default async function ZakatPage({
