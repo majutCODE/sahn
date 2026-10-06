@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og';
+import { FRAUNCES_500_BASE64 } from './_fonts/fraunces';
 import { starPath } from '@/lib/girih';
 
 /**
@@ -15,27 +16,17 @@ const INK = '#10202B';
 const STONE = '#F2EDE4';
 const GLAZE = '#2C8D88';
 
-/**
- * Fraunces, fetched at render time. If the fetch fails the card still renders -
- * satori falls back to its default face rather than throwing, and a slightly
- * off-brand preview beats a broken one.
- */
-async function displayFont(): Promise<ArrayBuffer | null> {
-  try {
-    const css = await fetch(
-      'https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&display=swap',
-      { headers: { 'user-agent': 'Mozilla/5.0' } }
-    ).then((r) => r.text());
-    const url = /src:\s*url\((https:[^)]+\.(?:ttf|woff2?))\)/.exec(css)?.[1];
-    if (!url) return null;
-    return await fetch(url).then((r) => r.arrayBuffer());
-  } catch {
-    return null;
-  }
+/** Decoded once per render. See _fonts/fraunces.ts for why it is inlined. */
+function displayFont(): ArrayBuffer {
+  const binary = Buffer.from(FRAUNCES_500_BASE64, 'base64');
+  return binary.buffer.slice(
+    binary.byteOffset,
+    binary.byteOffset + binary.byteLength
+  ) as ArrayBuffer;
 }
 
 export default async function Image() {
-  const font = await displayFont();
+  const font = displayFont();
 
   return new ImageResponse(
     (
@@ -69,7 +60,7 @@ export default async function Image() {
             style={{
               fontSize: 92,
               color: STONE,
-              fontFamily: font ? 'Fraunces' : 'serif',
+              fontFamily: 'Fraunces',
               letterSpacing: -2
             }}
           >
@@ -88,9 +79,10 @@ export default async function Image() {
     ),
     {
       ...size,
-      fonts: font
-        ? [{ name: 'Fraunces', data: font, weight: 500 as const, style: 'normal' as const }]
-        : []
+      // Always a real font. An empty array here is what threw.
+      fonts: [
+        { name: 'Fraunces', data: font, weight: 500 as const, style: 'normal' as const }
+      ]
     }
   );
 }
