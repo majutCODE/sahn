@@ -439,7 +439,9 @@
     "saveError": "Could not save. Try again.",
     "signInToSave": "<link>Sign in</link> to save this calculation and be reminded at your hawl.",
     "print": "Print or save as PDF",
-    "disclaimer": "This is a calculator, not a fatwa. Where schools differ on an asset the difference is noted rather than decided, and anything unusual in your circumstances should go to a qualified scholar."
+    "disclaimer": "This is a calculator, not a fatwa. Where schools differ on an asset the difference is noted rather than decided, and anything unusual in your circumstances should go to a qualified scholar.",
+    "guideHeading": "How zakat is calculated",
+    "faqHeading": "Common questions"
   },
   "finance": {
     "heading": "Halal finance",
