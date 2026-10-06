@@ -18,7 +18,8 @@ export const EXPORTED_TABLES = [
   'zakat_records',
   'chat_threads',
   'chat_messages',
-  'counsel_threads'
+  'counsel_threads',
+  'hifz_portions'
 ] as const;
 
 export type ExportedTable = (typeof EXPORTED_TABLES)[number];

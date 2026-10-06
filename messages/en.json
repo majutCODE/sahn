@@ -125,6 +125,10 @@
     "counsel": {
       "name": "Counsel",
       "summary": "A quieter room for strain, doubt and grief. It listens before it answers."
+    },
+    "hifz": {
+      "name": "Hifz tracker",
+      "summary": "What you have memorised, and what is due for review today."
     }
   },
   "prayer": {
@@ -692,5 +696,39 @@
   "about": {
     "title": "How Sahn answers",
     "intro": "What it draws on, what it refuses to do, and why a question of Islamic law is treated differently from everything else."
+  },
+  "hifz": {
+    "loading": "Loading…",
+    "signedOut": "Sign in to keep your memorisation record.",
+    "signIn": "Sign in",
+    "loadFailed": "Could not load your record. Please try again.",
+    "stats": {
+      "memorised": "Ayat held",
+      "percent": "Of the Qur'an",
+      "due": "Due today"
+    },
+    "dueHeading": "Due for review",
+    "dueBody": "Recite each from memory, then say how it went. Honest beats generous: a portion marked solid will not come back round for a while.",
+    "solid": "Solid",
+    "shaky": "Shaky",
+    "addHeading": "Add a portion",
+    "surah": "Surah",
+    "from": "From",
+    "to": "To",
+    "add": "Add",
+    "surahLength": "{surah} has {count} ayat.",
+    "addFailed": "Could not add that portion.",
+    "allHeading": "Everything you are holding",
+    "open": "Read",
+    "remove": "Remove",
+    "strength": {
+      "new": "New",
+      "shaky": "Shaky",
+      "settling": "Settling",
+      "steady": "Steady",
+      "strong": "Strong",
+      "firm": "Firm"
+    },
+    "note": "Review intervals lengthen as a portion settles: a day at first, then two, five, twelve, thirty, and seventy-five. Marking something shaky brings it back quickly rather than starting it over, because forgetting what you once knew is not the same as meeting it for the first time."
   }
 }

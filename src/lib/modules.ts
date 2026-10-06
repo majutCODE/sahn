@@ -21,6 +21,7 @@ export type ModuleId =
   | 'tracker'
   | 'duas'
   | 'quran'
+  | 'hifz'
   | 'search'
   | 'ramadan'
   | 'calendar'
@@ -45,6 +46,7 @@ export const modules: readonly ModuleDef[] = [
   { id: 'tracker', group: 'worship', href: '/tracker', phase: 2, tier: 'free', girih: 1 },
   { id: 'duas', group: 'read', href: '/duas', phase: 3, tier: 'free', girih: 2 },
   { id: 'quran', group: 'read', href: '/quran', phase: 3, tier: 'free', girih: 3 },
+  { id: 'hifz', group: 'read', href: '/hifz', phase: 6, tier: 'free', girih: 1 },
   { id: 'search', group: 'read', href: '/search', phase: 4, tier: 'paid', girih: 4 },
   { id: 'ramadan', group: 'worship', href: '/ramadan', phase: 6, tier: 'paid', girih: 5 },
   { id: 'calendar', group: 'worship', href: '/calendar', phase: 2, tier: 'free', girih: 6 },
