@@ -31,6 +31,7 @@ export type ErrorScope =
   | 'auth'
   | 'account'
   | 'ramadan'
+  | 'tracker'
   | 'threads';
 
 /**

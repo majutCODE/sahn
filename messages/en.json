@@ -247,7 +247,8 @@
       "jamaah": "In jamaah",
       "qada": "Made up",
       "missed": "Not yet"
-    }
+    },
+    "autoQadaNote": "Prayers you mark missed are added to the qada ledger automatically, and taken back off it if you change your mind. Marking one as qada records that you made it up."
   },
   "hijri": {
     "todayLabel": "Today",

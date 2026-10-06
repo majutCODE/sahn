@@ -80,7 +80,16 @@ export default function SalahTracker() {
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({ date: todayKey, prayer, status })
     });
-    if (!res.ok) void refresh();
+
+    // The ledger moves server-side whenever a status changes, so it has to be
+    // read back. Marking Fajr missed and watching the qada count stay at zero
+    // would look like the feature was not working.
+    if (res.ok) {
+      const ledger = await fetch('/api/qada').catch(() => null);
+      if (ledger?.ok) setQada((await ledger.json()).entries);
+    } else {
+      void refresh();
+    }
   }
 
   async function saveQada(entry: QadaEntry) {
@@ -201,6 +210,7 @@ export default function SalahTracker() {
       <section className="mt-10">
         <h3 className="font-display text-xl text-ink">{t('qadaHeading')}</h3>
         <p className="mt-2 max-w-prose text-sm text-muted">{t('qadaNote')}</p>
+        <p className="mt-2 max-w-prose text-sm text-muted">{t('autoQadaNote')}</p>
         {owedTotal > 0 && (
           <p className="mt-3 text-sm text-ink">
             {t('qadaRemaining', { count: formatNumber(locale, owedTotal) })}
