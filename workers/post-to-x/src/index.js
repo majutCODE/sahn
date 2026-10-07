@@ -144,8 +144,44 @@ export default {
       return new Response('not found', { status: 404 });
     }
     const now = url.searchParams.get('at') ? new Date(url.searchParams.get('at')) : new Date();
-    const dry = url.searchParams.get('dry') === '1';
-    if (dry) {
+
+    // Health. Names only, never values: the question this answers is "is this
+    // thing configured", and answering it should not require trusting whoever
+    // is asking with the credentials.
+    //
+    // It exists because `wrangler secret list` shows only secrets, so a value
+    // added in the dashboard as a plaintext variable is invisible to it. Three
+    // of these looked missing when they were not, and the only way to tell was
+    // to infer it. The Worker itself is the one thing that knows for certain
+    // what it can see.
+    if (url.searchParams.get('check') === '1') {
+      const names = [
+        'X_API_KEY',
+        'X_API_SECRET',
+        'X_ACCESS_TOKEN',
+        'X_ACCESS_SECRET',
+        'RESEND_API_KEY',
+        'ALERT_EMAIL',
+        'TRIGGER_SECRET'
+      ];
+      const bound = Object.fromEntries(names.map((n) => [n, Boolean(env[n])]));
+      return Response.json({
+        bound,
+        canPost: ['X_API_KEY', 'X_API_SECRET', 'X_ACCESS_TOKEN', 'X_ACCESS_SECRET'].every(
+          (n) => bound[n]
+        ),
+        canAlert: bound.RESEND_API_KEY && bound.ALERT_EMAIL,
+        poolSize: pool.posts.length,
+        today: planFor(now, pool.posts).map((s) => ({
+          hour: s.hour,
+          lang: s.post.lang,
+          tone: s.post.tone,
+          withLink: s.withLink
+        }))
+      });
+    }
+
+    if (url.searchParams.get('dry') === '1') {
       const slot = planFor(now, pool.posts).find((s) => s.hour === now.getUTCHours());
       return Response.json(slot ? { would: compose(slot, pool.link) } : { would: null });
     }

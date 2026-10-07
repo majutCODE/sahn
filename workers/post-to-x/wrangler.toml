@@ -16,3 +16,10 @@ crons = ["7 * * * *"]
 #   RESEND_API_KEY   so a refusal reaches a person
 #   ALERT_EMAIL      where it reaches them
 #   TRIGGER_SECRET   guards the manual /?key=... endpoint
+
+# Retained logs. Without this a failed run leaves nothing behind, which is how
+# the first missed slot became a thing we had to reason about rather than read.
+# Sampling stays at 1: this runs 24 times a day, so there is nothing to sample.
+[observability]
+enabled = true
+head_sampling_rate = 1
