@@ -1,0 +1,18 @@
+name = "sahn-x-bot"
+main = "src/index.js"
+compatibility_date = "2026-10-07"
+
+# Hourly, and most hours do nothing: the schedule inside the Worker decides
+# whether this particular hour carries a post. That is what produces the uneven
+# rhythm - some days three, some days none - instead of a visible cron.
+#
+# Cloudflare does not disable a cron trigger for inactivity, which is the whole
+# reason this is not a GitHub Actions schedule.
+[triggers]
+crons = ["7 * * * *"]
+
+# Secrets are set with `wrangler secret put` or in the dashboard, never here:
+#   X_API_KEY  X_API_SECRET  X_ACCESS_TOKEN  X_ACCESS_SECRET
+#   RESEND_API_KEY   so a refusal reaches a person
+#   ALERT_EMAIL      where it reaches them
+#   TRIGGER_SECRET   guards the manual /?key=... endpoint
