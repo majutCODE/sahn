@@ -28,23 +28,16 @@ const { posts: pool, link } = JSON.parse(
 );
 
 /**
- * Interleaved by language before anything else looks at it.
+ * Walked in file order.
  *
- * The file groups English then Arabic, which is how it is readable to edit.
- * Walking that order produced eight straight days of Arabic followed by eight
- * of English: not a mix, a block. Alternating here means every other post is
- * in the other language whatever stride the day happens to take.
+ * An earlier version grouped the file by language and alternated here, which
+ * fixed one problem and left another: consecutive posts still shared a tone,
+ * so a stretch of the schedule read as fifty contrarian lines in a row. The
+ * ordering now lives in the file itself, round-robin across the seven tones
+ * with no two neighbours sharing a tone, a language or a link. Nothing to
+ * shuffle at run time, and `--plan` shows exactly what will go out.
  */
-const posts = (() => {
-  const en = pool.filter((p) => p.lang === 'en');
-  const ar = pool.filter((p) => p.lang === 'ar');
-  const out = [];
-  for (let i = 0; i < Math.max(en.length, ar.length); i += 1) {
-    if (en[i]) out.push(en[i]);
-    if (ar[i]) out.push(ar[i]);
-  }
-  return out;
-})();
+const posts = pool;
 
 /** Deterministic PRNG. Same seed, same sequence, on any machine. */
 function rng(seed) {
@@ -106,9 +99,11 @@ function planFor(date) {
   return [...hours].sort((a, b) => a - b).map((hour, index) => {
     const sequence = seqStart + index;
     const post = posts[sequence % posts.length];
-    // Roughly one in three carries the link. A bare line travels further on
-    // X, so the link is spent rather than attached by default.
-    const withLink = sequence % 3 === 0;
+    // Per line, not a ratio. A link under an observation reads as bait and a
+    // link under a feature reads as a door, so the lines that carry one say so
+    // in the file. A bare line also travels further on X, which is why it is
+    // about one post in nine rather than one in three.
+    const withLink = post.link === true;
     return { hour, post, withLink };
   });
 }
@@ -130,7 +125,7 @@ if (PLAN_DAYS > 0) {
     for (const slot of plan) {
       console.log(
         `${label}  ${String(slot.hour).padStart(2, '0')}:00  ` +
-          `${slot.post.lang} ${slot.post.person.padEnd(11)} ${slot.withLink ? '+link' : '     '}  ` +
+          `${slot.post.lang} ${slot.post.tone.padEnd(10)} ${slot.withLink ? '+link' : '     '}  ` +
           slot.post.text.slice(0, 58)
       );
     }

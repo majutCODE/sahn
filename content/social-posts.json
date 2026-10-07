@@ -1,55 +1,2806 @@
 {
-  "note": "One-liners for the X bot. House rules: lowercase, no punctuation, one idea. `person` alternates between first ('i built') and impersonal ('sahn does'), `lang` between en and ar, and `keyword` records the search term the line is aimed at - taken from real Search Console queries, not guessed. The link is appended to roughly one post in three; a bare line travels further on X, so it is spent rather than attached by default.",
+  "note": "One-liners for the X bot, walked in file order. House rules: lowercase, no punctuation, one idea. 350 lines at the bot's own rate is a bit over eight months before anything repeats.\n\n`tone` is what the line is doing - critical, contextual, observed, insight, question, build, product - and the file is ordered round-robin across the seven so consecutive posts never share one. `lang` is en or ar; one line in five is Arabic, written in Arabic rather than translated word for word, and chosen for the lines that land in an Arabic-speaking context. The British clock change and Dewsbury stay in English. `person` alternates between first ('i built') and impersonal ('sahn does'). `keyword` records the search term the line is aimed at, taken from Search Console queries rather than guessed.\n\n`link` is per line, not a ratio. A link under an observation reads as bait and a link under a feature reads as a door, so the product lines carry it and the rest do not. That is about one post in nine.",
   "link": "https://sahn-ai.com",
   "posts": [
-    { "lang": "en", "person": "first", "keyword": "prayer times", "text": "i built prayer times that work with no signal because they are computed on your phone not fetched" },
-    { "lang": "en", "person": "impersonal", "keyword": "prayer times", "text": "sahn calculates prayer times on your device so they still work on a plane" },
-    { "lang": "en", "person": "first", "keyword": "quran ai", "text": "i loaded the entire quran into ai and it answers from the text not from memory" },
-    { "lang": "en", "person": "impersonal", "keyword": "quran ai", "text": "the entire quran and all six hadith collections live inside sahn searchable by meaning" },
-    { "lang": "en", "person": "first", "keyword": "islamic ai", "text": "i wanted claude but from an islamic perspective so i built it" },
-    { "lang": "en", "person": "impersonal", "keyword": "islamic ai", "text": "an islamic assistant that shows you where every answer came from" },
-    { "lang": "en", "person": "impersonal", "keyword": "hadith search", "text": "36057 narrations across the six books searchable by what you mean not what you type" },
-    { "lang": "en", "person": "first", "keyword": "hadith search", "text": "i indexed every hadith in the six books so you can search them by meaning" },
-    { "lang": "en", "person": "impersonal", "keyword": "qibla direction", "text": "qibla bearing from anywhere in the world computed on your phone in degrees from true north" },
-    { "lang": "en", "person": "first", "keyword": "zakat calculator", "text": "i built a zakat calculator that tells you which rule it applied and where scholars disagree" },
-    { "lang": "en", "person": "impersonal", "keyword": "zakat nisab", "text": "gold nisab or silver nisab your choice and sahn shows you what changes" },
-    { "lang": "en", "person": "impersonal", "keyword": "quran tafsir", "text": "every ayah in sahn comes with twelve reciters and ibn kathir beside it" },
-    { "lang": "en", "person": "first", "keyword": "quran recitation", "text": "i added twelve reciters to the quran reader and it keeps playing into the next ayah" },
-    { "lang": "en", "person": "first", "keyword": "hifz tracker", "text": "i built a hifz tracker that schedules your review before you forget" },
-    { "lang": "en", "person": "impersonal", "keyword": "memorise quran", "text": "mark a portion shaky and sahn brings it back in two days instead of thirty" },
-    { "lang": "en", "person": "impersonal", "keyword": "islamic ai", "text": "ask a general ai about islam and it answers confidently ask it for the source and it goes quiet" },
-    { "lang": "en", "person": "impersonal", "keyword": "fatwa", "text": "sahn does not issue fatwa it retrieves cites and names the school or says it does not know" },
-    { "lang": "en", "person": "first", "keyword": "islamic ai", "text": "i made it say i dont know when the sources dont settle it which is harder than it sounds" },
-    { "lang": "en", "person": "impersonal", "keyword": "shariah compliant bank", "text": "the halal finance guide explains murabaha and sukuk and names the criticism of each" },
-    { "lang": "en", "person": "impersonal", "keyword": "islamic finance", "text": "a finance guide that only gives the marketing case for a product is worse than no guide" },
-    { "lang": "en", "person": "first", "keyword": "ramadan planner", "text": "i built a ramadan planner that tracks fasts taraweeh and juz and remembers what you owe" },
-    { "lang": "en", "person": "impersonal", "keyword": "qada prayers", "text": "mark a prayer missed and sahn adds it to your qada ledger without you doing it twice" },
-    { "lang": "en", "person": "impersonal", "keyword": "hijri calendar", "text": "hijri dates computed on your device from the umm al qura calendar" },
-    { "lang": "en", "person": "impersonal", "keyword": "dua", "text": "every dua in sahn carries its arabic its transliteration and the narration it came from" },
-    { "lang": "en", "person": "first", "keyword": "quran search", "text": "i searched my own quran index for feeling hopeless and it returned verses that never use the word" },
-    { "lang": "en", "person": "impersonal", "keyword": "islamic app", "text": "installs to your home screen and the worship tools keep working with no connection" },
-    { "lang": "en", "person": "impersonal", "keyword": "privacy", "text": "your worship records are private at the database level not just hidden in the interface" },
-    { "lang": "en", "person": "first", "keyword": "islamic ai", "text": "i made incognito actually mean nothing is stored rather than nothing is shown" },
-    { "lang": "en", "person": "impersonal", "keyword": "prayer times uk", "text": "prayer times for blackburn bradford dewsbury and everywhere else that never gets its own page" },
-    { "lang": "en", "person": "impersonal", "keyword": "prayer times", "text": "fajr moves five hours across the year in northern england and sahn explains why on the page" },
-    { "lang": "en", "person": "first", "keyword": "quran ai", "text": "6236 ayat 36057 hadith nine collections all of it searchable by meaning" },
-    { "lang": "en", "person": "impersonal", "keyword": "islamic assistant", "text": "ask it anything at all on islam it answers only from cited sources" },
-
-    { "lang": "ar", "person": "impersonal", "keyword": "اوقات الصلاة", "text": "أوقات الصلاة في سحن محسوبة على جهازك فتعمل بلا اتصال" },
-    { "lang": "ar", "person": "first", "keyword": "اوقات الصلاة", "text": "صنعت أوقات صلاة تُحسب على الهاتف لا تُجلب من خادم" },
-    { "lang": "ar", "person": "impersonal", "keyword": "مواقيت الصلاة", "text": "مواقيت الصلاة واتجاه القبلة لأي مدينة محسوبة لا مجلوبة" },
-    { "lang": "ar", "person": "first", "keyword": "القرآن الذكاء الاصطناعي", "text": "أدخلت القرآن كاملا في الذكاء الاصطناعي فصار يجيب من النص لا من الذاكرة" },
-    { "lang": "ar", "person": "impersonal", "keyword": "القرآن الذكاء الاصطناعي", "text": "القرآن كاملا والكتب الستة داخل سحن يُبحث فيها بالمعنى" },
-    { "lang": "ar", "person": "impersonal", "keyword": "الفتوى", "text": "سحن لا يفتي بل يسترجع ويعزو ويسمي المذهب أو يقول لا أعلم" },
-    { "lang": "ar", "person": "impersonal", "keyword": "حاسبة الزكاة", "text": "حاسبة زكاة تبين أي قاعدة طبقت وأين اختلف العلماء" },
-    { "lang": "ar", "person": "impersonal", "keyword": "نصاب الزكاة", "text": "نصاب الذهب أو الفضة تختار أنت وسحن يبين لك الفرق" },
-    { "lang": "ar", "person": "impersonal", "keyword": "تفسير القرآن", "text": "كل آية في سحن معها اثنا عشر قارئا وتفسير ابن كثير" },
-    { "lang": "ar", "person": "first", "keyword": "حفظ القرآن", "text": "بنيت متابعة حفظ ترتب لك المراجعة قبل أن تنسى" },
-    { "lang": "ar", "person": "impersonal", "keyword": "البحث في الحديث", "text": "ستة وثلاثون ألف حديث في الكتب الستة يبحث فيها بالمعنى لا باللفظ" },
-    { "lang": "ar", "person": "impersonal", "keyword": "التقويم الهجري", "text": "التقويم الهجري بتقويم أم القرى محسوبا على جهازك" },
-    { "lang": "ar", "person": "first", "keyword": "الذكاء الاصطناعي الإسلامي", "text": "أردت كلود من منظور إسلامي فصنعته" },
-    { "lang": "ar", "person": "impersonal", "keyword": "الذكاء الاصطناعي الإسلامي", "text": "اسأله عن أي شيء وفي الإسلام لا يجيب إلا من مصدر معزو" },
-    { "lang": "ar", "person": "impersonal", "keyword": "الأدعية", "text": "كل دعاء في سحن معه نصه العربي ونطقه ومصدره" },
-    { "lang": "ar", "person": "impersonal", "keyword": "الخصوصية", "text": "سجل عبادتك محفوظ لك وحدك على مستوى قاعدة البيانات لا في الواجهة فقط" }
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "islamic law",
+      "text": "a ruling is for a person in a situation which is why a general answer to a specific question is usually the wrong shape",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "first",
+      "tone": "product",
+      "keyword": "islamic ai",
+      "text": "بنيت كلود من منظور إسلامي ووضعت القرآن كله داخله",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "prayer times",
+      "text": "there is a specific panic in checking maghrib while already eating",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "islamic ai",
+      "text": "القرآن كاملا والكتب الستة في مساعد واحد تبحث فيه بالمعنى لا باللفظ",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "islamic app",
+      "text": "what is the one islamic app feature nobody has built properly yet",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "مئتان وثمان وثمانون صفحة لأوقات الصلاة في مئة واثنتين وأربعين مدينة وكل واحدة يجب أن تستحق الزيارة",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "clocks change",
+      "text": "the clocks go back this month and every prayer time you memorised is now wrong",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "muslim app privacy",
+      "text": "معظم تطبيقات الصلاة تعرف مكانك بدقة خمس مرات كل يوم وهذه البيانات أغلى من التطبيق نفسه",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "quran app",
+      "text": "the quran with twelve reciters and ibn kathir beside every ayah",
+      "link": true
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "prayer times",
+      "text": "هناك لحظة فزع خاصة أن تتحقق من وقت المغرب وأنت تأكل بالفعل",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "prayer times",
+      "text": "in blackburn fajr moves five hours across the year and in singapore it moves eleven minutes",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "prayer times",
+      "text": "which calculation method does your local masjid use and does anyone there know why",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "حملت القرآن كاملا والكتب الستة في فهرس دلالي واحد ويعمل على قاعدة بيانات في متناول الجميع",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "prayer times",
+      "text": "fajr in reykjavik never arrives in midsummer because astronomical twilight never ends so the angle is never reached",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "muslim app privacy",
+      "text": "if an islamic app is free and has no ads ask what it is selling instead",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "quran app",
+      "text": "القرآن باثني عشر قارئا وتفسير ابن كثير بجوار كل آية",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "travel",
+      "text": "every muslim who travels has opened three apps to check one prayer time",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "prayer times",
+      "text": "umm al qura does not calculate isha from a solar angle it fixes it at ninety minutes after maghrib",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "prayer times",
+      "text": "أي طريقة حساب يعتمدها مسجدك وهل يعرف أحد هناك لماذا",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "36057 narrations embedded one at a time on a free tier rate limit of three requests a minute it took two days",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "product",
+      "keyword": "islamic ai",
+      "text": "i built claude from an islamic perspective and put the whole quran inside it",
+      "link": true
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "muslim app privacy",
+      "text": "إذا كان التطبيق الإسلامي مجانيا وبلا إعلانات فاسأل ما الذي يبيعه إذن",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "ramadan 2027",
+      "text": "ramadan is walking backwards into winter which means the fasts get shorter every year for the next decade",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "prayer times",
+      "text": "the mosque says one time the app says another and you have been quietly choosing a side for years",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "prayer times",
+      "text": "تقويم أم القرى لا يحسب العشاء بزاوية شمسية بل يثبته بعد المغرب بتسعين دقيقة",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "islamic apps",
+      "text": "what made you delete the last islamic app you downloaded",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "ستة وثلاثون ألفا وسبع وخمسون رواية جرى تمثيلها واحدة واحدة بحد ثلاث طلبات في الدقيقة فاستغرق الأمر يومين",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "islamic ai",
+      "text": "the entire quran and all six hadith books inside one assistant searchable by meaning",
+      "link": true
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "masjid",
+      "text": "ما الذي تغيره في مسجدك لو كان أحد لا يغضب",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "ramadan scotland",
+      "text": "muslims in aberdeen fasted nineteen hours in 2016 and will fast eleven by 2032 same religion same latitude",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "prayer times",
+      "text": "المسجد يقول وقتا والتطبيق يقول وقتا آخر وأنت تختار بينهما بصمت منذ سنين",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "prayer times",
+      "text": "during ramadan umm al qura moves isha to a hundred and twenty minutes after maghrib",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "zakat calculator",
+      "text": "حاسبة زكاة تذكر لك القاعدة التي طبقتها وموضع خلاف العلماء",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "the ingestion died six hours in because postgres timed out on a write and i had to learn why index inserts get slower as a table grows",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "quran",
+      "text": "ما أول سورة حفظتها وما السورة التي تركتها",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "muslim app ads",
+      "text": "putting a casino ad next to a verse is a choice someone made in a meeting",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "tarawih",
+      "text": "عشرون ركعة أم ثمان وهل يسمح مسجدك بالانصراف مبكرا بغير نظرة",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "ramadan",
+      "text": "the first three days of ramadan are a different sport to the last ten",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "prayer times",
+      "text": "في رمضان ينقل تقويم أم القرى العشاء إلى مئة وعشرين دقيقة بعد المغرب",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "hifz",
+      "text": "what finally made your hifz stick after years of starting over",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "i spent a day on prayer times above the arctic circle for a handful of users who will probably never visit",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "prayer times",
+      "text": "أوقات الصلاة والقبلة لمئة واثنتين وأربعين مدينة تحسب على جهازك فتعمل بغير شبكة",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "islamic ai",
+      "text": "ai will answer a question about islamic law with total confidence and no source and most people will not notice",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "moon sighting",
+      "text": "مدينة واحدة وثلاث تواريخ للعيد وكل لجنة واثقة",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "ramadan",
+      "text": "nobody warns you that the hardest part of a long fast is the hour before maghrib not the hunger",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "prayer times",
+      "text": "isna uses fifteen degrees and the muslim world league uses eighteen which is why your american cousin prays isha earlier than you",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "hifz",
+      "text": "ما الذي ثبت حفظك أخيرا بعد سنين من البداية من جديد",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "every prayer time in my app is computed on device which means i cannot see where anyone is and that was the point",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "clocks change",
+      "text": "british summer time ends and suddenly maghrib is before you have left the office",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "islamic ai",
+      "text": "الذكاء الاصطناعي يجيب في مسائل الفقه بثقة تامة وبغير دليل ولن يلاحظ أكثر الناس ذلك",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "eid",
+      "text": "booking eid off work when you do not know the date yet is a specifically muslim kind of planning",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "qada",
+      "text": "everyone has a number in their head for missed prayers and almost nobody has written it down",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "prayer times",
+      "text": "الجمعية الإسلامية لأمريكا الشمالية تعتمد خمس عشرة درجة ورابطة العالم الإسلامي ثماني عشرة ولهذا يصلي قريبك في أمريكا العشاء قبلك",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "islamic ai",
+      "text": "would you trust an ai with a question about your deen or does that feel wrong to you",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "كل وقت صلاة في التطبيق يحسب على جهازك أي أنني لا أعرف مكان أحد وهذا هو المقصود",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "winter prayer times",
+      "text": "in a british winter asr and maghrib are close enough that you can miss both in one meeting",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "islamic app",
+      "text": "اشتراك شهري لقراءة القرآن جملة ينبغي أن تجعلك تتوقف",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "hajj",
+      "text": "hajj costs more than most weddings now and the packages are still selling out in days",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "qada",
+      "text": "كل واحد منا يحمل رقما في رأسه للصلوات الفائتة وقليل منا كتبه",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "prayer times",
+      "text": "every prayer time you have ever seen is a calculation and someone chose the angle",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "islamic ai",
+      "text": "هل تثق بالذكاء الاصطناعي في سؤال يتعلق بدينك أم تجد في ذلك شيئا",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "i wrote the crisis response copy by hand because i refuse to let a model generate it",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "hadith",
+      "text": "في كل مجموعة عائلية من يرسل حديثا ليس بحديث",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "critical",
+      "keyword": "islamic ai",
+      "text": "i asked three ai models the same fiqh question and got three different answers each stated as fact",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "hajj",
+      "text": "الحج صار أغلى من كثير من الأعراس وبرامجه تنتهي في أيام",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "qada",
+      "text": "the qada ledger is the most avoided screen in any islamic app and that is exactly why it should be easy",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "qibla",
+      "text": "the qibla is a great circle not a straight line on a map which is why from new york it points northeast",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "islamic finance",
+      "text": "has anyone actually read the contract on their islamic mortgage",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "if someone types something about hurting themselves it never reaches a model at all it hits written reviewed text",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "zakat calculator",
+      "text": "a zakat calculator that names the rule it applied and the places scholars disagree",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "islamic ai",
+      "text": "confidence is not evidence and fluency is not knowledge",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "umrah",
+      "text": "umrah in ramadan is now a logistics operation with its own apps queue times and influencers",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "hifz",
+      "text": "you do not forget a surah all at once you forget the middle of it",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "qibla",
+      "text": "القبلة دائرة كبرى على الكرة لا خط مستقيم على الخريطة ولهذا تتجه من نيويورك إلى الشمال الشرقي",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "fajr",
+      "text": "what is your actual fajr strategy not the one you tell people",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "إذا كتب أحد عن إيذاء نفسه لا يصل كلامه إلى نموذج أبدا بل إلى نص مكتوب ومراجع",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "quran app",
+      "text": "what is the best quran app and be honest about what is wrong with it",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "quran app",
+      "text": "a quran app that needs a signal to open is not a quran app it is a website in a costume",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "umrah",
+      "text": "العمرة في رمضان صارت عملية لوجستية لها تطبيقاتها وأوقات انتظارها ومشاهيرها",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "i loaded the entire quran and all six hadith books into a vector index and it fits in a database you can afford",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "qibla",
+      "text": "your phone compass shows magnetic north and the qibla is measured from true north so it is always a few degrees out",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "fajr",
+      "text": "ما خطتك الحقيقية للفجر لا التي تحكيها للناس",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "i made the hardest feature the refusal and it took longer than everything else",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "hadith search",
+      "text": "36057 narrations searchable by what you mean with the grading attached to every one",
+      "link": true
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "hifz",
+      "text": "لا تنسى السورة مرة واحدة بل تنسى وسطها",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "makkah",
+      "text": "the haram runs five prayers a day for two million people and your masjid cannot agree on a jumuah time",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "hifz",
+      "text": "everyone who memorised juz amma as a child can still recite it and cannot tell you what half of it means",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "asr",
+      "text": "the hanafi asr is usually forty minutes to an hour and a half later than the majority position and that is the whole dispute",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "masjid",
+      "text": "what would you change about your local masjid if nobody could get offended",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "my service worker served html in place of a javascript chunk and broke the site for everyone who had visited before",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "hadith search",
+      "text": "ستة وثلاثون ألفا وسبع وخمسون رواية تبحث فيها بالمعنى ومع كل واحدة حكم إسنادها",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "critical",
+      "keyword": "prayer times",
+      "text": "i stopped trusting prayer apps when one of them was nine minutes out and never said which method it used",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "makkah",
+      "text": "الحرم يقيم خمس صلوات لمليوني إنسان ومسجدك لا يتفق على وقت الجمعة",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "quran",
+      "text": "the ayah you needed usually finds you while you were looking for something else",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "asr",
+      "text": "عصر الحنفية يتأخر عادة من أربعين دقيقة إلى ساعة ونصف عن قول الجمهور وهذا هو الخلاف كله",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "critical",
+      "keyword": "muslim app privacy",
+      "text": "i checked a popular prayer app and counted fourteen trackers before i stopped counting",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "the bug only affected returning visitors so every test i ran in a fresh browser passed",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "islamic ai",
+      "text": "ask it anything at all and on islam it answers only from sources it can show you",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "prayer times",
+      "text": "if an app will not tell you its calculation method it is hiding a decision it made for you",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "app store",
+      "text": "islamic apps charge monthly for the quran which has been free for fourteen hundred years",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "quran",
+      "text": "الآية التي كنت تحتاجها تجدك عادة وأنت تبحث عن غيرها",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "hijri calendar",
+      "text": "the hijri year is eleven days shorter so ramadan moves backwards through the seasons about a month every three years",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "quran",
+      "text": "which surah did you memorise first and which one did you give up on",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "i shipped an og image that fetched a font at build time and a deploy failed because google fonts blinked",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "islamic finance",
+      "text": "a halal finance guide that gives the criticism of every structure alongside it",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "islamic app",
+      "text": "subscription to read the quran is a sentence that should make you stop",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "app store",
+      "text": "تطبيقات إسلامية تتقاضى اشتراكا شهريا على القرآن وهو متاح بغير ثمن منذ أربعة عشر قرنا",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "diaspora",
+      "text": "growing up in the west means knowing the arabic sounds of your religion better than the meaning",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "hijri calendar",
+      "text": "السنة الهجرية أقصر بأحد عشر يوما فيتراجع رمضان في الفصول نحو شهر كل ثلاث سنين",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "prayer times",
+      "text": "prayer times and qibla for 142 cities computed on your device so they work with no signal",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "i had a try catch around the font fetch with a comment saying it degrades gracefully and it does not",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "islamic finance",
+      "text": "دليل في المالية الإسلامية يذكر مع كل صيغة ما وجه إليها من نقد",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "islamic ai",
+      "text": "the dangerous thing about a chatbot is not that it is wrong it is that it is never unsure",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "ads",
+      "text": "an app that shows you an advert between a dua and its translation has made a choice about you",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "diaspora",
+      "text": "half of us learned to read quran before we learned to read arabic and never closed the gap",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "hijri calendar",
+      "text": "in the southern hemisphere ramadan moves through the seasons in the opposite direction to every article written about it",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "dua",
+      "text": "which dua do you make that you have never told anyone about",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "i wrote a comment claiming a library falls back safely and it throws instead which is why you test the failure path",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "product",
+      "keyword": "islamic ai",
+      "text": "free no ads no tracking and it works offline",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "islamic ai",
+      "text": "asking an llm for a fatwa is asking a very well read stranger with no accountability",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "chatgpt",
+      "text": "people are already asking chatgpt about halal and haram and it is answering with nothing behind it",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "diaspora",
+      "text": "نصفنا تعلم قراءة القرآن قبل أن يتعلم قراءة العربية ولم يسد تلك الفجوة قط",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "quran",
+      "text": "the quran is 6236 ayat and almost every count you see online disagrees because of how the basmala is counted",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "dua",
+      "text": "ما الدعاء الذي تدعو به ولم تخبر به أحدا",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "my sign in links went to a 404 for days because the i18n middleware was prefixing the auth callback",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "first",
+      "tone": "product",
+      "keyword": "islamic ai",
+      "text": "مجاني بلا إعلانات ولا تتبع ويعمل بغير اتصال",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "islamic ai",
+      "text": "every ai that answers islamic questions should be judged on what it refuses to answer",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "chatgpt",
+      "text": "الناس يسألون الروبوتات عن الحلال والحرام بالفعل وهي تجيب بلا سند",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "converts",
+      "text": "a convert gets contradictory advice from five people in the first month and has no way to check any of it",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "quran",
+      "text": "القرآن ستة آلاف ومئتان وست وثلاثون آية وأكثر الأعداد المنشورة تختلف بسبب طريقة عد البسملة",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "islamic education",
+      "text": "what did nobody teach you about islam that you had to find out alone at twenty five",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "it worked anyway because the browser client was quietly picking the code out of the url which hid the bug perfectly",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "islamic app",
+      "text": "installs to your home screen and the worship tools keep working with no connection",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "critical",
+      "keyword": "islamic ai",
+      "text": "i spent more time making it say i dont know than making it answer",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "ai",
+      "text": "every general model has absorbed every bad forum fatwa on the internet and weighted it the same as tafsir",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "islamic ai",
+      "text": "asking a scholar a basic question feels like wasting their time which is why people ask google instead",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "quran",
+      "text": "surah nine is the only surah that opens without the basmala",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "reverts",
+      "text": "what is the question you were too embarrassed to ask when you were new to practising",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "i added rate limiting that failed open and then could not tell whether it was working so i made it say so in a header",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "quran tafsir",
+      "text": "tap any ayah to hear it read ask about it or read the tafsir",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "muslim tech",
+      "text": "the muslim app market is full of beautiful products with nothing underneath them",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "google",
+      "text": "google will give you a prayer time with no method attached and most people will never ask which one",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "islamic ai",
+      "text": "most people asking ai about islam are not looking for a fatwa they are looking for a starting point",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "hadith",
+      "text": "the six books hold about thirty six thousand narrations and a great many of them are the same hadith through different chains",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "ramadan",
+      "text": "what is the one thing you do in ramadan that you cannot sustain the rest of the year",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "retrieval was timing out only for logged out users because the anon role has a three second statement timeout and a cold vector index takes two",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "quran tafsir",
+      "text": "اضغط أي آية لتسمعها أو تسأل عنها أو تقرأ تفسيرها",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "muslim tech",
+      "text": "shipping fast is easy when you do not have to be right",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "prayer times blackburn",
+      "text": "blackburn has more mosques per square mile than most cities have coffee shops and no app ever heard of it",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "mosque",
+      "text": "the kids who sat at the back of the madrasah are the ones building the apps now",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "zakat",
+      "text": "zakat is two and a half percent of everything once you pass the nisab not two and a half percent of the amount above it",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "tarawih",
+      "text": "twenty rakah or eight and does your masjid let you leave early without a look",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "i only found it because the error monitor emailed me and not because anyone complained",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "islamic ai",
+      "text": "english and arabic throughout not an interface translation",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "quran translation",
+      "text": "a translation is an interpretation and apps that present one as the quran are doing something subtle and wrong",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "prayer times dewsbury",
+      "text": "dewsbury bradford and bolton are three of the most muslim towns in britain and none of them get their own page",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "prayer times",
+      "text": "fajr in summer in the uk is a test of character and nobody told me",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "zakat",
+      "text": "الزكاة ربع العشر من المال كله إذا بلغ النصاب لا من الزائد على النصاب وحده",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "moon sighting",
+      "text": "one city three eid dates and all three committees are certain",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "every bug i shipped this month was invisible to the way i was testing it",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "privacy",
+      "text": "your worship records are private at the database level and you can delete all of it in one click",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "hadith",
+      "text": "a hadith with no grading attached is a claim not a narration",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "dearborn",
+      "text": "dearborn michigan is the most muslim city in america and most islamic apps default it to new york",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "prayer times",
+      "text": "you do not realise how far north you live until you see your own isha time in july",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "zakat nisab",
+      "text": "the silver nisab is far lower than the gold nisab so which one you use decides whether you owe anything at all",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "halal",
+      "text": "what is the halal certification you stopped trusting and why",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "i generated arabic city names from an open dataset and london came out as a garbled transliteration",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "product",
+      "keyword": "islamic ai",
+      "text": "i wanted an islamic assistant that would admit when it did not know so i built one",
+      "link": true
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "hadith",
+      "text": "حديث بلا حكم على إسناده دعوى لا رواية",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "mostar",
+      "text": "mostar has had muslims for five hundred years and gets treated as an edge case by every app built in california",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "zakat",
+      "text": "most people calculate zakat once badly and then copy that number every year",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "zakat nisab",
+      "text": "نصاب الفضة أقل بكثير من نصاب الذهب فاختيارك بينهما يحدد هل تجب عليك زكاة أصلا",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "islamic books",
+      "text": "which islamic book did you buy and never open",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "rabat came out without the definite article because i tie broke on string length like an idiot",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "ramadan planner",
+      "text": "a ramadan planner that tracks fasts taraweeh and juz and remembers what you still owe",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "hadith",
+      "text": "half the hadith you see quoted online would not survive being looked up",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "muslim britain",
+      "text": "four million muslims in britain and the software they use was mostly built by three men in basements",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "zakat",
+      "text": "the hardest part of zakat is not the maths it is remembering the date",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "zakat",
+      "text": "classical scholars priced the nisab in metal because currencies did not hold value and that problem did not go away",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "scholars",
+      "text": "which scholar changed how you think and which one you quietly stopped listening to",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "i would rather ship no arabic page than a mangled city name",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "islamic ai",
+      "text": "it answers code questions and cooking questions too it is just an assistant that happens to know its sources",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "critical",
+      "keyword": "hadith",
+      "text": "i indexed thirty six thousand narrations and the first thing i noticed is how many famous quotes are not in any of them",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "sarajevo",
+      "text": "sarajevo kept its adhan through a siege and we cannot keep our fajr through a phone notification",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "zakat",
+      "text": "أصعب ما في الزكاة ليس الحساب بل تذكر الموعد",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "zakat",
+      "text": "your house your car and the tools of your trade are outside zakat however much they are worth",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "arabic",
+      "text": "how long have you been learning arabic and how far did you actually get",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "أفضل ألا أنشر صفحة بالعربية على أن أنشرها باسم مدينة محرف",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "islamic ai",
+      "text": "no account needed to use it and no account needed to leave",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "islamic finance",
+      "text": "most things labelled shariah compliant are conventional products with a different word on the tin",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "gaza",
+      "text": "people are reciting quran from memory in places with no electricity and we need a subscription to open an app",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "dua",
+      "text": "the dua you make at your lowest is usually three words and not in arabic",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "islamic finance",
+      "text": "diminishing musharaka is the strongest of the home finance structures because the financier actually owns something",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "qada",
+      "text": "how many years of qada are you carrying and have you told anyone",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "288 pages of prayer times for 142 cities and every single one has to be worth landing on",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "islamic ai",
+      "text": "incognito means nothing is stored not that nothing is shown",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "islamic finance",
+      "text": "أكثر ما يوصف بأنه متوافق مع الشريعة منتجات تقليدية بغلاف جديد",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "airport",
+      "text": "the prayer room at every airport is next to the toilets and nobody has ever explained why",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "mosque",
+      "text": "every mosque notice board has one printout from 2019 that nobody will take down",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "islamic finance",
+      "text": "in 2007 the chairman of aaoifis sharia board said most sukuk in issue did not comply and the market mostly carried on",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "qada",
+      "text": "كم سنة من القضاء تحملها وهل أخبرت بها أحدا",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "prayer times",
+      "text": "your prayer app fetches times from a server when your phone can calculate them in a millisecond",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "prayer times",
+      "text": "every city page tells you which calculation method it used and why that one applies there",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "islamic finance",
+      "text": "if the return tracks the interest rate exactly ask what the structure is actually doing",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "workplace prayer",
+      "text": "asking for ten minutes to pray at work is still harder than asking for an hour for lunch",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "travel",
+      "text": "praying in an airport is ninety percent finding the direction and ten percent not caring who is watching",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "islamic finance",
+      "text": "في سنة 2007 قال رئيس الهيئة الشرعية لأيوفي إن أكثر الصكوك المصدرة غير متوافقة ومضى السوق في طريقه",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "muslim parents",
+      "text": "what will you do differently than your parents did with deen and what will you keep exactly",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "i picked blackburn dewsbury and novi pazar over cities ten times their size because that is where the demand actually is",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "qibla",
+      "text": "qibla bearing in degrees from true north for anywhere on earth",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "islamic finance",
+      "text": "sukuk that cannot be claimed against an asset is a bond wearing a thobe",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "deliveroo",
+      "text": "the halal filter on every delivery app is a checkbox with nothing verifying it",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "diaspora",
+      "text": "bradford blackburn dewsbury have more daily prayer time searches than cities ten times their size and nobody builds for them",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "islamic finance",
+      "text": "qatar ordered conventional banks to close their islamic windows in 2011 because separation inside one institution is hard to guarantee",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "muslim youth",
+      "text": "why do young muslims trust a youtube channel more than the man leading their own jumuah",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "the hifz tracker counts overlapping portions once because rewarding people for re adding the same passage is a lie",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "hifz",
+      "text": "mark a portion shaky and it comes back in two days instead of thirty",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "islamic finance",
+      "text": "الصك الذي لا تستطيع المطالبة به في أصل ليس إلا سندا في ثوب",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "halal certification",
+      "text": "there are over a hundred halal certifiers in europe and no agreement between them on stunning",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "islamic finance",
+      "text": "everyone has a friend who gave up looking for a halal mortgage and just took the normal one quietly",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "islamic finance",
+      "text": "aaoifi screens let a company earn five percent of income from prohibited sources as long as that portion is given away",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "islamic finance",
+      "text": "does anyone feel genuinely good about their halal savings account",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "i made the qada ledger move by the difference between the old status and the new one so corrections actually reverse",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "qada",
+      "text": "mark a prayer missed and the qada ledger updates itself",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "islamic finance",
+      "text": "the fiqh academy ruled organised tawarruq impermissible in 2009 and your bank still sells it",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "islamic mortgage",
+      "text": "a murabaha priced off the same base rate as a conventional mortgage is a question worth asking out loud",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "islamic finance",
+      "text": "the honest reason most people use conventional banking is that the halal option was never explained to them properly",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "islamic finance",
+      "text": "two funds can both be called shariah compliant and hold completely different portfolios because index providers use different thresholds",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "muslim converts",
+      "text": "what is the thing born muslims do that converts find genuinely strange",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "the counsel transcripts are encrypted in your browser which means if you forget the passphrase it is gone and i cannot help you",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "qada",
+      "text": "change your mind and mark it prayed and the ledger takes it back off",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "islamic finance",
+      "text": "مجمع الفقه الإسلامي حرم التورق المنظم سنة 2009 ومصرفك ما زال يبيعه",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "islamic banking",
+      "text": "islamic finance is a four trillion dollar industry and most muslims still cannot get a current account they trust",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "hadith",
+      "text": "somebody in every family group chat forwards a hadith that is not a hadith",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "vector search",
+      "text": "searching by meaning means asking about feeling hopeless can return a verse that never uses the word",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "masjid",
+      "text": "why is there always space for a new car park and never for a womens prayer hall",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "that tradeoff is the right one for that content and i will not quietly swap it for convenience",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "dua",
+      "text": "every dua with its arabic its transliteration and the narration it came from",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "zakat",
+      "text": "most zakat calculators will not tell you which nisab they used which is the only decision that matters",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "islamic banking",
+      "text": "المالية الإسلامية صناعة بأربعة تريليونات دولار وأكثر المسلمين لا يجدون حسابا يثقون به",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "hifz tracker",
+      "text": "a hifz tracker that schedules your review before you forget",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "vector search",
+      "text": "keyword search fails on the quran because the thing you are looking for is rarely the word you typed",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "quran translation",
+      "text": "which quran translation do you actually read and which one do you own for show",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "i cache question embeddings so the same fiqh question asked twice costs nothing the second time",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "quran recitation",
+      "text": "recitation carries on into the next ayah instead of stopping because nobody listens to one verse",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "zakat",
+      "text": "أكثر حاسبات الزكاة لا تخبرك بأي نصاب حسبت وهو القرار الوحيد المهم",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "sukuk",
+      "text": "the gulf issues billions in sukuk and your local masjid still takes an interest bearing overdraft",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "hadith",
+      "text": "the forwarded islamic quote with no source has done more damage than any critic",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "retrieval",
+      "text": "retrieval augmented generation is a long phrase for look it up before you answer",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "hadith",
+      "text": "what is a hadith everyone quotes and almost nobody has checked",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "أخزن تمثيل السؤال حتى لا يكلف السؤال الفقهي نفسه شيئا في المرة الثانية",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "hijri calendar",
+      "text": "hijri dates and the key islamic dates for the year computed locally",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "muslim app privacy",
+      "text": "your dua list is more revealing than your search history and it is sitting on someone elses server",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "crypto",
+      "text": "every ramadan a new crypto project announces it is sharia compliant and every shawwal it is gone",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "quran",
+      "text": "reading the quran in a language you understand for the first time is a strange and specific grief",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "hifz",
+      "text": "spaced repetition works because the moment just before you forget is the moment review is worth most",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "islamic ai",
+      "text": "if an ai answered your islamic question with the source attached would you still check it",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "only a hash of the question is stored because a log of what people ask is not a thing worth having",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "counsel",
+      "text": "a private mode that stores nothing unless you choose to keep it and encrypts it in your browser if you do",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "islamic ai",
+      "text": "an islamic ai with no citations is just vibes with wudu",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "crypto",
+      "text": "في كل رمضان مشروع عملة رقمية يعلن توافقه مع الشريعة وفي كل شوال يختفي",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "ramadan",
+      "text": "taraweeh is the only time of year a mosque car park has a queuing system",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "hifz",
+      "text": "forgetting something you once knew is not the same as learning it for the first time and your review schedule should know that",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "islamic ai",
+      "text": "ما الحديث الذي يردده الجميع ولم يرجع إليه أحد تقريبا",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "i built the whole thing bilingual from the first commit and it still cost me a week of rtl bugs",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "islamic ai",
+      "text": "it names the school a position belongs to instead of presenting one as the answer",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "muslim tech",
+      "text": "we keep building prayer time apps and nobody is building the boring infrastructure underneath them",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "islamic school",
+      "text": "we can fund a new masjid extension in six weeks and cannot fund one arabic teacher for a year",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "prayer",
+      "text": "the salah you nearly missed is the one you remember",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "ramadan",
+      "text": "in northern europe the fast can run nineteen hours in summer and eight in winter for the same city",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "muslim tech",
+      "text": "why is there no muslim software company anyone can name",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "بنيته بلغتين من أول سطر ومع ذلك كلفني أسبوعا من أخطاء الاتجاه من اليمين إلى اليسار",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "islamic ai",
+      "text": "where the sources do not settle a question it says so and stops",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "critical",
+      "keyword": "muslim tech",
+      "text": "i wanted one islamic app that did not want my location my email and my money on day one",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "muslim charity",
+      "text": "muslims give the most to charity per head in britain and still argue about who deserves it",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "prayer",
+      "text": "الصلاة التي كدت تفوتها هي التي تبقى في ذاكرتك",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "prayer times",
+      "text": "two cities at the same latitude have nearly identical prayer times whatever the distance between them",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "salah",
+      "text": "which prayer is hardest for you and do not say fajr unless it is true",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "every directional margin in the codebase is a logical property which sounds pedantic until you flip to arabic",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "search",
+      "text": "search the quran and the six books together and see which is which",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "islamic app",
+      "text": "the business model of most islamic apps is your attention and they are not subtle about it",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "jumuah",
+      "text": "three jumuah slots and a car park marshal is now standard infrastructure in half of england",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "hifz",
+      "text": "revision is harder than memorising and nobody makes apps for the harder half",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "dua",
+      "text": "the dua of yunus was said inside a whale in the dark and it is four words long",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "zakat",
+      "text": "did you calculate your zakat yourself or did you guess and round up",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "i wrote tests that read the migrations and fail if a new user table is missing from the data export",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "prayer times",
+      "text": "prayer times for blackburn bradford dewsbury luton and everywhere else that never gets its own page",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "quran app",
+      "text": "ads between ayat is not monetisation it is a category error",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "muslim students",
+      "text": "freshers week and a prayer room with a broken lock is the entire muslim university experience",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "islamic ai",
+      "text": "we trust an app with our prayer times and would never trust it with a fatwa and that line is worth keeping",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "dua",
+      "text": "دعاء يونس قيل في بطن الحوت في الظلمات وهو أربع كلمات",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "islam online",
+      "text": "what islamic content online made you worse rather than better",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "it caught me twice already which is two times a user would have got an incomplete copy of their own data",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "zakat nisab",
+      "text": "gold nisab or silver nisab your choice and it shows you what changes",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "islamic ai",
+      "text": "if your ai cannot show you the verse it is paraphrasing it is not retrieving it is remembering",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "exams",
+      "text": "revising for finals with a fast on is a skill nobody puts on a cv",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "diaspora",
+      "text": "the arabic name for your city probably exists and your app has never shown it to you",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "quran",
+      "text": "al baqarah is 286 ayat and an nas is six and both are one surah",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "travel",
+      "text": "what is the worst place you have ever prayed and did you pray anyway",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "shipping 109 cities instead of 2400 because i would rather learn whether one ranks than find out none do",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "islamic finance",
+      "text": "murabaha ijara sukuk tawarruq explained with what each one is criticised for",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "islamic ai",
+      "text": "إذا لم يستطع الذكاء الاصطناعي أن يريك الآية التي يعيد صياغتها فهو لا يرجع إلى مصدر بل يتذكر",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "world cup",
+      "text": "a stadium of people stopped for maghrib in qatar and the broadcast had no idea what to do with it",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "counsel",
+      "text": "there are questions people will type into a box that they would never ask out loud",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "arabic",
+      "text": "arabic city names in open datasets are mostly transliterations and a lot of them are wrong",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "eid",
+      "text": "two eids in one city and everyone pretends it is fine what is the actual fix",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "the arabic pages are outperforming the english ones and i did not predict that at all",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "islamic app",
+      "text": "no subscription no paywall on the quran",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "islamic ai",
+      "text": "a model trained on the internet has read more reddit than fiqh and it shows",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "istanbul",
+      "text": "istanbul has three thousand mosques and the adhan still arrives in waves across the water",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "counsel",
+      "text": "the reason people google their problems at 2am is that nobody qualified is awake",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "prayer times",
+      "text": "above the arctic circle the high latitude rules are scholarly conventions not astronomy because astronomy stops working",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "muslim identity",
+      "text": "when did you stop performing your deen for other people",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "الصفحات العربية تتقدم على الإنجليزية ولم أتوقع ذلك إطلاقا",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "islamic ai",
+      "text": "it will not give you a fatwa and it tells you that before you ask",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "critical",
+      "keyword": "islamic ai",
+      "text": "i built the thing that says the sources do not settle this because nothing else would",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "istanbul",
+      "text": "في إستانبول ثلاثة آلاف مسجد ولا يزال الأذان يصل موجة بعد موجة عبر الماء",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "prayer times",
+      "text": "nothing exposes a bad app like being in a different timezone",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "tafsir",
+      "text": "ibn kathir usually comments on a block of ayat rather than one so the tafsir you open for a single verse covers its neighbours too",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "khutbah",
+      "text": "when did you last hear a khutbah about something happening this year",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "four of my top search queries are jordan prayer times and i had exactly one jordanian city",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "product",
+      "keyword": "building",
+      "text": "everything in it is either computed on your device or retrieved from a source it shows you",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "prayer times",
+      "text": "two mosques on the same street with different isha times is a calculation method disagreement not a conspiracy",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "kuala lumpur",
+      "text": "kuala lumpur puts prayer times on the train station screens and london cannot manage a sign",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "quran",
+      "text": "you can have read a surah a hundred times and never read a word of the commentary on it",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "quran recitation",
+      "text": "murattal is the measured reading you can follow along with and mujawwad is the ornamented one you listen to",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "islamic app",
+      "text": "would you pay for an islamic app or does charging for the quran feel wrong to you",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "i found out my site was serving on two hostnames and google was spending half its crawl budget on duplicates",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "hadith",
+      "text": "every narration comes with its grading because a hadith without one is a claim",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "muslim app privacy",
+      "text": "an app that works offline cannot sell your data because it never had it",
+      "link": true
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "nigeria",
+      "text": "kano prays with more people than most european countries have muslims and gets a quarter of the software",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "quran",
+      "text": "قد تقرأ السورة مئة مرة ولا تقرأ حرفا من تفسيرها",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "prayer times",
+      "text": "moonsighting committee adjusts the twilight angle by season and latitude instead of fixing it which is more honest and less predictable",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "muslim diaspora",
+      "text": "what did your parents sacrifice to keep your deen that you have never properly thanked them for",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "two months of work and the most valuable thing i did this week was read a search console export properly",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "prayer times",
+      "text": "one page per city with the whole month of times not just today",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "islamic ai",
+      "text": "the honest answer to most questions about islamic law is it depends on who you follow and ai hates saying that",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "indonesia",
+      "text": "indonesia has more muslims than the entire arab world and almost no islamic software is built for it",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "mosque",
+      "text": "the local mosque timetable pdf is load bearing infrastructure for an entire town",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "zakat",
+      "text": "the hawl runs on a lunar year so your zakat date drifts eleven days earlier against the calendar on your wall",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "tahajjud",
+      "text": "who here actually prays tahajjud regularly and what does your evening look like",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "first",
+      "tone": "build",
+      "keyword": "building",
+      "text": "i keep a file of every claim the site makes so the marketing cannot drift from what the code does",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "product",
+      "keyword": "islamic ai",
+      "text": "built by one person and it shows its working",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "muslim tech",
+      "text": "nobody needs another islamic app with a dark mode and no sources",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "contextual",
+      "keyword": "indonesia",
+      "text": "في إندونيسيا مسلمون أكثر من العالم العربي كله وبرمجيات إسلامية أقل من أن تذكر",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "observed",
+      "keyword": "islamic app",
+      "text": "we will all switch islamic apps for one feature and never look back",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "islamic law",
+      "text": "where the four schools differ the honest answer names the difference instead of resolving it",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "question",
+      "keyword": "muslim women",
+      "text": "what is the islamic app feature muslim women keep asking for and nobody builds",
+      "link": false
+    },
+    {
+      "lang": "ar",
+      "person": "impersonal",
+      "tone": "insight",
+      "keyword": "islamic law",
+      "text": "حيث اختلفت المذاهب الأربعة فالجواب الصادق يذكر الخلاف ولا يحسمه",
+      "link": false
+    },
+    {
+      "lang": "en",
+      "person": "impersonal",
+      "tone": "critical",
+      "keyword": "muslim app privacy",
+      "text": "most prayer apps know exactly where you are five times a day and that data is worth more than the app",
+      "link": false
+    }
   ]
 }
