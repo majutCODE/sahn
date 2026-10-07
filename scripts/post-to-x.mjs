@@ -59,6 +59,30 @@ function rng(seed) {
 
 const dayNumber = (date) => Math.floor(date.getTime() / 86_400_000);
 
+/** Day the sequence is counted from. Moving it reshuffles everything. */
+const ANCHOR_DAY = dayNumber(new Date('2026-10-01T00:00:00Z'));
+
+/** How many posts a given day carries. Weighted for a human rhythm. */
+function countFor(day) {
+  const roll = rng(day * 2654435761)();
+  return roll < 0.2 ? 0 : roll < 0.6 ? 1 : roll < 0.88 ? 2 : 3;
+}
+
+/**
+ * How many posts have gone out before this day.
+ *
+ * The pool is walked by this running total, so every line is used once before
+ * any repeats. The previous version indexed by `day * 3 % length`, and with 48
+ * lines a stride of 3 only ever reaches 16 of them: two thirds of the pool
+ * could never post, and the rest repeated on a sixteen day cycle. Counting
+ * actual posts cannot drift out of step with the pool size however it changes.
+ */
+function sequenceBefore(day) {
+  let total = 0;
+  for (let d = ANCHOR_DAY; d < day; d += 1) total += countFor(d);
+  return total;
+}
+
 /**
  * The day's plan: which UTC hours carry a post, and which post each one is.
  *
@@ -70,21 +94,21 @@ const dayNumber = (date) => Math.floor(date.getTime() / 86_400_000);
 function planFor(date) {
   const day = dayNumber(date);
   const random = rng(day * 2654435761);
+  const count = countFor(day);
 
-  const roll = random();
-  const count = roll < 0.2 ? 0 : roll < 0.6 ? 1 : roll < 0.88 ? 2 : 3;
-
+  // Re-roll the hours off the same seed, after the count has been taken.
+  random();
   const hours = new Set();
   while (hours.size < count) hours.add(7 + Math.floor(random() * 15));
 
+  const seqStart = sequenceBefore(day);
+
   return [...hours].sort((a, b) => a - b).map((hour, index) => {
-    // Walk the pool rather than picking at random, so every line is used
-    // before any repeats, then offset by the day so the order is not fixed.
-    const position = (day * 3 + index) % posts.length;
-    const post = posts[position];
+    const sequence = seqStart + index;
+    const post = posts[sequence % posts.length];
     // Roughly one in three carries the link. A bare line travels further on
     // X, so the link is spent rather than attached by default.
-    const withLink = (day + index) % 3 === 0;
+    const withLink = sequence % 3 === 0;
     return { hour, post, withLink };
   });
 }
