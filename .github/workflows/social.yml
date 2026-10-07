@@ -1,8 +1,13 @@
 name: Post to X
 
-# Every three days at 10:00 UTC, which is late morning in the UK and early
-# evening in the Gulf. GitHub's scheduler is best-effort and can run late
-# under load; for a post every few days that does not matter.
+# Runs hourly and usually does nothing. The script decides whether this
+# particular hour is a slot, which is what produces the uneven human rhythm:
+# some days three posts, some days none. GitHub's scheduler is best-effort and
+# can run late under load; for this it does not matter.
+#
+# Note that GitHub disables a scheduled workflow after 60 days of repository
+# inactivity. The pool holds eight to eleven months of posts, so the schedule
+# outlives the repo's activity; the warning email is the thing to watch for.
 on:
   schedule:
       - cron: '7 * * * *'
