@@ -2,8 +2,8 @@
   "app": {
     "name": "Sahn",
     "tagline": "Sourced and cited, never decreed",
-    "description": "An Islamic assistant that retrieves and cites - prayer times, the Quran, duas, zakat and more.",
-    "homeTitle": "Sahn | The entire Qur’an, loaded into AI",
+    "description": "Claude for Muslims. An Islamic assistant that retrieves and cites - prayer times, the Quran, duas, zakat and more.",
+    "homeTitle": "Sahn | Claude for Muslims — the entire Qur’an, loaded into AI",
     "homeDescription": "The entire Qur’an and six hadith collections loaded into AI. Claude’s intelligence, from an Islamic perspective. Prayer times, hifz, zakat, and answers that cite their sources."
   },
   "nav": {

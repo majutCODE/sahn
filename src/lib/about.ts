@@ -22,17 +22,17 @@ export type AboutSection = { heading: Bilingual; body: Bilingual };
 
 export const ABOUT: AboutSection[] = [
   {
-    heading: { en: 'What Sahn is', ar: 'ما هو سَحْن' },
+    heading: { en: 'What Sahn is', ar: 'ما هو صَحْن' },
     body: {
-      en: 'An assistant you can ask anything. Most questions have nothing to do with religion, and those are answered as any capable assistant would answer them, without religious framing bolted on.\n\nWhere a question touches Islam, the behaviour changes, and the rest of this page is about how.',
-      ar: 'مساعد تسأله عن أي شيء. وأكثر الأسئلة لا صلة لها بالدين، وتلك تُجاب كما يجيبها أي مساعد قدير، من غير إقحام إطار ديني عليها.\n\nفإذا مسّ السؤال الإسلام تغيّر السلوك، وبقية هذه الصفحة في بيان ذلك.'
+      en: 'Claude for Muslims. An assistant you can ask anything. Most questions have nothing to do with religion, and those are answered as any capable assistant would answer them, without religious framing bolted on.\n\nWhere a question touches Islam, the behaviour changes, and the rest of this page is about how.',
+      ar: 'كلود للمسلمين. مساعد تسأله عن أي شيء. وأكثر الأسئلة لا صلة لها بالدين، وتلك تُجاب كما يجيبها أي مساعد قدير، من غير إقحام إطار ديني عليها.\n\nفإذا مسّ السؤال الإسلام تغيّر السلوك، وبقية هذه الصفحة في بيان ذلك.'
     }
   },
   {
     heading: { en: 'Questions of Islamic law are not generated', ar: 'مسائل الفقه لا تُنشأ إنشاءً' },
     body: {
       en: 'This is the whole design. When a question is one of Islamic law, Sahn does not compose a ruling from what a language model happens to have absorbed. It searches its sources, puts the passages it found in front of the model, and requires the answer to come from those passages with every claim cited to a reference you can open and read.\n\nWhere the sources do not answer, it says so and stops. An answer that says "the retrieved material does not settle this" is the system working, not failing.',
-      ar: 'وهذا أصل التصميم. فإذا كان السؤال مسألة فقهية لم يُنشئ سَحْن حكمًا مما وقع لنموذج لغوي، بل يبحث في مصادره، ويضع ما وجده بين يدي النموذج، ويُلزمه أن يكون الجواب منها، مع إحالة كل دعوى إلى مرجع تفتحه وتقرؤه.\n\nوإذا لم تُجب المصادر صرّح بذلك ووقف. والجواب بأن المادة المسترجعة لا تحسم المسألة هو عمل النظام على وجهه، لا إخفاقه.'
+      ar: 'وهذا أصل التصميم. فإذا كان السؤال مسألة فقهية لم يُنشئ صَحْن حكمًا مما وقع لنموذج لغوي، بل يبحث في مصادره، ويضع ما وجده بين يدي النموذج، ويُلزمه أن يكون الجواب منها، مع إحالة كل دعوى إلى مرجع تفتحه وتقرؤه.\n\nوإذا لم تُجب المصادر صرّح بذلك ووقف. والجواب بأن المادة المسترجعة لا تحسم المسألة هو عمل النظام على وجهه، لا إخفاقه.'
     }
   },
   {
@@ -60,7 +60,7 @@ export const ABOUT: AboutSection[] = [
     heading: { en: 'Who built it, and what it is not', ar: 'من بناه وما ليس هو' },
     body: {
       en: 'Sahn is an independent project, not the output of a mosque, a madhhab or an institution, and it does not speak for any of them. It is not a scholarly authority and does not present itself as one.\n\nIt is a tool for finding what the sources say and reading them yourself. If it ever makes that harder rather than easier, it has failed at the only thing it was built to do.',
-      ar: 'سَحْن مشروع مستقل، لا يصدر عن مسجد ولا مذهب ولا مؤسسة، ولا ينطق باسم أحد منها. وليس مرجعًا علميًا ولا يقدّم نفسه كذلك.\n\nوإنما هو أداة للوقوف على ما تقوله المصادر وقراءتها بنفسك. فإن صار يصعّب ذلك بدل أن ييسّره فقد أخفق في الشيء الوحيد الذي بُني له.'
+      ar: 'صَحْن مشروع مستقل، لا يصدر عن مسجد ولا مذهب ولا مؤسسة، ولا ينطق باسم أحد منها. وليس مرجعًا علميًا ولا يقدّم نفسه كذلك.\n\nوإنما هو أداة للوقوف على ما تقوله المصادر وقراءتها بنفسك. فإن صار يصعّب ذلك بدل أن ييسّره فقد أخفق في الشيء الوحيد الذي بُني له.'
     }
   }
 ];

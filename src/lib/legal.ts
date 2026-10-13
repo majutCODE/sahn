@@ -38,7 +38,7 @@ export const PRIVACY: LegalDocument = {
   updated: '2026-08-04',
   intro: {
     en: 'Sahn holds worship records, and those are among the most private things a person keeps. This notice says exactly what is stored, who else sees it, and how to remove it. It describes what the software does today.',
-    ar: 'يحفظ سَحْن سجلّات عبادة، وهي من أخصّ ما يحتفظ به المرء. وهذا البيان يوضّح ما يُخزَّن، ومن يطّلع عليه، وكيف يُحذف. وهو وصف لما يفعله البرنامج اليوم.'
+    ar: 'يحفظ صَحْن سجلّات عبادة، وهي من أخصّ ما يحتفظ به المرء. وهذا البيان يوضّح ما يُخزَّن، ومن يطّلع عليه، وكيف يُحذف. وهو وصف لما يفعله البرنامج اليوم.'
   },
   sections: [
     {
@@ -52,7 +52,7 @@ export const PRIVACY: LegalDocument = {
       heading: { en: 'Who else sees it', ar: 'من يطّلع عليها' },
       body: {
         en: 'Sahn cannot answer without sending your message somewhere. Naming those places is the point of this section.\n\nAnthropic receives the text of a message you send to the assistant, in order to classify it and to write the answer. Voyage AI receives the text of messages with an Islamic dimension, and of verse searches, in order to convert them into the numerical form retrieval needs. Supabase stores the database and runs authentication. Vercel hosts the site, processes the requests, and counts page views as described above. Resend delivers the sign-in email. Quran.com supplies verse text and translations, and a market data provider supplies gold and silver prices for zakat.\n\nThey are given what they need to perform that function and nothing further. Your data is not sold, and it is not shared with anyone for advertising.',
-        ar: 'لا يستطيع سَحْن الجواب دون إرسال رسالتك إلى جهة ما، وبيان تلك الجهات هو مقصود هذا الفصل.\n\nتتلقّى «أنثروبيك» نصّ الرسالة التي ترسلها إلى المساعد، لتصنيفها وكتابة الجواب. وتتلقّى «فويج» نصّ الرسائل ذات البُعد الإسلامي ونصّ عمليات البحث في الآيات، لتحويلها إلى الصورة العددية التي يحتاجها الاسترجاع. و«سوبابيس» تحتضن قاعدة البيانات وتتولّى المصادقة. و«فيرسل» تستضيف الموقع وتعالج الطلبات وتُحصي مرّات فتح الصفحات على الوجه المتقدّم. و«ريسند» توصل بريد تسجيل الدخول. و«قرآن دوت كوم» تزوّدنا بنصّ الآيات وترجماتها، ومزوّد بيانات سوقية يزوّدنا بأسعار الذهب والفضة للزكاة.\n\nويُعطى كلٌّ منها ما يلزم لأداء وظيفته لا غير. ولا تُباع بياناتك، ولا تُشارَك مع أحد لأغراض إعلانية.'
+        ar: 'لا يستطيع صَحْن الجواب دون إرسال رسالتك إلى جهة ما، وبيان تلك الجهات هو مقصود هذا الفصل.\n\nتتلقّى «أنثروبيك» نصّ الرسالة التي ترسلها إلى المساعد، لتصنيفها وكتابة الجواب. وتتلقّى «فويج» نصّ الرسائل ذات البُعد الإسلامي ونصّ عمليات البحث في الآيات، لتحويلها إلى الصورة العددية التي يحتاجها الاسترجاع. و«سوبابيس» تحتضن قاعدة البيانات وتتولّى المصادقة. و«فيرسل» تستضيف الموقع وتعالج الطلبات وتُحصي مرّات فتح الصفحات على الوجه المتقدّم. و«ريسند» توصل بريد تسجيل الدخول. و«قرآن دوت كوم» تزوّدنا بنصّ الآيات وترجماتها، ومزوّد بيانات سوقية يزوّدنا بأسعار الذهب والفضة للزكاة.\n\nويُعطى كلٌّ منها ما يلزم لأداء وظيفته لا غير. ولا تُباع بياناتك، ولا تُشارَك مع أحد لأغراض إعلانية.'
       }
     },
     {
@@ -92,14 +92,14 @@ export const TERMS: LegalDocument = {
   updated: '2026-08-03',
   intro: {
     en: 'What Sahn is, what it is not, and the terms on which you use it. The limits below are not disclaimers bolted on at the end - they describe how the software is actually built.',
-    ar: 'ما سَحْن وما ليس هو، وعلى أيّ شرط تستعمله. وليست الحدود الآتية إخلاءَ مسؤولية أُلحق في آخر الكلام، بل هي وصف لكيفية بناء البرنامج.'
+    ar: 'ما صَحْن وما ليس هو، وعلى أيّ شرط تستعمله. وليست الحدود الآتية إخلاءَ مسؤولية أُلحق في آخر الكلام، بل هي وصف لكيفية بناء البرنامج.'
   },
   sections: [
     {
-      heading: { en: 'Sahn does not issue fatwa', ar: 'سَحْن لا يُفتي' },
+      heading: { en: 'Sahn does not issue fatwa', ar: 'صَحْن لا يُفتي' },
       body: {
         en: 'This is the most important term here. When you ask a question of Islamic law, Sahn does not compose a ruling. It retrieves passages from its sources, presents them with citations you can open and check, and names the school a position belongs to. Where the sources do not answer, it says so rather than filling the gap.\n\nThat is deliberate and it is a limit, not a feature to be worked around. A ruling for your situation comes from a qualified scholar who knows your circumstances. Nothing here substitutes for that, and no answer from Sahn should be quoted as though it were a fatwa.',
-        ar: 'وهذا أهمّ ما في هذه الشروط. فإذا سألت مسألة فقهية لم يُنشئ سَحْن حكمًا، بل يسترجع نصوصًا من مصادره ويعرضها مع إحالات تفتحها وتتحقق منها، ويسمّي المذهب الذي إليه القول. وإذا لم تُجب المصادر صرّح بذلك ولم يسدّ الفراغ من عنده.\n\nوهذا مقصود، وهو حدٌّ لا حيلةَ تُلتمس للالتفاف عليه. فالحكم في نازلتك يصدر عن عالم مؤهَّل يعرف حالك. ولا يقوم شيء هنا مقام ذلك، ولا ينبغي أن يُنقل جواب من سَحْن على أنه فتوى.'
+        ar: 'وهذا أهمّ ما في هذه الشروط. فإذا سألت مسألة فقهية لم يُنشئ صَحْن حكمًا، بل يسترجع نصوصًا من مصادره ويعرضها مع إحالات تفتحها وتتحقق منها، ويسمّي المذهب الذي إليه القول. وإذا لم تُجب المصادر صرّح بذلك ولم يسدّ الفراغ من عنده.\n\nوهذا مقصود، وهو حدٌّ لا حيلةَ تُلتمس للالتفاف عليه. فالحكم في نازلتك يصدر عن عالم مؤهَّل يعرف حالك. ولا يقوم شيء هنا مقام ذلك، ولا ينبغي أن يُنقل جواب من صَحْن على أنه فتوى.'
       }
     },
     {
@@ -109,14 +109,14 @@ export const TERMS: LegalDocument = {
       },
       body: {
         en: 'The finance guide explains structures and reports where scholars disagree. It does not recommend a product or a provider, and Sahn is not a regulated financial adviser. The zakat calculator applies rules you can read to figures you enter; check the result before you rely on it.\n\nSahn is not a medical or mental health service. Where a message discloses distress, harm or abuse, Sahn responds with support and points to crisis services. That is signposting, not treatment, and it is not a substitute for emergency help. If someone is in immediate danger, contact the emergency services where you are.',
-        ar: 'دليل التمويل يشرح البنى ويذكر مواضع خلاف العلماء. ولا يوصي بمنتج ولا بمزوِّد، وليس سَحْن مستشارًا ماليًا مرخَّصًا. وحاسبة الزكاة تُطبّق قواعد منشورة على أرقام تُدخلها أنت؛ فتحقّق من النتيجة قبل الاعتماد عليها.\n\nوليس سَحْن خدمة طبية ولا نفسية. وإذا أفصحت رسالةٌ عن كرب أو أذًى أو إساءة أجاب سَحْن بالمواساة ودلّ على جهات الإغاثة. وهذه دلالة لا علاج، ولا تقوم مقام النجدة العاجلة. فإن كان أحد في خطر حالٍّ فاتصل بخدمات الطوارئ في بلدك.'
+        ar: 'دليل التمويل يشرح البنى ويذكر مواضع خلاف العلماء. ولا يوصي بمنتج ولا بمزوِّد، وليس صَحْن مستشارًا ماليًا مرخَّصًا. وحاسبة الزكاة تُطبّق قواعد منشورة على أرقام تُدخلها أنت؛ فتحقّق من النتيجة قبل الاعتماد عليها.\n\nوليس صَحْن خدمة طبية ولا نفسية. وإذا أفصحت رسالةٌ عن كرب أو أذًى أو إساءة أجاب صَحْن بالمواساة ودلّ على جهات الإغاثة. وهذه دلالة لا علاج، ولا تقوم مقام النجدة العاجلة. فإن كان أحد في خطر حالٍّ فاتصل بخدمات الطوارئ في بلدك.'
       }
     },
     {
       heading: { en: 'Times and directions', ar: 'الأوقات والاتجاهات' },
       body: {
         en: 'Prayer times, the Qibla direction and Hijri dates are computed on your device from your location, your chosen calculation method and published astronomical models. They are close, and they are not authoritative. Calculation methods differ, and a local mosque or moon-sighting authority may not agree with the figure shown.\n\nWhere the two differ, the local determination governs. Sahn shows a calculation; it does not declare a time.',
-        ar: 'أوقات الصلاة واتجاه القبلة والتواريخ الهجرية تُحسب على جهازك من موقعك وطريقة الحساب التي اخترتها ونماذج فلكية منشورة. وهي قريبة، وليست حجّة. فطرق الحساب مختلفة، وقد يخالف مسجدُك أو جهةُ الرؤية ما يُعرض لك.\n\nوعند الاختلاف فالعبرة بتقرير أهل البلد. وسَحْن يعرض حسابًا ولا يُعلن وقتًا.'
+        ar: 'أوقات الصلاة واتجاه القبلة والتواريخ الهجرية تُحسب على جهازك من موقعك وطريقة الحساب التي اخترتها ونماذج فلكية منشورة. وهي قريبة، وليست حجّة. فطرق الحساب مختلفة، وقد يخالف مسجدُك أو جهةُ الرؤية ما يُعرض لك.\n\nوعند الاختلاف فالعبرة بتقرير أهل البلد. وصَحْن يعرض حسابًا ولا يُعلن وقتًا.'
       }
     },
     {
@@ -130,14 +130,14 @@ export const TERMS: LegalDocument = {
       heading: { en: 'Sources and copyright', ar: 'المصادر وحقوق النشر' },
       body: {
         en: 'Qur\'an text and translations are provided through the Quran.com content API under its terms. The hadith collection is drawn from a public-domain dataset. Du\'a translations were written for Sahn. The finance and reference material was written for Sahn.\n\nSahn quotes from its sources with citation; it does not reproduce copyrighted works in bulk, and you should not use it to try.',
-        ar: 'نصّ القرآن وترجماته يُقدَّمان عبر واجهة «قرآن دوت كوم» وفق شروطها. ومجموعة الحديث مأخوذة من بيانات في الملك العام. وترجمات الأدعية كُتبت لسَحْن. ومادة التمويل والمراجع كُتبت لسَحْن.\n\nويقتبس سَحْن من مصادره مع الإحالة، ولا يعيد نشر المصنَّفات المحمية جملةً، ولا ينبغي أن تستعمله في محاولة ذلك.'
+        ar: 'نصّ القرآن وترجماته يُقدَّمان عبر واجهة «قرآن دوت كوم» وفق شروطها. ومجموعة الحديث مأخوذة من بيانات في الملك العام. وترجمات الأدعية كُتبت لصَحْن. ومادة التمويل والمراجع كُتبت لصَحْن.\n\nويقتبس صَحْن من مصادره مع الإحالة، ولا يعيد نشر المصنَّفات المحمية جملةً، ولا ينبغي أن تستعمله في محاولة ذلك.'
       }
     },
     {
       heading: { en: 'Availability and liability', ar: 'الإتاحة والمسؤولية' },
       body: {
         en: 'Sahn is provided as it is. It depends on services operated by others, and it can be unavailable, slow, or wrong. No warranty is given that it will be uninterrupted or that every answer will be accurate.\n\nTo the extent the law allows, Sahn is not liable for loss arising from reliance on its output. Nothing here limits liability that cannot lawfully be limited. These terms are governed by the law of England and Wales.\n\nThey may change; the date at the top of this page shows when it last did. Questions go to {email}.',
-        ar: 'يُقدَّم سَحْن على حاله. وهو يعتمد على خدمات يشغّلها غيرنا، فقد يتعذّر أو يبطئ أو يخطئ. ولا يُضمن أن يعمل بلا انقطاع ولا أن يصحّ كل جواب.\n\nوفي حدود ما يسمح به القانون، لا يُسأل سَحْن عن ضرر ناشئ عن الاعتماد على مخرجاته. وليس فيما تقدّم تقييد لمسؤولية لا يجيز القانون تقييدها. وتخضع هذه الشروط لقانون إنجلترا وويلز.\n\nوقد تتغيّر، والتاريخ في أعلى الصفحة يبيّن آخر تغيير. والأسئلة إلى {email}.'
+        ar: 'يُقدَّم صَحْن على حاله. وهو يعتمد على خدمات يشغّلها غيرنا، فقد يتعذّر أو يبطئ أو يخطئ. ولا يُضمن أن يعمل بلا انقطاع ولا أن يصحّ كل جواب.\n\nوفي حدود ما يسمح به القانون، لا يُسأل صَحْن عن ضرر ناشئ عن الاعتماد على مخرجاته. وليس فيما تقدّم تقييد لمسؤولية لا يجيز القانون تقييدها. وتخضع هذه الشروط لقانون إنجلترا وويلز.\n\nوقد تتغيّر، والتاريخ في أعلى الصفحة يبيّن آخر تغيير. والأسئلة إلى {email}.'
       }
     }
   ]
