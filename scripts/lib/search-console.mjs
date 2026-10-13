@@ -100,6 +100,7 @@ export async function query(token, property, body) {
  * The JSON is multi-line, which a .env file cannot hold, so it is accepted
  * base64-encoded as well as by path.
  */
+/** @param {Record<string, string | undefined>} env */
 export function loadKey(env = process.env) {
   const inline = env.SEARCH_CONSOLE_KEY;
   if (inline) {
