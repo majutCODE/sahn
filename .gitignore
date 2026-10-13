@@ -30,3 +30,6 @@ android/local.properties
 
 # Throwaway design mockups, never committed
 public/_uipreview/
+
+# Search Console pulls, which are data about the site rather than part of it.
+.search-console.json
