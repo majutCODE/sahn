@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { absolute } from '@/lib/site';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import SurahIndex from '@/components/SurahIndex';
 import { quranFetch } from '@/lib/quran/client';
@@ -11,7 +12,20 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'modules.quran' });
-  return { title: t('seoTitle'), description: t('summary') };
+  return {
+    title: t('seoTitle'),
+    description: t('summary'),
+    // The index had neither, so the two locales were competing rather than
+    // pointing at each other.
+    alternates: {
+      canonical: absolute(`/${locale}/quran`),
+      languages: {
+        'en-GB': absolute('/en/quran'),
+        ar: absolute('/ar/quran'),
+        'x-default': absolute('/en/quran')
+      }
+    }
+  };
 }
 
 export default async function QuranPage({

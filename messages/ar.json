@@ -227,7 +227,9 @@
     "tafsirCovers": "تفسير - {name}، للآيات من {from} إلى {to}",
     "askAboutThis": "اسأل عن هذه الآية",
     "askPrefill": "عن قوله تعالى في {verse} - ",
-    "reciter": "القارئ"
+    "reciter": "القارئ",
+    "metaTitle": "سورة {surah} · قراءة واستماع وتفسير",
+    "metaDescription": "سورة {surah} رقم {number} من ١١٤ {revelation} وعدد آياتها {ayat}. النص العربي مع الترجمة وتفسير ابن كثير بجوار كل آية وتلاوة من اثني عشر قارئا"
   },
   "tracker": {
     "signedOut": "سجّل الدخول لحفظ سجلك.",

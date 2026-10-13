@@ -227,7 +227,9 @@
     "tafsirCovers": "Tafsir - {name}, on {from} to {to}",
     "askAboutThis": "Ask about this",
     "askPrefill": "About Qur'an {verse} - ",
-    "reciter": "Reciter"
+    "reciter": "Reciter",
+    "metaTitle": "Surah {surah} · Read, Listen and Tafsir",
+    "metaDescription": "Surah {surah}, {number} of 114, {revelation}, {ayat} ayat. The Arabic text with translation, Ibn Kathir's tafsir beside every ayah, and recitation from twelve reciters."
   },
   "tracker": {
     "signedOut": "Sign in to keep a record.",
